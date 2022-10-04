@@ -4,6 +4,6 @@
 <template>
   <main>
 
-    <h1>hello profile group</h1>
+    <h1>Welcome to the navbar</h1>
   </main>
 </template>
