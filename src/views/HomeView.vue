@@ -3,7 +3,6 @@
 
 <template>
   <main>
-
-    <h1>hello profile group</h1>
+    <h1>hello Homepage</h1>
   </main>
 </template>
