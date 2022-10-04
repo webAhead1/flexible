@@ -2,6 +2,5 @@
 </script>
 
 <template>
-  <main>
-  </main>
+  <h1 class="example">For Example</h1>
 </template>
