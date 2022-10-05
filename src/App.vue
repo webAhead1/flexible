@@ -1,17 +1,21 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 </script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Welcome Initial Project</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <div id="app">
+    <p>Build your custom website with Flexible  </p>
+    <button>Get Started</button>
+    <Slider />
+ 
+  </div>
 </template>
+
+<script>
+import Slider from "./views/Slider.vue";
+export default {
+  name: "app",
+  components: {
+    Slider
+  }
+};
+</script>
