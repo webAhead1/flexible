@@ -1,17 +1,29 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import Navbar from './components/Navbar.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Welcome Initial Project</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <body>
+    <header>
+      <Navbar />
+    </header>
+    <RouterView />
+  </body>
 </template>
+
+<style>
+  html,body {
+    height: 100%;
+    width: 100%;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+  }
+
+header {
+  width: 100%;
+}
+</style>
