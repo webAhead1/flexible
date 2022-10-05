@@ -57,42 +57,10 @@ export default {
     </template>
 
 <style>
-:root{
-    --active-color: yellow;
-    --link-text-color: white;
-    --menu-background-color: #1d3557;
-    --active-background-color: #132238;
-}
-
 html,body {
     margin: 0;
     padding: 0;
     width: 100%;
-}
-
-/* ul */
-.menu {
-    padding: 0;
-    margin: 0;
-    position: relative;
-    background-color: var(--menu-background-color);
-    display: inline-flex;
-    border-radius: 4px;
-    list-style-type: none;
-    width: 100%;
-}
-
-/* li */
-.menu-item {
-    display: inline-flex;
-}
-
-/* a */
-.menu-link { 
-    padding: 0.75rem 1rem;
-    display: inline-flex;
-    align-items: center;
-    color: var(--link-text-color);
 }
 </style>
    

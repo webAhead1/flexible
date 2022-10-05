@@ -3,7 +3,6 @@
 
 <template>
   <main>
-
-    <!-- <h1>Welcome to the navbar</h1> -->
+    <h1 class="example">Welcome to the navbar</h1>
   </main>
 </template>

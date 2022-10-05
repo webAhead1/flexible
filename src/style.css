@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-.example{
+.example {
     @apply text-red-700
+}
+.menu {
+    @apply p-0 m-0 relative bg-primary inline-flex rounded-b-2xl list-none w-full h-16 drop-shadow-xl
+}
+.menu-item {
+    @apply inline-flex
+}
+.menu-link {
+    @apply p-3 inline-flex items-center text-white
 }
