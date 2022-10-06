@@ -1,21 +1,21 @@
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
+import { RouterLink, RouterView } from 'vue-router';
 </script>
+
 <template>
-  <div id="app">
-    <p>Build your custom website with Flexible  </p>
-    <button>Get Started</button>
-    <Slider />
- 
-  </div>
+  <!-- <div id="app"> -->
+  <button class="get-started-button">Get Started</button>
+  <p class="intro-text">Build your custom website with Flexible</p>
+  <Slider />
+  <!-- </div> -->
 </template>
 
 <script>
-import Slider from "./views/Slider.vue";
+import Slider from './components/Slider.vue';
 export default {
-  name: "app",
+  name: 'app',
   components: {
-    Slider
-  }
+    Slider,
+  },
 };
 </script>
