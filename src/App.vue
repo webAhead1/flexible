@@ -3,11 +3,11 @@ import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
-  <div id="app">
-    <p>Build your custom website with Flexible  </p>
-    <button>Get Started</button>
+  <!-- <div id="app"> -->
+    <button class="get-started-button">Get Started</button>
+    <p class="intro-text">Build your custom website with Flexible  </p>
     <Slider />
-  </div>
+  <!-- </div> -->
 </template>
 
 <script>
