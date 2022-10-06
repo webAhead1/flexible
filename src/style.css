@@ -1,16 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.example {
-    @apply text-red-700
+/* .navbar {
+  @apply p-0 m-0 w-full text-center text-2xl fixed bg-primary rounded-b-2xl list-none h-16 drop-shadow-xl align-middle;
+} */
+.flexible {
+  @apply justify-items-start;
 }
 .menu {
-    @apply p-0 m-0 relative bg-primary inline-flex rounded-b-2xl list-none w-full h-16 drop-shadow-xl
+  @apply p-0 m-0 w-full text-center text-2xl fixed bg-primary rounded-b-2xl list-none h-16 drop-shadow-xl align-middle;
 }
 .menu-item {
-    @apply inline-flex
+  @apply inline-flex;
 }
 .menu-link {
-    @apply p-3 inline-flex items-center text-white
+  @apply p-3 items-center text-white;
+}
+.logo {
+  @apply h-16;
 }
