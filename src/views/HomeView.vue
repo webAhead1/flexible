@@ -2,5 +2,5 @@
 </script>
 
 <template>
-  <h1 class="example">For Example</h1>
+  <!-- <h1 class="example">For Example</h1> -->
 </template>
