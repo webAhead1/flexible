@@ -3,17 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .navbar {
-  @apply p-0 m-0 w-full text-center text-2xl fixed bg-navyColor rounded-b-2xl list-none h-16 drop-shadow-xl align-middle;
-} */
-.flexible {
-  @apply justify-items-start;
-}
 .menu {
-  @apply w-full text-center text-2xl font-myFont fixed bg-navyColor rounded-b-2xl list-none h-24 drop-shadow-xl  flex;
+  @apply w-full text-center text-2xl font-myFont fixed bg-navyColor rounded-b-2xl list-none h-24 drop-shadow-xl flex;
 }
 .menu-item {
-  @apply flex;
+  @apply flex m-auto;
 }
 .menu-item:last-child {
   @apply ml-auto mr-5;
