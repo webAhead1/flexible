@@ -1,19 +1,17 @@
-<script setup>
-import Navbar from '../components/Navbar.vue';
-</script>
+<script setup></script>
 
 <template>
-  <Navbar />
   <main>
     <h1 class="example">
-      <br /><br /><br />Welcome to the navbar
-      <img src="../assets/img/Picture1.png" class="logo" />
-      <img src="../assets/img/Picture1.png" class="logo" />
-      <img src="../assets/img/Picture1.png" class="logo" />
-      <img src="../assets/img/Picture1.png" class="logo" />
-      <img src="../assets/img/Picture1.png" class="logo" />
-      <img src="../assets/img/Picture1.png" class="logo" />
-      <img src="../assets/img/Picture1.png" class="logo" />
+      <br /><br /><br />Welcome to the Home page
+      <img src="../assets/img/pic1.png" class="logo1" />
+      <img src="../assets/img/pic1.png" class="logo1" />
+      <img src="../assets/img/pic1.png" class="logo1" />
+      <img src="../assets/img/pic1.png" class="logo1" />
+      <img src="../assets/img/pic1.png" class="logo1" />
+      <img src="../assets/img/pic1.png" class="logo1" />
+      <img src="../assets/img/pic1.png" class="logo1" />
+      <img src="../assets/img/pic1.png" class="logo1" />
     </h1>
   </main>
 </template>

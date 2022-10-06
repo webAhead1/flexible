@@ -7,14 +7,6 @@ export default {
       selectedIndex: 0,
       links: [
         {
-          id: 1,
-          name: 'Flexible',
-        },
-        {
-          id: 2,
-          name: 'Home',
-        },
-        {
           id: 3,
           name: 'About Us',
         },
@@ -66,9 +58,13 @@ export default {
 </script>
 
 <template>
-  <img src="../assets/img/Picture1.png" class="logo" />
-
   <ul id="menu" class="menu">
+    <a href="#">
+      <div class="logoWithFlexible">
+        <img src="../assets/img/pic1.png" class="logo" />
+        <span>Flexible</span>
+      </div>
+    </a>
     <div class="menu-indicator"></div>
     <li class="menu-item" v-for="link in links" :key="link.id">
       <a href="#" class="menu-link">
