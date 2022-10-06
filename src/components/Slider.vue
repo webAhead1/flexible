@@ -1,7 +1,7 @@
 <template>
     <div class="slider-container">
       <transition-group name="fade" tag="div">
-        <div :key="currentIndex">
+        <div v-cloak:key="currentIndex">
           <img class="slider-image" :src="currentImg" />
         </div>
       </transition-group>
@@ -16,6 +16,10 @@
     </div>
   </template>
   
+  <style>
+    [v-cloak]{display: none}
+  </style>
+
   <script>
   export default {
     name: "Slider",
@@ -50,7 +54,6 @@
   
     computed: {
       currentImg: function() {
-        console.log(this.images[Math.abs(this.currentIndex) % this.images.length])
         return this.images[Math.abs(this.currentIndex) % this.images.length];
       }
     }
