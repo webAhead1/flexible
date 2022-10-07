@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.example{
-    @apply text-red-700
+html {
+    @apply bg-gradient-to-r from-indigo-500
+}
+
+header {
+    @apply text-4xl bg-slate-200 w-[40rem] h-[5rem] m-auto flex items-center justify-center relative top-[10rem] rounded-lg
 }
