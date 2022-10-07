@@ -3,9 +3,41 @@
 @tailwind utilities;
 
 html {
-    @apply bg-gradient-to-r from-indigo-500
+    @apply bg-gradient-to-r from-teal-700 w-full h-full bg-gradient-to-br from-neutral-400 via-sky-700 to-blue-900
 }
 
 header {
-    @apply text-4xl bg-slate-200 w-[40rem] h-[5rem] m-auto flex items-center justify-center relative top-[10rem] rounded-lg
+    @apply text-3xl bg-slate-200 w-[30rem] h-[4rem] m-auto flex items-center justify-center relative top-[3rem] rounded-[15px]
+}
+
+.questionnaire-or-templates-container {
+    @apply flex flex-row justify-evenly
+}
+
+.build-website-option {
+    @apply relative top-[8rem] w-[25rem] flex items-center flex-col
+}
+
+.or-container {
+    @apply relative top-[25rem] h-[70px] w-[70px] text-3xl bg-slate-200 flex items-center justify-center rounded-[15px]
+}
+
+.template-option {
+    @apply relative top-[8rem] w-[25rem] flex items-center flex-col
+}
+
+.build-website-option-title {
+    @apply bg-[#72A0AECF] h-[3rem] w-4/5 rounded-[15px] flex items-center justify-center text-3xl
+}
+
+.template-option-title {
+    @apply bg-[#72A0AECF] h-[3rem] w-4/5 rounded-[15px] flex items-center justify-center text-3xl
+}
+
+.build-website-card {
+    @apply bg-[#2B4F6087] h-[35rem] w-full rounded-[20px] mt-[2rem] shadow-md shadow-black
+}
+
+.template-card {
+    @apply bg-[#2B4F6087] h-[35rem] w-full rounded-[20px] mt-[2rem] shadow-md shadow-black
 }
