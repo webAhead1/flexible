@@ -1,3 +1,3 @@
 <template>
-  <h1>Hello questionnaire</h1>
+  <h1 class="example">Hello questionnaire</h1>
 </template>

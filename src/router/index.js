@@ -28,24 +28,6 @@ const router = createRouter({
       component: Questionnaire,
     },
   ],
-  // scrollBehavior: function (to) {
-  //   if (to.hash) {
-  //     return {
-  //       selector: to.hash,
-  //     };
-  //   }
-  // },
-
-  // scrollBehavior(to, from, savedPosition) {
-  //   if (savedPosition) {
-  //     return savedPosition;
-  //   }
-
-  //   if (to.hash) {
-  //     return { selector: to.hash };
-  //   }
-  //   return { x: 0, y: 0 };
-  // },
 
   scrollBehavior(to, from, SavedPosition) {
     if (to.hash) {
@@ -55,9 +37,8 @@ const router = createRouter({
       }
     } else if (SavedPosition) {
       return SavedPosition;
-      // } else {
-      //   document.getElementById('app').scrollIntoView({ behavior: 'smooth' });
-      // }
+    } else {
+      document.getElementById('app').scrollIntoView({ behavior: 'smooth' });
     }
   },
 });

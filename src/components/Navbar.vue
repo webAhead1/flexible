@@ -23,39 +23,33 @@ export default {
 </script>
 
 <template>
-  <div class="relative">
-    <ul id="menu" class="menu">
-      <router-link :to="{ path: '/', hash: '#home' }">
-        <div class="logoWithFlexible">
-          <img src="../assets/img/pic1.png" class="logo" />
-          <span>Flexible</span>
-        </div>
-      </router-link>
-
-      <div class="menu-item">
-        <router-link :to="{ path: '/', hash: '#about' }" class="menu-link">
-          <span>About Us</span>
-        </router-link>
-        <router-link :to="{ path: '/', hash: '#template' }" class="menu-link">
-          <span>Templates</span>
-        </router-link>
-        <router-link to="/questionnaire" class="menu-link">
-          <span>Questionnaire</span>
-        </router-link>
-        <router-link :to="{ path: '/', hash: '#pricing' }" class="menu-link">
-          <span>Pricing</span>
-        </router-link>
-        <router-link :to="{ path: '/', hash: '#contact' }" class="menu-link">
-          <span>Contact Us</span>
-        </router-link>
-        <router-link to="/sign-in" id="signin" class="menu-link">
-          <span>Sign in</span>
-        </router-link>
+  <ul id="menu" class="menu">
+    <router-link :to="{ path: '/', hash: '#home' }">
+      <div class="logoWithFlexible">
+        <img src="../assets/img/pic1.png" class="logo" />
+        <span>Flexible</span>
       </div>
-    </ul>
-  </div>
-  <br />
-  <br />
-  <br />
-  <br />
+    </router-link>
+
+    <div class="menu-item">
+      <router-link :to="{ path: '/', hash: '#about' }" class="menu-link">
+        <span>About Us</span>
+      </router-link>
+      <router-link :to="{ path: '/', hash: '#template' }" class="menu-link">
+        <span>Templates</span>
+      </router-link>
+      <router-link to="/questionnaire" class="menu-link">
+        <span>Questionnaire</span>
+      </router-link>
+      <router-link :to="{ path: '/', hash: '#pricing' }" class="menu-link">
+        <span>Pricing</span>
+      </router-link>
+      <router-link :to="{ path: '/', hash: '#contact' }" class="menu-link">
+        <span>Contact Us</span>
+      </router-link>
+      <router-link to="/sign-in" id="signin" class="menu-link">
+        <span>Sign in</span>
+      </router-link>
+    </div>
+  </ul>
 </template>
