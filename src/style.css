@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    @apply scroll-pt-[100px] scroll-smooth
+}
 .example {
   @apply py-3 px-1;
 }
