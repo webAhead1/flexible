@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.example{
-    @apply text-red-700
+.example {
+  @apply text-red-700;
+}
+
+.logoWithFlexible {
+  @apply flex items-center text-white py-3 truncate text-4xl;
 }
