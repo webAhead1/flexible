@@ -1,47 +1,12 @@
 <script>
 export default {
-  data() {
-    return {
-      sliderPosition: 0,
-      selectedElementWidth: 0,
-      selectedIndex: 0,
-      links: [
-        {
-          id: 3,
-          name: 'About Us',
-        },
-        {
-          id: 4,
-          name: 'Templates',
-        },
-        {
-          id: 5,
-          name: 'Questionnaire',
-        },
-        {
-          id: 6,
-          name: 'Pricing',
-        },
-        {
-          id: 7,
-          name: 'Contact Us',
-        },
-        {
-          id: 8,
-          name: 'Sign In',
-        },
-      ],
-    };
-  },
   created() {
-    console.log('created');
     window.addEventListener('scroll', this.handleScroll);
     window.onscroll = function () {
       this.handleScroll;
     };
   },
   destroyed() {
-    console.log('destroyed');
     window.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
@@ -59,17 +24,36 @@ export default {
 
 <template>
   <ul id="menu" class="menu">
-    <a href="#">
+    <router-link :to="{ path: '/', hash: '#home' }">
       <div class="logoWithFlexible">
         <img src="../assets/img/pic1.png" class="logo" />
         <span>Flexible</span>
       </div>
-    </a>
-    <div class="menu-indicator"></div>
-    <li class="menu-item" v-for="link in links" :key="link.id">
-      <a href="#" class="menu-link">
-        <span>{{ link.name }}</span>
-      </a>
-    </li>
+    </router-link>
+
+    <div class="menu-item">
+      <router-link :to="{ path: '/', hash: '#about' }" class="menu-link">
+        <span>About Us</span>
+      </router-link>
+      <router-link :to="{ path: '/', hash: '#template' }" class="menu-link">
+        <span>Templates</span>
+      </router-link>
+      <router-link to="/questionnaire" class="menu-link">
+        <span>Questionnaire</span>
+      </router-link>
+      <router-link :to="{ path: '/', hash: '#pricing' }" class="menu-link">
+        <span>Pricing</span>
+      </router-link>
+      <router-link :to="{ path: '/', hash: '#contact' }" class="menu-link">
+        <span>Contact Us</span>
+      </router-link>
+      <router-link to="/sign-in" id="signin" class="menu-link">
+        <span>Sign in</span>
+      </router-link>
+    </div>
   </ul>
+  <br />
+  <br />
+  <br />
+  <br />
 </template>

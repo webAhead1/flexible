@@ -3,24 +3,30 @@
 @tailwind components;
 @tailwind utilities;
 
+.example {
+  @apply py-3 px-1;
+}
+.logo1 {
+  @apply h-28;
+}
 .menu {
-  @apply w-full text-center text-2xl font-myFont fixed bg-navyColor rounded-b-2xl list-none h-24 drop-shadow-xl flex;
+  @apply w-full mb-[3rem] top-0 text-center text-base md:text-xl lg:text-2xl font-myFont fixed bg-navyColor rounded-b-2xl list-none h-24 drop-shadow-xl flex;
 }
 .menu-item {
-  @apply flex m-auto;
+  @apply flex;
 }
-.menu-item:last-child {
+/* .menu-item:last-child {
   @apply ml-auto mr-5;
-}
+} */
 .menu-link {
-  @apply p-4 items-center text-white;
+  @apply py-7 px-4 items-center text-white hover:bg-white hover:text-black;
+}
+.menu-link:first-child {
+  @apply ml-3;
 }
 .logo {
   @apply h-16 top-0 z-10;
 }
 .logoWithFlexible {
-  @apply flex items-center text-white;
-}
-.logo1 {
-  @apply h-28;
+  @apply flex items-center text-white py-3 truncate text-4xl;
 }
