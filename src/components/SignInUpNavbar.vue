@@ -1,8 +1,8 @@
 <script></script>
 <template>
-  <div class="menu">
-    <router-link :to="{ path: '/', hash: '#home' }">
-      <div class="logoWithFlexible">
+  <div class="signInUpNavbar">
+    <router-link to="/">
+      <div class="logoWithFlexible1">
         <img src="../assets/img/pic1.png" class="logo" />
         <span>Flexible</span>
       </div>
