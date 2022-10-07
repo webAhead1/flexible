@@ -2,18 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    @apply w-full h-full bg-gradient-to-r from-teal-700 bg-gradient-to-br from-neutral-400 via-sky-700 to-blue-900
+}
+
 body {
     @apply flex justify-center
 }
 
 header {
-    @apply text-[30px] flex justify-center relative top-[5rem]
+    @apply text-[30px] flex justify-center relative top-[5rem] text-white
 }
 
 .contact-card {
-    @apply border-2 border-black h-[40rem] w-[25rem] rounded-[20px] relative top-[8rem]
+    @apply border-2 border-black h-[40rem] w-[25rem] rounded-[20px] relative top-[8rem] p-[2rem] grid
 }
 
 .name-input {
-    @apply w-[20rem] h-[3rem] border-black border-2 rounded-[18px]
+    @apply w-full h-[3rem] border-2 rounded-[18px] 
+}
+
+.email-input {
+    @apply w-full h-[3rem] border-2 rounded-[18px] 
+}
+
+.message-input {
+    @apply w-full h-[9rem] border-2 rounded-[18px]
+}
+
+.submit-button {
+    @apply bg-[#2b4f6086] w-[8rem] h-[2rem] border-2 border-[#2b4f6086] rounded-[70px] justify-self-center
 }
