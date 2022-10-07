@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-.example{
-    @apply text-red-700
+body {
+    @apply flex justify-center
+}
+
+header {
+    @apply text-[30px] flex justify-center relative top-[5rem]
+}
+
+.contact-card {
+    @apply border-2 border-black h-[40rem] w-[25rem] rounded-[20px] relative top-[8rem]
+}
+
+.name-input {
+    @apply w-[20rem] h-[3rem] border-black border-2 rounded-[18px]
 }
