@@ -3,7 +3,14 @@
     <div class="flex justify-center">
       <div class="bg-[#FFFFFF99] w-[332px] h-[587px] rounded-[20px]">
         <div class="cardName">{{ name }}</div>
-        <div class="cardPrice">{{ price }}</div>
+        <div class="flex justify-center">
+          <span class="cardPrice">
+            <b class="priceDetails">{{ shekels }}</b>
+            <b class="">{{ price }}</b>
+            <b v-if="monthly" class="priceDetails">/{{ monthly }}</b>
+          </span>
+        </div>
+
         <div class="cardSentence">{{ sentence }}</div>
         <div class="pt-10">
           <div class="cardOffers" v-for="offer in offers">
@@ -23,6 +30,14 @@
 </template>
 <script>
 export default {
-  props: ['name', 'price', 'sentence', 'offers', 'buttonText'],
+  props: [
+    'name',
+    'shekels',
+    'price',
+    'monthly',
+    'sentence',
+    'offers',
+    'buttonText',
+  ],
 };
 </script>

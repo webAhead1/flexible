@@ -15,7 +15,9 @@
         <div class="mt-20">
           <PricingCard
             :name="name[1]"
+            :shekels="shekels"
             :price="price[1]"
+            :monthly="monthly"
             :sentence="sentence[1]"
             :offers="offers[1]"
             :buttonText="buttonText[1]"
@@ -24,7 +26,9 @@
         <span class="mt-20">
           <PricingCard
             :name="name[2]"
+            :shekels="shekels"
             :price="price[2]"
+            :monthly="monthly"
             :sentence="sentence[2]"
             :offers="offers[2]"
             :buttonText="buttonText[1]"
@@ -65,7 +69,7 @@ export default {
       ],
       buttonText: ['Start for free', 'Add plan'],
       shekels: '₪',
-      monthly: '\monthly',
+      monthly: 'monthly',
     };
   },
   components: {
