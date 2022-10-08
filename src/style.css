@@ -27,11 +27,11 @@ header {
 }
 
 .build-website-option-title {
-    @apply bg-[#72A0AECF] h-[3rem] w-4/5 rounded-[15px] flex items-center justify-center text-3xl
+    @apply bg-[#72A0AECF] h-[3rem] w-3/4 rounded-[15px] flex items-center justify-center text-3xl
 }
 
 .template-option-title {
-    @apply bg-[#72A0AECF] h-[3rem] w-4/5 rounded-[15px] flex items-center justify-center text-3xl
+    @apply bg-[#72A0AECF] h-[3rem] w-3/4 rounded-[15px] flex items-center justify-center text-3xl
 }
 
 .build-website-card {
