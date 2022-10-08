@@ -13,10 +13,10 @@
   @apply w-full top-0 font-myFont bg-gradient-to-r from-[#2B4F60] via-[#0781BA] to-[#0781BA] rounded-b-2xl h-24 drop-shadow-xl;
 }
 input {
-  @apply w-[423px] h-[70px] drop-shadow-2xl opacity-80 placeholder:pl-2 placeholder:text-left placeholder:text-[30px] placeholder:font-myFont rounded-[14px];
+  @apply w-[423px] h-[70px] m-0 mb-5 drop-shadow-2xl opacity-80 placeholder:pl-2 placeholder:text-left placeholder:text-[30px] placeholder:font-myFont rounded-[14px];
 }
 .btn {
-  @apply text-[#0C0C0C] bg-[#2B4F6087] w-[255px] text-center text-[34px] rounded-[70px] border border-[#2B4F60];
+  @apply flex justify-center text-[#0C0C0C] bg-[#2B4F6087] w-[255px] text-center text-[34px] rounded-[70px] border border-[#2B4F60];
 }
 .txt {
   @apply pl-2 text-[#0C0C0C] pb-1;
