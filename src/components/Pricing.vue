@@ -3,7 +3,7 @@
     <div class="bg-[#2B4F6087] w-[1177px] h-[768px] rounded-[20px]">
       <div class="flex justify-center">
         <div class="text-white align-center text-[37px] pt-5">Pricing</div>
-        <span class="pt-28">
+        <span class="pt-20">
           <PricingCard
             :name="name[0]"
             :price="price[0]"
@@ -12,12 +12,21 @@
             :buttonText="buttonText[0]"
           />
         </span>
-        <span class="pt-50">
+        <span class="pt-35">
           <PricingCard
             :name="name[1]"
             :price="price[1]"
             :sentence="sentence[1]"
             :offers="offers[1]"
+            :buttonText="buttonText[1]"
+          />
+        </span>
+        <span class="pt-40">
+          <PricingCard
+            :name="name[2]"
+            :price="price[2]"
+            :sentence="sentence[2]"
+            :offers="offers[2]"
             :buttonText="buttonText[1]"
           />
         </span>

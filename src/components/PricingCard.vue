@@ -4,8 +4,11 @@
       <div class="cardName">{{ name }}</div>
       <div class="cardPrice">{{ price }}</div>
       <div class="cardSentence">{{ sentence }}</div>
-      <div class="flex justify-center pt-[290px]">
-        <div class="bg-[#2B4F6087] rounded-[70px] w-[238px] h-[71px]">
+      <div class="pt-10">
+        <div class="cardOffers" v-for="offer in offers">{{ offer }}</div>
+      </div>
+      <div class="flex justify-center pt-[150px]">
+        <div class="bg-[#2B4F6087] rounded-[18px] w-[238px] h-[71px]">
           <div class="cardButton">{{ buttonText }}</div>
         </div>
       </div>
