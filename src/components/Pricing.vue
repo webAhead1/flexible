@@ -1,9 +1,9 @@
 <template>
   <div class="flex justify-center py-8">
     <div class="bg-[#2B4F6087] w-[1177px] h-[768px] rounded-[20px]">
+      <div class="text-white text-[37px] pl-[130px] pt-7">Pricing</div>
       <div class="flex justify-center">
-        <div class="text-white align-center text-[37px] pt-5">Pricing</div>
-        <span class="pt-20">
+        <div class="mt-20">
           <PricingCard
             :name="name[0]"
             :price="price[0]"
@@ -11,8 +11,8 @@
             :offers="offers[0]"
             :buttonText="buttonText[0]"
           />
-        </span>
-        <span class="pt-35">
+        </div>
+        <div class="mt-20">
           <PricingCard
             :name="name[1]"
             :price="price[1]"
@@ -20,8 +20,8 @@
             :offers="offers[1]"
             :buttonText="buttonText[1]"
           />
-        </span>
-        <span class="pt-40">
+        </div>
+        <span class="mt-20">
           <PricingCard
             :name="name[2]"
             :price="price[2]"
@@ -64,6 +64,8 @@ export default {
         ],
       ],
       buttonText: ['Start for free', 'Add plan'],
+      shekels: '₪',
+      monthly: '\monthly',
     };
   },
   components: {

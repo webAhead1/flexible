@@ -17,3 +17,9 @@
 .cardButton {
   @apply flex justify-center pt-2 text-black text-[30px];
 }
+.btnPosition {
+  @apply flex justify-center pt-32 mb-4;
+}
+.justify-center {
+  justify-content: space-around;
+}
