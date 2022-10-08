@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center py-8">
+  <div class="flex justify-center py-8 font-myFont">
     <div class="bg-[#2B4F6087] w-[1177px] h-[768px] rounded-[20px]">
       <div class="text-white text-[37px] pl-[130px] pt-7">Pricing</div>
       <div class="flex justify-center">
