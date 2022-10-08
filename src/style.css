@@ -35,9 +35,17 @@ header {
 }
 
 .build-website-card {
-    @apply bg-[#2B4F6087] bg-[url('../public/icons/questionnaire.png')] bg-contain bg-no-repeat bg-center h-[40rem] w-full rounded-[20px] mt-[2rem] shadow-md shadow-black
+    @apply bg-[#2B4F6087] bg-no-repeat bg-center h-[40rem] w-full rounded-[20px] mt-[2rem] shadow-md shadow-black p-[2rem]
 }
 
 .template-card {
-    @apply bg-[#2B4F6087] bg-[url('../public/icons/template.png')] bg-contain bg-no-repeat  bg-center h-[40rem] w-full rounded-[20px] mt-[2rem] shadow-md shadow-black
+    @apply bg-[#2B4F6087] bg-contain bg-no-repeat  bg-center h-[40rem] w-full rounded-[20px] mt-[2rem] shadow-md shadow-black p-[2rem]
+}
+
+.questionnaire-img {
+    @apply relative top-[8rem] w-[20rem] left-[3rem]
+}
+
+.template-img {
+    @apply relative top-[8rem] w-[20rem] left-[3rem]
 }
