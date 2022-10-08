@@ -12,13 +12,7 @@
           <div class="flex justify-center">
             <div class="text-[30px] pt-16 font-myFont">
               <div class="txt">Email</div>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                placeholder="Email"
-              />
+              <input type="email" id="email" name="email" required />
               <div class="txt">Password</div>
               <input type="password" id="password" name="password" required />
               <div class="btnBg pt-14">

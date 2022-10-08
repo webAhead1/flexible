@@ -13,16 +13,16 @@
   @apply h-16 z-10;
 }
 .signInUpNavbar {
-  @apply w-full font-myFont bg-[#2B4F60] rounded-b-2xl h-24 drop-shadow-xl;
+  @apply w-full font-myFont bg-[#2B4F60] rounded-b-2xl h-24 drop-shadow-2xl;
 }
 input {
-  @apply w-[459px] h-[70px] mb-5 drop-shadow-2xl opacity-80 placeholder:pl-2 placeholder:text-left placeholder:text-[30px] placeholder:font-myFont rounded-[14px];
+  @apply h-[70px] mb-5 drop-shadow-2xl opacity-80 rounded-[14px] block px-3 py-2 w-full bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none;
 }
 .btnBg {
   @apply flex justify-center;
 }
 .btn {
-  @apply flex justify-center text-[#0C0C0C] shadow-inner bg-[#496C7C] w-[237px] h-[79px] text-[34px] rounded-[18px]  hover:bg-white active:drop-shadow-xl active:bg-gray-100;
+  @apply flex justify-center text-[#0C0C0C] shadow-inner bg-[#496C7C] w-[237px] h-[79px] text-[34px] rounded-[18px] hover:opacity-80  hover:bg-white active:drop-shadow-2xl active:bg-gray-100;
 }
 .txt {
   @apply pl-2 text-[#0C0C0C] pb-1;

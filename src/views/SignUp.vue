@@ -12,29 +12,11 @@
           <div class="flex justify-center">
             <div class="text-[30px] pt-6 font-myFont">
               <div class="txt">First Name</div>
-              <input
-                type="text"
-                id="fName"
-                name="fName"
-                required
-                placeholder="First Name"
-              />
+              <input type="text" id="fName" name="fName" required />
               <div class="txt">Last Name</div>
-              <input
-                type="text"
-                id="lName"
-                name="lName"
-                required
-                placeholder="Last Name"
-              />
+              <input type="text" id="lName" name="lName" required />
               <div class="txt">Email</div>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                placeholder="Email"
-              />
+              <input type="email" id="email" name="email" required />
               <div class="txt">Password</div>
               <input type="password" id="password" name="password" required />
               <div class="txt">Confirm Password</div>
