@@ -11,6 +11,6 @@
 .cardSentence {
   @apply flex justify-center pt-2 text-black text-[20px];
 }
-.cardBotton {
+.cardButton {
   @apply flex justify-center pt-2 text-black text-[30px];
 }

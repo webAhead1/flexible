@@ -9,7 +9,16 @@
             :price="price[0]"
             :sentence="sentence[0]"
             :offers="offers[0]"
-            :bottonText="bottonText[0]"
+            :buttonText="buttonText[0]"
+          />
+        </span>
+        <span class="pt-50">
+          <PricingCard
+            :name="name[1]"
+            :price="price[1]"
+            :sentence="sentence[1]"
+            :offers="offers[1]"
+            :buttonText="buttonText[1]"
           />
         </span>
       </div>
@@ -25,7 +34,7 @@ export default {
       name: ['Starter', 'Basic', 'Premium'],
       price: ['Free', '57', '69'],
       sentence: [
-        'For those getting sterted',
+        'For those getting started',
         'For personal use',
         'For growing your brand',
       ],
@@ -45,7 +54,7 @@ export default {
           'Customer care - 24/7',
         ],
       ],
-      bottonText: ['Start for free', 'Add plan'],
+      buttonText: ['Start for free', 'Add plan'],
     };
   },
   components: {

@@ -6,7 +6,7 @@
       <div class="cardSentence">{{ sentence }}</div>
       <div class="flex justify-center pt-[290px]">
         <div class="bg-[#2B4F6087] rounded-[70px] w-[238px] h-[71px]">
-          <div class="cardBotton">{{ bottonText }}</div>
+          <div class="cardButton">{{ buttonText }}</div>
         </div>
       </div>
     </div>
@@ -14,6 +14,6 @@
 </template>
 <script>
 export default {
-  props: ['name', 'price', 'sentence', 'offers', 'bottonText'],
+  props: ['name', 'price', 'sentence', 'offers', 'buttonText'],
 };
 </script>
