@@ -19,15 +19,15 @@ header {
 }
 
 .name-input {
-    @apply w-full h-[3rem] border-2 rounded-[18px] pl-[1rem] text-[20px] 
+    @apply w-full h-[3rem] border-2 rounded-[18px] pl-[1rem] text-[20px] shadow shadow-black
 }
 
 .email-input {
-    @apply w-full h-[3rem] border-2 rounded-[18px] pl-[1rem] text-[20px]
+    @apply w-full h-[3rem] border-2 rounded-[18px] pl-[1rem] text-[20px] shadow shadow-black
 }
 
 .message-input {
-    @apply w-full h-[15rem] max-h-[20rem] border-2 rounded-[18px] pl-[1rem] text-[20px] break-normal p-[10px]
+    @apply w-full h-[15rem] max-h-[20rem] border-2 rounded-[18px] pl-[1rem] text-[20px] break-normal p-[10px] shadow shadow-black
 }
 
 .submit-button {
