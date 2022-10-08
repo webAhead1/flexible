@@ -11,25 +11,37 @@ body {
 }
 
 header {
-    @apply text-[30px] flex justify-center relative top-[5rem] text-white
+    @apply text-[40px] flex justify-center relative top-[5rem] text-white
 }
 
 .contact-card {
-    @apply border-2 border-black h-[40rem] w-[25rem] rounded-[20px] relative top-[8rem] p-[2rem] grid
+    @apply h-[42rem] w-[35rem] rounded-[20px] relative top-[8rem] p-[2rem] grid bg-[#ffffff8c] shadow-md shadow-black
 }
 
 .name-input {
-    @apply w-full h-[3rem] border-2 rounded-[18px] 
+    @apply w-full h-[3rem] border-2 rounded-[18px] pl-[1rem] text-[20px] 
 }
 
 .email-input {
-    @apply w-full h-[3rem] border-2 rounded-[18px] 
+    @apply w-full h-[3rem] border-2 rounded-[18px] pl-[1rem] text-[20px]
 }
 
 .message-input {
-    @apply w-full h-[9rem] border-2 rounded-[18px]
+    @apply w-full h-[15rem] max-h-[20rem] border-2 rounded-[18px] pl-[1rem] text-[20px] break-normal p-[10px]
 }
 
 .submit-button {
-    @apply bg-[#2b4f6086] w-[8rem] h-[2rem] border-2 border-[#2b4f6086] rounded-[70px] justify-self-center
+    @apply bg-[#2b4f6086] w-[10rem] h-[2.5rem] border-2 border-[#2b4f6086] rounded-[70px] justify-self-center text-[22px]
+}
+
+.contact-name-label {
+    @apply text-[25px]
+}
+
+.contact-email-label {
+    @apply text-[25px]
+}
+
+.contact-message-label {
+    @apply text-[25px]
 }
