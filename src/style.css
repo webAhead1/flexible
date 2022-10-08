@@ -10,10 +10,10 @@ html {
   @apply text-black text-5xl;
 }
 body {
-  @apply mt-[6rem] px-1 bg-gradient-to-bl from-[#ffffff]  to-[#5590AC];
+  @apply mt-[6rem] bg-gradient-to-bl from-[#ffffff]  to-[#5590AC];
 }
 .menu {
-  @apply w-full mb-[3rem] top-0 text-center text-base md:text-xl lg:text-2xl font-myFont fixed bg-[#2B4F60] rounded-b-2xl list-none h-24 drop-shadow-xl flex;
+  @apply w-full mb-[3rem] top-0 text-center text-base md:text-xl lg:text-2xl font-myFont fixed bg-[#2B4F60] rounded-b-3xl h-24 drop-shadow-xl flex;
 }
 .menu-item {
   @apply flex;
