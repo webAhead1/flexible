@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-.example{
-    @apply text-red-700
+.cardName {
+  @apply flex justify-center pt-5 text-black text-[30px];
+}
+.cardPrice {
+  @apply flex justify-center pt-5  text-black text-[47px] font-bold;
+}
+.cardSentence {
+  @apply flex justify-center pt-2 text-black text-[20px];
+}
+.cardBotton {
+  @apply flex justify-center pt-2 text-black text-[30px];
 }

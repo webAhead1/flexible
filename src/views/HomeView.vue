@@ -1,6 +1,12 @@
-<script setup>
-</script>
-
 <template>
-  <h1 class="example">For Example</h1>
+  <Pricing />
 </template>
+
+<script>
+import Pricing from '../components/Pricing.vue';
+export default {
+  components: {
+    Pricing,
+  },
+};
+</script>
