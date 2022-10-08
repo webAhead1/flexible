@@ -26,7 +26,7 @@
       <br />
       <br />
       <br />
-      <div id="template">Hello Templates</div>
+      <div>Hello Questionnaire/Templates</div>
       <br />
       <br />
       <br />

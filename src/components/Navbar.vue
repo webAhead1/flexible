@@ -35,7 +35,7 @@ export default {
       <router-link :to="{ path: '/', hash: '#about' }" class="menu-link">
         <span>About Us</span>
       </router-link>
-      <router-link :to="{ path: '/', hash: '#template' }" class="menu-link">
+      <router-link to="/templates" class="menu-link">
         <span>Templates</span>
       </router-link>
       <router-link to="/questionnaire" class="menu-link">

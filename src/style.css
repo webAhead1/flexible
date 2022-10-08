@@ -10,19 +10,16 @@ html {
   @apply text-black text-5xl;
 }
 body {
-  @apply mt-[6rem] px-1;
+  @apply mt-[6rem] px-1 bg-gradient-to-bl from-[#ffffff]  to-[#5590AC];
 }
 .menu {
-  @apply w-full mb-[3rem] top-0 text-center text-base md:text-xl lg:text-2xl font-myFont fixed bg-gradient-to-r from-[#2B4F60] via-[#0781BA] to-[#0781BA] rounded-b-2xl list-none h-24 drop-shadow-xl flex;
+  @apply w-full mb-[3rem] top-0 text-center text-base md:text-xl lg:text-2xl font-myFont fixed bg-[#2B4F60] rounded-b-2xl list-none h-24 drop-shadow-xl flex;
 }
 .menu-item {
   @apply flex;
 }
 .menu-link {
-  @apply py-7 px-4 items-center text-white hover:bg-white hover:text-black;
-}
-.menu-link:first-child {
-  @apply ml-3;
+  @apply py-7 px-4 ml-14 items-center text-white hover:bg-white hover:text-black active:drop-shadow-2xl active:bg-gray-100;
 }
 .logo {
   @apply h-16 top-0 z-10;
