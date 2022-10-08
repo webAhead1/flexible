@@ -35,13 +35,13 @@ header {
 }
 
 .contact-name-label {
-    @apply text-[25px]
+    @apply text-[25px] relative left-[10px]
 }
 
 .contact-email-label {
-    @apply text-[25px]
+    @apply text-[25px] relative left-[10px]
 }
 
 .contact-message-label {
-    @apply text-[25px]
+    @apply text-[25px] relative left-[10px]
 }
