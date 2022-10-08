@@ -35,9 +35,9 @@ header {
 }
 
 .build-website-card {
-    @apply bg-[url('../public/icons/building-icon.png')] bg-cover h-[40rem] w-full rounded-[20px] mt-[2rem] shadow-md shadow-black
+    @apply bg-[#2B4F6087] bg-[url('../public/icons/questionnaire.png')] bg-contain bg-no-repeat bg-center h-[40rem] w-full rounded-[20px] mt-[2rem] shadow-md shadow-black
 }
 
 .template-card {
-    @apply bg-[url('../public/icons/templates.png')] bg-contain bg-center h-[40rem] w-full rounded-[20px] mt-[2rem] shadow-md shadow-black
+    @apply bg-[#2B4F6087] bg-[url('../public/icons/template.png')] bg-contain bg-no-repeat  bg-center h-[40rem] w-full rounded-[20px] mt-[2rem] shadow-md shadow-black
 }
