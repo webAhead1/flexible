@@ -11,11 +11,11 @@ body {
 }
 
 header {
-    @apply text-[40px] flex justify-center relative top-[5rem] text-white
+    @apply text-[40px] flex justify-center relative top-[3rem] text-white
 }
 
 .contact-card {
-    @apply h-[42rem] w-[35rem] rounded-[20px] relative top-[8rem] p-[2rem] grid bg-[#ffffff8c] shadow-md shadow-black
+    @apply h-[44rem] w-[35rem] rounded-[20px] relative top-[6rem] p-[2rem] pl-[4rem] pr-[4rem] grid bg-[#ffffff8c] shadow-md shadow-black
 }
 
 .name-input {
@@ -31,7 +31,7 @@ header {
 }
 
 .submit-button {
-    @apply bg-[#2b4f6086] w-[10rem] h-[2.5rem] border-2 border-[#2b4f6086] rounded-[70px] justify-self-center text-[22px]
+    @apply bg-[#2b4f6086] w-[11rem] h-[3rem] border-2 border-[#2b4f6086] rounded-[70px] justify-self-center text-[23px]
 }
 
 .contact-name-label {
