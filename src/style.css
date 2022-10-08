@@ -11,19 +11,19 @@ header {
 }
 
 .questionnaire-or-templates-container {
-    @apply flex flex-row justify-evenly
+    @apply flex flex-row space-x-[5rem] justify-center
 }
 
 .build-website-option {
-    @apply relative top-[8rem] w-[25rem] flex items-center flex-col
+    @apply relative top-[6rem] w-[30rem] flex items-center flex-col
 }
 
 .or-container {
-    @apply relative top-[25rem] h-[70px] w-[70px] text-3xl bg-slate-200 flex items-center justify-center rounded-[15px]
+    @apply relative top-[28rem] h-[70px] w-[70px] text-3xl bg-slate-200 flex items-center justify-center rounded-[15px]
 }
 
 .template-option {
-    @apply relative top-[8rem] w-[25rem] flex items-center flex-col
+    @apply relative top-[6rem] w-[30rem] flex items-center flex-col
 }
 
 .build-website-option-title {
@@ -35,9 +35,9 @@ header {
 }
 
 .build-website-card {
-    @apply bg-[#2B4F6087] h-[35rem] w-full rounded-[20px] mt-[2rem] shadow-md shadow-black
+    @apply bg-[#2B4F6087] h-[40rem] w-full rounded-[20px] mt-[2rem] shadow-md shadow-black
 }
 
 .template-card {
-    @apply bg-[#2B4F6087] h-[35rem] w-full rounded-[20px] mt-[2rem] shadow-md shadow-black
+    @apply bg-[#2B4F6087] h-[40rem] w-full rounded-[20px] mt-[2rem] shadow-md shadow-black
 }
