@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-.example{
-    @apply text-red-700
+.nameQ {
+  @apply font-poppins mr-24 ml-24 text-center md:text-center text-4xl mt-[120px] leading-loose not-italic font-semibold;
+}
+.text {
+  @apply shadow-[0px_4px_4px_0px_#00000080]  py-2 px-3 text-text leading-tight focus:outline-none ml-28 w-[347.85px] h-[55.07px] rounded-[18px] text-3xl;
+}
+.background {
+  @apply flex-auto ml-[260px] rounded-[10px] h-[766.46px] w-[721.38px] z-0 bg-backgroundColor;
+}
+.domain {
+  @apply flex flex-row;
+}
+.buttons {
+  @apply flex flex-row justify-between mr-[70px] ml-[70px] mt-[200px];
+}
+.backButton {
+  @apply shadow-boxShadow bg-back text-white  rounded-[18px] h-[70px] w-[180px] text-3xl leading-loose font-normal text-center;
+}
+.nextButton {
+  @apply shadow-boxShadow bg-red text-white rounded-[18px] h-[70px] w-[180px] text-3xl leading-loose font-normal text-center;
+}
+.com {
+  @apply w-[262px] h-[72px] font-poppins text-4xl leading-loose font-normal;
 }
