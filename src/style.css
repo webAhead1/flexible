@@ -18,61 +18,20 @@
 .cardSentence {
   @apply flex justify-center pt-2 text-[20px];
 }
+.offers {
+  @apply flex flex-col items-center pt-8;
+}
 .cardOffers {
-  @apply flex justify-center pt-3 text-[20px];
+  @apply flex flex-col items-center  text-[20px];
+}
+.line {
+  @apply my-2 w-[284px] h-[2px] border-[1px] bg-black border-black;
 }
 .cardButton {
-  @apply flex justify-center pt-2 text-[30px] hover:bg-white hover:rounded-[18px] hover:h-[71px] active:bg-gray-100;
+  @apply flex justify-center h-[71px] items-center text-[30px] hover:bg-white hover:rounded-[18px] hover:h-[71px] active:bg-gray-100;
 }
 /* hover:h-16 active:hover:h-[71px] active:hover:pb-1  active:drop-shadow-2xl */
 
 .btnPosition {
   @apply absolute bottom-5 left-[47px];
-}
-.justify-center {
-  justify-content: space-evenly;
-}
-.pricing-card-tooltip_wrapper {
-  color: inherit;
-}
-.pricing-card-tooltip_wrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 14px;
-  height: 14px;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  opacity: 0.65;
-  -webkit-transform: translate(0, 4px);
-  -ms-transform: translate(0, 4px);
-  transform: translate(0, 4px);
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
-  cursor: help;
-}
-.pricing-card-tooltip_icon {
-  width: 12px;
-  height: 12px;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-img {
-  border: 0;
-  vertical-align: middle;
-  display: inline-block;
-  max-width: 100%;
 }

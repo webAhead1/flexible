@@ -14,12 +14,14 @@
 
         <div class="cardSentence">{{ sentence }}</div>
 
-        <div class="pt-10">
+        <div class="offers">
           <div class="cardOffers" v-for="offer in offers">
-            <!-- <hr class="w-[284px] h-[2px] bg-black border-0" /> -->
+            <hr class="line" />
             {{ offer }}
           </div>
+          <hr class="line" />
         </div>
+
         <!-- Here we should remember witch of the offers the user choose,
            becouse after signing in/up we should give him this offer -->
         <router-link to="/sign-in">
