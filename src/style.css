@@ -3,38 +3,41 @@
 @tailwind components;
 @tailwind utilities;
 
-.body {
-  @apply bg-gradient-to-br from-white to-[#2B4F60];
-}
 .logoWithFlexible1 {
-  @apply flex justify-center items-center text-white py-3 truncate text-[34px];
+  @apply flex justify-center items-center text-black py-3 truncate text-[34px];
 }
 .logo {
   @apply h-16 z-10;
 }
 .signInUpNavbar {
-  @apply w-full font-myFont bg-[#2B4F60] rounded-b-2xl h-24 drop-shadow-2xl;
+  @apply w-full font-myFont bg-[#D7CEC7F7] h-24 shadow-[0px_4px_4px_0px_#00000080];
 }
 input {
-  @apply h-[70px] mb-5 drop-shadow-2xl opacity-80 rounded-[14px] block px-3 py-2 w-[459px] bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none;
+  @apply w-[459px] h-[70px] mb-5 rounded-[18px] px-3 py-2 bg-[#FFFFFF99] focus:bg-white focus:outline-none shadow-[0px_4px_4px_0px_#00000080];
 }
 .btnBg {
   @apply flex justify-center;
 }
 .btn {
-  @apply flex justify-center text-[#0C0C0C] shadow-inner bg-[#496C7C] w-[237px] h-[79px] text-[34px] rounded-[18px] hover:opacity-80  hover:bg-white active:drop-shadow-2xl active:bg-gray-100;
+  @apply flex justify-center text-white bg-[#D11F1F] w-[237px] h-[79px] text-[34px] rounded-[18px] hover:opacity-80 hover:text-black  hover:bg-[#FFFFFF99] active:drop-shadow-xl active:bg-gray-100 shadow-[0px_4px_4px_0px_#00000080];
+}
+.txt-and-button {
+  @apply text-[30px] font-myFont;
 }
 .txt {
   @apply pl-2 text-[#0C0C0C] pb-1;
 }
+.signBg1 {
+  @apply bg-[#D7CEC7] w-[600px] rounded-[20px] border border-black;
+}
 .signBg {
-  @apply bg-[#2B4F6087] rounded-t-[20px] h-[70px];
+  @apply bg-[#F1E8E2C2] rounded-t-[20px] h-[70px];
 }
 .signText {
-  @apply flex justify-center text-white font-myFont pt-3 text-[34px];
+  @apply flex justify-center text-black font-myFont pt-3 text-[34px];
 }
 .accountQuestion {
-  @apply text-center text-[20px] text-white;
+  @apply text-center text-[20px] text-black;
 }
 .hereStyle {
   @apply text-[#013565F0] hover:underline;

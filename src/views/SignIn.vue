@@ -3,14 +3,12 @@
     <SignInUpNavbar />
   </header>
   <body>
-    <div class="flex justify-center py-8 drop-shadow-xl">
-      <div
-        class="bg-[#2B4F6087] w-[600px] h-[690px] rounded-[20px] drop-shadow-xl"
-      >
+    <div class="flex justify-center py-[153px]">
+      <div class="signBg1 h-[690px]">
         <div class="signBg">
           <div class="signText">Sign In</div>
           <div class="flex justify-center">
-            <div class="text-[30px] pt-16 font-myFont">
+            <div class="txt-and-button pt-16">
               <div class="txt">Email</div>
               <input type="email" id="email" name="email" required />
               <div class="txt">Password</div>
