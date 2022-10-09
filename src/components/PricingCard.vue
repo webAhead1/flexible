@@ -18,23 +18,6 @@
           <div class="cardOffers" v-for="offer in offers">
             <!-- <hr class="w-[284px] h-[2px] bg-black border-0" /> -->
             {{ offer }}
-            <!-- <li class="pricing-card-list_item">
-              <div class="pricing-card_list-tooltip_wrapper">
-                webflow.io domain
-              </div>
-              <div
-                tabindex="0"
-                data-tippy-content="Publish to Flexible. Upgrade to publish to a custom domain."
-                class="pricing-card-tooltip_wrapper"
-              >
-                <img
-                  loading="lazy"
-                  src="https://assets-global.website-files.com/6070a1eff3cb5fbec1f62848/620d3dafee977e3d64ea12dd_icon-info-line.svg"
-                  alt="More info"
-                  class="pricing-card-tooltip_icon"
-                />
-              </div>
-            </li> -->
           </div>
         </div>
         <!-- Here we should remember witch of the offers the user choose,
