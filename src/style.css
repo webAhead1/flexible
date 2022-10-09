@@ -3,27 +3,76 @@
 @tailwind components;
 @tailwind utilities;
 
+.pricingTxt {
+  @apply text-white text-[37px] flex justify-center items-end  h-[90px];
+}
 .cardName {
-  @apply flex justify-center pt-5 text-black text-[30px];
+  @apply flex justify-center pt-5 text-[30px];
 }
 .cardPrice {
-  @apply flex justify-center pt-5 text-black font-bold text-[47px];
+  @apply flex pt-5 font-bold text-[47px];
 }
 .priceDetails {
-  @apply text-[20px] font-normal align-text-bottom;
+  @apply flex items-center pt-[12px] text-[20px] font-normal;
 }
 .cardSentence {
-  @apply flex justify-center pt-2 text-black text-[20px];
+  @apply flex justify-center pt-2 text-[20px];
 }
 .cardOffers {
-  @apply flex justify-center pt-3 text-black text-[20px];
+  @apply flex justify-center pt-3 text-[20px];
 }
 .cardButton {
-  @apply flex justify-center pt-2 text-black text-[30px];
+  @apply flex justify-center pt-2 text-[30px] hover:bg-white hover:rounded-[18px] hover:h-[71px] active:bg-gray-100;
 }
+/* hover:h-16 active:hover:h-[71px] active:hover:pb-1  active:drop-shadow-2xl */
+
 .btnPosition {
-  @apply flex justify-center pt-32 mb-4;
+  @apply absolute bottom-5 left-[47px];
 }
 .justify-center {
-  justify-content: space-around;
+  justify-content: space-evenly;
+}
+.pricing-card-tooltip_wrapper {
+  color: inherit;
+}
+.pricing-card-tooltip_wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 14px;
+  height: 14px;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  opacity: 0.65;
+  -webkit-transform: translate(0, 4px);
+  -ms-transform: translate(0, 4px);
+  transform: translate(0, 4px);
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  cursor: help;
+}
+.pricing-card-tooltip_icon {
+  width: 12px;
+  height: 12px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+  display: inline-block;
+  max-width: 100%;
 }

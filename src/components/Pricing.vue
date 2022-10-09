@@ -1,9 +1,9 @@
 <template>
   <div class="flex justify-center py-8 font-myFont">
     <div class="bg-[#2B4F6087] w-[1177px] h-[768px] rounded-[20px]">
-      <div class="text-white text-[37px] pl-[130px] pt-7">Pricing</div>
+      <div class="pricingTxt">Pricing</div>
       <div class="flex justify-center">
-        <div class="mt-20">
+        <div class="mt-14">
           <PricingCard
             :name="name[0]"
             :price="price[0]"
@@ -12,7 +12,7 @@
             :buttonText="buttonText[0]"
           />
         </div>
-        <div class="mt-20">
+        <div class="mt-14">
           <PricingCard
             :name="name[1]"
             :shekels="shekels"
@@ -23,7 +23,7 @@
             :buttonText="buttonText[1]"
           />
         </div>
-        <span class="mt-20">
+        <div class="mt-14">
           <PricingCard
             :name="name[2]"
             :shekels="shekels"
@@ -33,7 +33,7 @@
             :offers="offers[2]"
             :buttonText="buttonText[1]"
           />
-        </span>
+        </div>
       </div>
     </div>
   </div>
