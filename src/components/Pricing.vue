@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-center py-24 font-myFont">
-    <div class="bg-[#2B4F6087] w-[1177px] h-[768px] rounded-[20px]">
+    <div class="bg-[#013565] w-full h-[885px]">
       <div class="pricingTxt">Pricing</div>
       <div class="flex justify-center space-x-11">
         <div class="mt-14">
@@ -9,7 +9,6 @@
             :price="price[0]"
             :sentence="sentence[0]"
             :offers="offers[0]"
-            :buttonText="buttonText[0]"
           />
         </div>
         <div class="mt-14">
@@ -20,7 +19,6 @@
             :monthly="monthly"
             :sentence="sentence[1]"
             :offers="offers[1]"
-            :buttonText="buttonText[1]"
           />
         </div>
         <div class="mt-14">
@@ -31,7 +29,6 @@
             :monthly="monthly"
             :sentence="sentence[2]"
             :offers="offers[2]"
-            :buttonText="buttonText[1]"
           />
         </div>
       </div>
@@ -67,7 +64,6 @@ export default {
           'Customer care - 24/7',
         ],
       ],
-      buttonText: ['Start for free', 'Add plan'],
       shekels: '₪',
       monthly: 'monthly',
     };
