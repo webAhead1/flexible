@@ -16,13 +16,8 @@ export default {};
           You’re a few questions away from building the perfect website!
         </h2>
       </div>
-      <div class="flex justify-center mt-[157px]">
-        <button
-          type="button"
-          class="shadow-[inset-0px_4px_4px_rgba(0, 0, 0, 0.25)] rounded-[18px] w-[197px] h-[79px] bg-[#4F7A8E] text-center not-italic text-black font-poppins text-[33px] font-normal leading-[50px]"
-        >
-          Start
-        </button>
+      <div class="flex justify-center mt-[157px] text-[33px]">
+        <p>Fourth question</p>
       </div>
     </div>
   </div>
