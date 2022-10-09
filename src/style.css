@@ -16,7 +16,7 @@
   @apply w-full font-myFont bg-[#2B4F60] rounded-b-2xl h-24 drop-shadow-2xl;
 }
 input {
-  @apply h-[70px] mb-5 drop-shadow-2xl opacity-80 rounded-[14px] block px-3 py-2 w-full bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none;
+  @apply h-[70px] mb-5 drop-shadow-2xl opacity-80 rounded-[14px] block px-3 py-2 w-[459px] bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none;
 }
 .btnBg {
   @apply flex justify-center;
