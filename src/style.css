@@ -6,24 +6,26 @@
 html {
   @apply scroll-pt-[100px];
 }
-.example {
-  @apply text-black text-5xl;
-}
 body {
-  @apply mt-[6rem] bg-gradient-to-bl from-[#ffffff]  to-[#5590AC];
+  @apply mt-[7rem] bg-[#D7CEC7];
 }
 .menu {
-  @apply w-full mb-[3rem] top-0 text-center text-base md:text-xl lg:text-2xl font-myFont fixed bg-[#2B4F60] rounded-b-3xl h-24 drop-shadow-xl flex;
+  @apply w-full mb-[3rem] bg-[#D7CEC7] top-0 text-center text-[26px] 
+  font-myFont fixed h-106 flex shadow-[0px_4px_4px_0px_#00000080];
 }
 .menu-item {
-  @apply flex;
+  @apply flex focus:border focus:border-b-2;
 }
 .menu-link {
-  @apply py-7 px-4 ml-14 items-center text-white hover:bg-white hover:text-black active:drop-shadow-2xl active:bg-gray-100;
+  @apply py-7 px-3 ml-14 items-center text-black active:shadow-[0px_4px_4px_0px_#00000080];
+}
+/* this is for example */
+.menu-txt {
+  @apply hover:bg-[#D7CEC7];
 }
 .logo {
   @apply h-16 top-0 z-10;
 }
 .logoWithFlexible {
-  @apply flex items-center text-white py-3 truncate text-4xl;
+  @apply flex items-center text-black py-[0.80rem] truncate text-[34px];
 }
