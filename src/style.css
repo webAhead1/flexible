@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply bg-[#D7CEC7F7];
+}
 .logoWithFlexible1 {
   @apply flex justify-center items-center text-black py-3 truncate text-[34px];
 }
@@ -10,7 +13,7 @@
   @apply h-16 z-10;
 }
 .signInUpNavbar {
-  @apply w-full font-myFont bg-[#D7CEC7F7] h-24 shadow-[0px_4px_4px_0px_#00000080];
+  @apply w-full font-myFont bg-[#D7CEC7F7] h-24 z-10 shadow-[0px_4px_4px_0px_#00000080];
 }
 input {
   @apply w-[459px] h-[70px] mb-5 rounded-[18px] px-3 py-2 bg-[#FFFFFF99] focus:bg-white focus:outline-none shadow-[0px_4px_4px_0px_#00000080];
