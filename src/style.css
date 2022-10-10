@@ -19,8 +19,8 @@ body {
 .menu-link {
   @apply py-7 px-3 ml-14 items-center text-black active:shadow-[0px_4px_4px_0px_#00000080];
 }
-/* this is for example */
 .menu-txt {
+  /* this is for example */
   @apply hover:bg-[#D7CEC7];
 }
 .logo {
