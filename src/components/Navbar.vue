@@ -9,7 +9,7 @@
 
     <div class="menu-item">
       <router-link :to="{ path: '/', hash: '#about' }" class="menu-link">
-        <div class="menu-txt">About Us</div>
+        <span class="menu-txt">About Us</span>
       </router-link>
       <router-link to="/templates" class="menu-link">
         <span class="menu-txt">Templates</span>
