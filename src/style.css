@@ -2,6 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-.example{
-    @apply text-red-700
+html {
+  @apply bg-gradient-to-r from-indigo-500;
+}
+
+.get-started-button {
+  @apply relative top-[32rem] left-[540px] border-2 h-[2.5rem] w-[12rem] border-sky-700 rounded-full text-2xl font-medium bg-orange-100;
+}
+
+.intro-text {
+  @apply absolute top-[21rem] left-[450px] text-3xl w-[24rem] text-center font-medium;
+}
+
+.prev {
+  @apply absolute left-0;
+}
+
+.next {
+  @apply absolute right-0;
+}
+
+.slider-image {
+  @apply rounded-2xl h-[600px] w-[800px] shadow-md;
+}
+
+.slider-container {
+  @apply absolute left-[60rem] top-[8rem] rounded-2xl border-2 border-slate-200 h-[700px] w-[900px] grid place-items-center bg-blue-400 shadow-lg;
+}
+
+.next-arrow {
+  @apply h-[2rem];
+}
+
+.prev-arrow {
+  @apply h-[2rem];
 }
