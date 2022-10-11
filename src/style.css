@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 html {
-    @apply bg-gradient-to-r from-teal-700 w-full h-full bg-gradient-to-br from-neutral-400 via-sky-700 to-blue-900
+    @apply bg-[#D7CEC7] w-full h-full
 }
 
 header {
-    @apply text-3xl bg-slate-200 w-[30rem] h-[4rem] m-auto flex items-center justify-center relative top-[3rem] rounded-[15px]
+    @apply text-3xl text-white bg-[#013565] w-[30rem] h-[4rem] m-auto flex items-center justify-center relative top-[3rem] rounded-[15px]
 }
 
 .questionnaire-or-templates-container {
@@ -19,7 +19,7 @@ header {
 }
 
 .or-container {
-    @apply relative top-[28rem] h-[70px] w-[70px] text-3xl bg-slate-200 flex items-center justify-center rounded-[15px]
+    @apply relative top-[28rem] h-[70px] w-[70px] text-3xl bg-[#B1A198] flex items-center justify-center rounded-[15px]
 }
 
 .template-option {
@@ -27,25 +27,21 @@ header {
 }
 
 .build-website-option-title {
-    @apply bg-[#72A0AECF] h-[3rem] w-3/4 rounded-[15px] flex items-center justify-center text-3xl
+    @apply bg-white h-[3rem] w-3/4 rounded-[15px] flex items-center justify-center text-3xl text-[#013565]
 }
 
 .template-option-title {
-    @apply bg-[#72A0AECF] h-[3rem] w-3/4 rounded-[15px] flex items-center justify-center text-3xl
+    @apply bg-[#013565] h-[3rem] w-3/4 rounded-[15px] flex items-center justify-center text-3xl text-[white]
 }
 
 .build-website-card {
-    @apply bg-[#2B4F6087] bg-no-repeat bg-center h-[40rem] w-full rounded-[20px] mt-[2rem] shadow-md shadow-black p-[2rem]
+    @apply bg-[#908077] bg-no-repeat bg-center h-[40rem] w-full rounded-[20px] mt-[2rem] shadow-md shadow-gray-700 p-[2rem]
 }
 
 .template-card {
-    @apply bg-[#2B4F6087] bg-contain bg-no-repeat  bg-center h-[40rem] w-full rounded-[20px] mt-[2rem] shadow-md shadow-black p-[2rem]
+    @apply bg-[#908077] bg-contain bg-no-repeat  bg-center h-[40rem] w-full rounded-[20px] mt-[2rem] shadow-md shadow-gray-700 p-[2rem]
 }
 
-.questionnaire-img {
-    @apply relative top-[8rem] w-[20rem] left-[3rem]
-}
-
-.template-img {
-    @apply relative top-[8rem] w-[20rem] left-[3rem]
+.polygon {
+    @apply absolute w-0 h-0 left-0 bottom-0 border-t-0 border-t-transparent border-l-[1200px] border-l-[#013565F0] border-b-[800px] border-b-transparent 
 }
