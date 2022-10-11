@@ -7,12 +7,26 @@
       </div>
     </router-link>
 
-    <div class="menu-item">
-      <router-link :to="{ path: '/', hash: '#about' }" class="menu-link">
-        <div class="menu-txt">About Us</div>
+    <div class="menu-item" style="focus:border-bottom: 2px solid black">
+      <router-link
+        :to="{ path: '/', hash: '#about' }"
+        class="menu-link"
+        @click="focused = 'aboutUs'"
+      >
+        <div v-if="focused === 'aboutUs'" class="menu-txt underlined">
+          About us
+        </div>
+        <div v-else class="menu-txt">About Us</div>
       </router-link>
-      <router-link to="/templates" class="menu-link">
-        <span class="menu-txt">Templates</span>
+      <router-link
+        to="/templates"
+        class="menu-link"
+        @click="focused = 'templates'"
+      >
+        <div v-if="focused === 'templates'" class="menu-txt underlined">
+          Templates
+        </div>
+        <div v-else class="menu-txt">Templates</div>
       </router-link>
       <router-link to="/questionnaire" class="menu-link">
         <span class="menu-txt">Questionnaire</span>
@@ -39,6 +53,11 @@ export default {
   },
   destroyed() {
     window.removeEventListener('scroll', this.handleScroll);
+  },
+  data() {
+    return {
+      focused: '',
+    };
   },
   methods: {
     handleScroll() {

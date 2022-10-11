@@ -19,9 +19,14 @@ body {
 .menu-link {
   @apply py-7 px-3 ml-14 items-center text-black active:shadow-[0px_4px_4px_0px_#00000080];
 }
+/* focus:underline decoration-red-500 decoration-4 */
 .menu-txt {
   /* this is for example */
-  @apply hover:bg-[#D7CEC7];
+  @apply hover:bg-white focus-within:border-b-4 focus-within:border-solid focus-within:border-black z-10;
+}
+
+.underlined {
+  @apply border-b-4 border-solid border-black;
 }
 .logo {
   @apply h-16 top-0 z-10;
