@@ -1,72 +1,91 @@
-<script setup>
-    window.onload = function() {
-        const openModalButton = document.querySelector('[data-modal-target]')
-        const closeModalButtons = document.querySelectorAll('[data-close-button]')
-        const modal = document.querySelector('.modal')
-        const overlay = document.getElementById('overlay')
-        let nameInput = document.getElementById('name-input').value
-        let emailInput = document.getElementById('email-input').value
-        let messageInput = document.getElementById('message-input').value
-
-        console.log(nameInput)
-        console.log(emailInput)
-        console.log(messageInput)
-
-        openModalButton.addEventListener('click', openModal)
-
-        closeModalButtons.forEach(button => {
-            button.addEventListener('click',()=> {
-                const modal = button.closest('.modal') 
-                closeModal (modal)
-            })
-        })
-
-        function openModal() {
-            console.log(nameInput)
-            console.log(emailInput)
-            console.log(messageInput)
-            // if (nameInput != '' && emailInput != '' && messageInput != '') {
-                modal.classList.add('active')
-                overlay.classList.add('active')
-            // }
-            // else {
-            //     alert("You must fill out all the boxes")
-            // }
-        }
-
-        function closeModal() {
-            modal.classList.remove('active')
-            overlay.classList.remove('active')
-        }
-    }
-</script>
-
 <template>
-    <header>
-        <p>Contact Us</p>
-    </header>
     <body>
         <div class="contact-card">
-            <div class="contact-name-label">Name</div>
-            <input id="name-input" class="name-input" /> <br />
-            <div class="contact-email-label">Email</div>
-            <input id="email-input" class="email-input" /> <br />
-            <div class="contact-message-label">Tell us how we can help</div>
-            <textarea id="message-input" class="message-input" /> <br />
-            <button data-modal-target="#modal" class="submit-button">Submit</button>
+            <div class="card-title">Contact Us</div>
+            <div class="card-body">
+                <div class="contact-name-label">Name</div>
+                <input v-model="name" class="name-input" :class="nameIsEmpty" /> <br />
+                <div class="contact-email-label">Email</div>
+                <input v-model="email" class="email-input" :class="emailIsEmpty" /> <br />
+                <div class="contact-message-label">Tell us how we can help</div>
+                <textarea v-model="message" class="message-input" :class="messageIsEmpty" /> <br />
+                <button @click="openModal()" data-modal-target="#modal" class="submit-button">Submit</button>
+            </div>
         </div>
         <div class="modal" id="modal">
-            <div class="modal-header">
-                <div class="title">We appreciate your feedback</div>
-                <button data-close-button class="close-button">&times;</button>
-            </div>
             <div class="modal-text">
                 We got your request and we'll get back to you as soon as possible.
             </div>
             <div data-close-button class="ok-button-container">
-                <button class="ok-button">Ok</button>
+                <button @click="closeModal()" class="ok-button">Ok</button>
             </div>
         </div>
         <div id="overlay"></div>
     </body>
 </template>
+
+<script>
+    export default {
+    data() {
+        return {
+            name: '',
+            email: '',
+            message: '',
+            modal: document.querySelector('.modal'),
+            overlay: document.getElementById('overlay'),
+            nameIsEmpty: '',
+            emailIsEmpty: '',
+            messageIsEmpty: ''
+        };
+    },
+    methods: {
+        openModal: function() {
+            console.log({name:this.name,email:this.email,message:this.message})
+            if(!this.name || !this.email || !this.message) {
+                    if (!this.name) {
+                        this.nameIsEmpty = 'errorEmpty'
+                    }
+                    else {
+                        this.nameIsEmpty = 'notEmpty'
+                    }
+                    if (!this.email) {
+                        this.emailIsEmpty = 'errorEmpty'
+                    }
+                    else {
+                        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.email))
+                            this.emailIsEmpty = 'notEmpty'
+                        else
+                            this.emailIsEmpty = 'errorEmpty'
+                    }
+                    if (!this.message) {
+                        this.messageIsEmpty = 'errorEmpty'
+                    }
+                    else {
+                        this.messageIsEmpty = 'notEmpty'
+                    }
+                alert("You must fill out all the boxes")
+            } 
+            else {
+                this.nameIsEmpty = 'notEmpty'
+                this.emailIsEmpty = 'notEmpty'
+                this.messageIsEmpty = 'notEmpty'
+
+                if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.email)) {
+                    modal.classList.add('active')
+                    overlay.classList.add('active')
+                }
+                else {
+                    alert('You need to enter a valid email address')
+                    this.emailIsEmpty = 'errorEmpty'
+                }
+            }
+        },
+        closeModal: function() {
+            modal.classList.remove('active')
+            overlay.classList.remove('active')
+        }
+    }
+};
+</script>
+
+
