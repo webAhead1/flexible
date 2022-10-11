@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,9 +15,6 @@ body {
 }
 .logoWithFlexible1 {
   @apply flex justify-center w-full items-center text-black py-5 text-[34px];
-}
-.logo {
-  @apply h-16 z-10;
 }
 input {
   @apply w-[459px] h-[70px] mb-5 rounded-[18px] px-3 py-2 bg-[#FFFFFF99] focus:bg-white focus:outline-none shadow-[0px_4px_4px_0px_#00000080];
@@ -48,4 +45,25 @@ input {
 }
 .hereStyle {
   @apply text-[#013565F0] hover:underline;
+}
+
+.menu {
+  @apply w-full mb-[3rem] bg-[#D7CEC7] top-0 text-center text-[26px] 
+  font-myFont fixed h-106 flex shadow-[0px_4px_4px_0px_#00000080];
+}
+.menu-item {
+  @apply flex focus:border focus:border-b-2;
+}
+.menu-link {
+  @apply py-7 px-3 ml-14 items-center text-black active:shadow-[0px_4px_4px_0px_#00000080];
+}
+.menu-txt {
+  /* this is for example */
+  @apply hover:bg-[#D7CEC7];
+}
+.logo {
+  @apply h-16 top-0 z-10;
+}
+.logoWithFlexible {
+  @apply flex items-center text-black py-[0.80rem] truncate text-[34px];
 }

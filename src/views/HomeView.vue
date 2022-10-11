@@ -1,6 +1,7 @@
-<script setup>
-</script>
+<script setup></script>
 
 <template>
-  <h1 class="example">For Example</h1>
+  <main>
+    <h1 class="example" id="home">Welcome to the Home page</h1>
+  </main>
 </template>

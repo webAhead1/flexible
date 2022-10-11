@@ -4,13 +4,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        myFont: ['Poppins']
+        myFont: ["Poppins"],
       },
       colors: {
-        navyColor:'#2B4F60'
+        navyColor: "#2B4F60",
       },
       height: {
-        '106': '6.625rem',
+        106: "6.625rem",
       },
     },
   },
