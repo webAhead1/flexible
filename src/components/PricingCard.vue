@@ -24,7 +24,7 @@
         <router-link to="/">
           <!-- Here we should know if the user is already sign-in or not -->
           <div class="btnPosition">
-            <div class="btn">
+            <div class="pricingBtn">
               <div class="cardButton">Select</div>
             </div>
           </div>
@@ -35,6 +35,6 @@
 </template>
 <script>
 export default {
-  props: ['name', 'shekels', 'price', 'monthly', 'sentence', 'offers'],
+  props: ["name", "shekels", "price", "monthly", "sentence", "offers"],
 };
 </script>
