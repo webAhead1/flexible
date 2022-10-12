@@ -12,6 +12,9 @@ module.exports = {
       height: {
         106: '6.625rem',
       },
+      backgroundImage: {
+        bg1: "url('src/assets/img/Sign-In-bg.png')",
+      },
     },
   },
   plugins: [],

@@ -3,14 +3,90 @@
 @tailwind components;
 @tailwind utilities;
 
+.pricingTxt {
+  @apply text-white text-[37px] flex justify-center items-end h-[90px];
+}
+.cardName {
+  @apply flex justify-center pt-5 text-[30px];
+}
+.cardPrice {
+  @apply flex pt-5 font-bold text-[47px];
+}
+.priceDetails {
+  @apply flex items-center pt-[12px] text-[20px] font-normal;
+}
+.cardSentence {
+  @apply flex justify-center pt-2 text-[20px];
+}
+.offers {
+  @apply flex flex-col items-center pt-8;
+}
+.cardOffers {
+  @apply flex flex-col items-center  text-[20px];
+}
+.line {
+  @apply my-2 w-[284px] h-[2px] border-[1px] bg-black border-black;
+}
+.btnPosition {
+  @apply absolute bottom-5 left-[47px];
+}
+.pricingBtn {
+  @apply bg-[#B1A198] shadow-[0px_4px_4px_#00000080] rounded-[18px] w-[238px] h-[79px];
+}
+.btn {
+  @apply flex justify-center text-white bg-[#D11F1F] w-[237px] h-[79px] text-[34px] rounded-[18px] hover:opacity-80 hover:text-black  hover:bg-[#FFFFFF99] active:drop-shadow-xl active:bg-gray-100 shadow-[0px_4px_4px_0px_#00000080];
+}
+.cardButton {
+  @apply flex justify-center h-[74px] items-center text-[30px] hover:bg-white hover:rounded-[18px] active:h-[79px] active:bg-gray-100 active:shadow-[0px_4px_4px_#00000090];
+}
+/* another active design for button */
+/* .cardButton {
+  @apply flex justify-center h-[79px] items-center text-[30px] hover:bg-white hover:rounded-[18px] active:h-[82px] active:bg-gray-200 active:shadow-[0px_4px_4px_#00000090];
+} */
 html {
   @apply scroll-pt-[100px];
 }
 body {
-  @apply mt-[7rem] bg-[#D7CEC7];
+  @apply mt-[7rem] bg-bg1 bg-cover bg-no-repeat;
 }
+.signInUpNavbar {
+  @apply w-full mb-[3rem] bg-[#D7CEC7F7] top-0 text-center 
+  font-myFont fixed h-106 shadow-[0px_4px_4px_0px_#00000080];
+}
+.logoWithFlexible1 {
+  @apply flex justify-center w-full items-center text-black py-5 text-[34px];
+}
+input {
+  @apply w-[459px] h-[70px] mb-5 rounded-[18px] px-3 py-2 bg-[#FFFFFF99] focus:bg-white focus:outline-none shadow-[0px_4px_4px_0px_#00000080];
+}
+.btnBg {
+  @apply flex justify-center;
+}
+
+.txt-and-button {
+  @apply text-[30px] font-myFont;
+}
+.txt {
+  @apply pl-2 text-[#0C0C0C] pb-1;
+}
+.signBg1 {
+  @apply bg-[#D7CEC7] w-[600px] rounded-[20px] border border-black;
+}
+.signBg {
+  @apply bg-[#F1E8E2C2] rounded-t-[20px] h-[70px];
+}
+.signText {
+  @apply flex justify-center text-black font-myFont pt-3 text-[34px];
+}
+.accountQuestion {
+  @apply text-center text-[20px] text-black;
+}
+.hereStyle {
+  @apply text-[#013565F0] hover:underline;
+}
+
 .menu {
-  @apply w-full mb-[3rem] bg-[#D7CEC7] top-0 text-center text-[26px] 
+  @apply w-full z-10 mb-[3rem] bg-[#D7CEC7] top-0 text-center text-[26px] 
   font-myFont fixed h-106 flex shadow-[0px_4px_4px_0px_#00000080];
 }
 .menu-item {
