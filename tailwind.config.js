@@ -14,9 +14,9 @@ module.exports = {
       backgroundColor: "#D7CEC7",
       text: "#989595",
       white: "#FFFFFF",
-      red: "#D11F11",
+      red: "#D11F1F",
       back: "#565454",
-      black: "#000010",
+      black: "#000000",
       navyColor: "#2B4F60",
     },
     height: {
