@@ -1,14 +1,12 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
 import Template from "./components/Template.vue";
-import QuestionnaireNavBar from "./components/QuestionnaireNavBar.vue";
 </script>
 <script>
 export default {
-  components: { Template, QuestionnaireNavBar },
+  components: { Template },
 };
 </script>
 <template>
-  <QuestionnaireNavBar />
   <Template />
 </template>

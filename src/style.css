@@ -7,11 +7,9 @@
   @apply w-full mb-[3rem] bg-[#D7CEC7] top-0 text-center text-[26px] 
   font-poppins fixed h-[6.625rem] flex shadow-[0px_4px_4px_0px_#00000080];
 }
-body {
-  @apply bg-[#112A47];
-}
-.background2 {
-  @apply flex justify-start flex-col items-start m-auto rounded-[12px] mt-[180px] h-[35rem] w-[44rem] bg-[#D7CEC7] shadow-[0px_4px_4px_0px_#00000080];
+
+.background {
+  @apply flex justify-start flex-col items-start m-auto rounded-[12px] mt-[10rem] h-[35rem] w-[44rem] bg-[#D7CEC7] shadow-[0px_4px_4px_0px_#00000080];
 }
 .firstSentence {
   @apply ml-[4rem] mr-[4rem] mt-[120px] text-center not-italic text-black font-poppins text-[33px] font-semibold leading-[50px];
