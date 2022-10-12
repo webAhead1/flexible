@@ -2,12 +2,13 @@
 import { RouterLink, RouterView } from "vue-router";
 import CheckBoxes from "./components/CheckBoxes.vue";
 </script>
-<script>
-export default {
-  components: CheckBoxes,
-};
-</script>
 
 <template>
-  <CheckBoxes />
+  <header>
+    <Navbar />
+  </header>
+  <body>
+    <CheckBoxes />
+    <RouterView />
+  </body>
 </template>

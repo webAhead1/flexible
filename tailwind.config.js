@@ -17,6 +17,10 @@ module.exports = {
       red: "#D11F1F",
       back: "#565454",
       black: "#000000",
+      navyColor: "#2B4F60",
+    },
+    height: {
+      106: "6.625rem",
     },
   },
   plugins: [],
