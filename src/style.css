@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -47,7 +47,7 @@ html {
   @apply scroll-pt-[100px];
 }
 body {
-  @apply mt-[7rem] bg-[#D7CEC7];
+  @apply mt-[7rem] bg-bg1 bg-cover bg-no-repeat;
 }
 .signInUpNavbar {
   @apply w-full mb-[3rem] bg-[#D7CEC7F7] top-0 text-center 
@@ -86,7 +86,7 @@ input {
 }
 
 .menu {
-  @apply w-full mb-[3rem] bg-[#D7CEC7] top-0 text-center text-[26px] 
+  @apply w-full z-10 mb-[3rem] bg-[#D7CEC7] top-0 text-center text-[26px] 
   font-myFont fixed h-106 flex shadow-[0px_4px_4px_0px_#00000080];
 }
 .menu-item {
