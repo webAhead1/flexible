@@ -28,14 +28,35 @@
         </div>
         <div v-else class="menu-txt">Templates</div>
       </router-link>
-      <router-link to="/questionnaire" class="menu-link">
-        <span class="menu-txt">Questionnaire</span>
+      <router-link
+        to="/questionnaire"
+        class="menu-link"
+        @click="focused = 'questionnaire'"
+      >
+        <div v-if="focused === 'questionnaire'" class="menu-txt underlined">
+          Questionnaire
+        </div>
+        <div v-else class="menu-txt">Questionnaire</div>
       </router-link>
-      <router-link :to="{ path: '/', hash: '#pricing' }" class="menu-link">
-        <span class="menu-txt">Pricing</span>
+      <router-link
+        :to="{ path: '/', hash: '#pricing' }"
+        class="menu-link"
+        @click="focused = 'pricing'"
+      >
+        <div v-if="focused === 'pricing'" class="menu-txt underlined">
+          Pricing
+        </div>
+        <div v-else class="menu-txt">Pricing</div>
       </router-link>
-      <router-link :to="{ path: '/', hash: '#contact' }" class="menu-link">
-        <span class="menu-txt">Contact Us</span>
+      <router-link
+        :to="{ path: '/', hash: '#contact' }"
+        class="menu-link"
+        @click="focused = 'contact'"
+      >
+        <div v-if="focused === 'contact'" class="menu-txt underlined">
+          Contact Us
+        </div>
+        <div v-else class="menu-txt">Contact Us</div>
       </router-link>
       <router-link to="/sign-in" id="signin" class="menu-link">
         <span class="menu-txt">Sign in</span>

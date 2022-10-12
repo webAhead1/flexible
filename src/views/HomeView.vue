@@ -3,7 +3,9 @@
     <Navbar />
   </header>
   <main>
-    <Pricing />
+    <div id="pricing">
+      <Pricing />
+    </div>
   </main>
 </template>
 
