@@ -11,13 +11,13 @@ body {
   @apply bg-[#112A47];
 }
 .background2 {
-  @apply fixed rounded-[12px] mt-[225px] ml-[386px] h-[766.46px] w-[721.38px] bg-[#D7CEC7] shadow-[0px_4px_4px_0px_#00000080];
+  @apply flex justify-start flex-col items-start m-auto rounded-[12px] mt-[180px] h-[35rem] w-[44rem] bg-[#D7CEC7] shadow-[0px_4px_4px_0px_#00000080];
 }
 .firstSentence {
-  @apply ml-[82px] mr-[54.97px] mt-[120px] text-center not-italic text-black font-poppins text-[33px] font-semibold leading-[50px];
+  @apply ml-[4rem] mr-[4rem] mt-[120px] text-center not-italic text-black font-poppins text-[33px] font-semibold leading-[50px];
 }
 .startButton {
-  @apply shadow-boxShadow mt-[124.53px] ml-[262px] bg-red text-white rounded-[18px] h-[70px] w-[180px] text-3xl leading-loose font-poppins items-center text-center;
+  @apply shadow-boxShadow m-auto mt-[10rem] bg-red text-white rounded-[1rem] h-[4.5rem] w-[12rem] text-3xl leading-loose font-poppins items-center text-center;
 }
 .logo {
   @apply h-[16px] top-[opx] z-10;
