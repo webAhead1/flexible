@@ -1,17 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
-  @apply bg-gradient-to-r from-indigo-500;
+  @apply bg-gradient-to-r bg-[#D7CEC7];
 }
 
 .get-started-button {
-  @apply relative top-[32rem] left-[540px] border-2 h-[2.5rem] w-[12rem] border-sky-700 rounded-full text-2xl font-medium bg-orange-100;
-}
+  @apply relative top-[30rem] left-[390px] h-[3rem] w-[15rem]  rounded-[12px] text-[#FFFFFF]
+   text-2xl  bg-[#D11F1F] text-[32px] shadow-md;
+} 
 
 .intro-text {
-  @apply absolute top-[21rem] left-[450px] text-3xl w-[24rem] text-center font-medium;
+  @apply absolute top-[21rem] left-[320px] text-3xl w-[24rem] text-center text-[32px];
 }
 
 .prev {
@@ -27,7 +29,7 @@ html {
 }
 
 .slider-container {
-  @apply absolute left-[60rem] top-[8rem] rounded-2xl border-2 border-slate-200 h-[700px] w-[900px] grid place-items-center bg-blue-400 shadow-lg;
+  @apply absolute left-[60rem] top-[8rem] rounded-2xl border-2 h-[700px] w-[900px] grid place-items-center;
 }
 
 .next-arrow {
@@ -37,3 +39,16 @@ html {
 .prev-arrow {
   @apply h-[2rem];
 }
+
+.about-container{
+  @apply top-[60rem] left-[300px] w-[1479px]  font-['Poppins'] text-4xl font-normal absolute
+   text-center text-black not-italic leading-[803px] ;
+}
+.about{
+  @apply h-12 absolute w-[443px] left-[499px] top-[112px]  leading-[56px];
+}
+.about-text{
+  @apply text-3xl absolute w-[794px] left-[306px] top-[250px] leading-[40px];
+  height: 500px;
+}
+

@@ -1,14 +1,16 @@
 <template>
-  <button class="get-started-button">Get Started</button>
-  <p class="intro-text">Build your custom website with Flexible</p>
+  <GetStarted />
   <Slider />
+  <About />
 </template>
 
 <script>
 import Slider from '../components/Slider.vue';
+import About from '../components/About.vue';
+import GetStarted from '../components/GetStarted.vue';
 export default {
   components: {
-    Slider,
+    Slider, About, GetStarted
   },
 };
 </script>
