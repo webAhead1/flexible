@@ -21,7 +21,7 @@
   @apply shadow-boxShadow bg-red text-white rounded-[18px] h-[70px] w-[180px] text-3xl leading-loose font-normal text-center;
 }
 .checkboxes {
-  @apply font-poppins font-normal text-3xl not-italic leading-loose ml-[120px];
+  @apply text-black font-poppins font-normal text-3xl not-italic leading-loose ml-[120px];
 }
 .checkbox1 {
   @apply w-[214px] h-[72px];
