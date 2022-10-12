@@ -2,9 +2,6 @@
 </script>
 
 <template>
-    <header>    
-        <p>Choose what's right for you</p>
-    </header>
     <body>
         <div class="polygon"></div>
         <div class="questionnaire-or-templates-container">

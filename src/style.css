@@ -6,10 +6,6 @@ html {
     @apply bg-[#D7CEC7] w-full h-full
 }
 
-header {
-    @apply text-3xl text-white bg-[#013565] w-[30rem] h-[4rem] m-auto flex items-center justify-center relative top-[3rem] rounded-[15px]
-}
-
 .questionnaire-or-templates-container {
     @apply flex flex-row space-x-[5rem] justify-center
 }
@@ -43,5 +39,5 @@ header {
 }
 
 .polygon {
-    @apply absolute w-0 h-0 left-0 bottom-0 border-t-0 border-t-transparent border-l-[1200px] border-l-[#013565F0] border-b-[800px] border-b-transparent 
+    @apply absolute w-0 h-0 left-0 bottom-0 border-l-[82rem] border-l-[#013565F0] border-b-[59rem] border-b-transparent 
 }
