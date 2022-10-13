@@ -2,9 +2,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* start of questionnaire css */
 .background {
-  @apply flex justify-start flex-col items-start m-auto rounded-[12px] mt-[10rem] h-[43rem] w-[44rem] bg-[#D7CEC7] shadow-[0px_4px_4px_0px_#00000080];
+  @apply flex justify-start flex-col items-start m-auto border-solid border border-[#948C86] rounded-[12px] mt-[10rem] h-[43rem] w-[44rem] bg-[#D7CEC7] shadow-[0px_4px_4px_0px_#00000080];
 }
 .nameQ {
   @apply ml-[5.5rem] mr-[5.5rem] mt-[2.5rem] text-center not-italic text-black font-poppins text-[33px] font-semibold leading-[50px];
@@ -30,8 +30,10 @@
 #restaurant,
 #event,
 #e-commerce {
-  @apply mt-[35px] w-[35px] h-[32px];
+  @apply mt-[35px] border-none w-[35px] h-[32px] shadow-none;
 }
+/* end of questionnaire css */
+
 .pricingTxt {
   @apply text-white text-[37px] flex justify-center items-end h-[90px];
 }
@@ -88,6 +90,7 @@ body {
 input {
   @apply w-[459px] h-[70px] mb-5 rounded-[18px] px-3 py-2 bg-[#FFFFFF99] focus:bg-white focus:outline-none shadow-[0px_4px_4px_0px_#00000080];
 }
+
 .btnBg {
   @apply flex justify-center;
 }
