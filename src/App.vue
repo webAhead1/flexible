@@ -1,14 +1,12 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-import CheckBoxes from "./components/CheckBoxes.vue";
+import RadioButtons from "./components/RadioButtons.vue";
 </script>
-
+<script>
+export default {
+  components: { RadioButtons },
+};
+</script>
 <template>
-  <header>
-    <Navbar />
-  </header>
-  <body>
-    <CadioButtons />
-    <RouterView />
-  </body>
+  <RadioButtons />
 </template>

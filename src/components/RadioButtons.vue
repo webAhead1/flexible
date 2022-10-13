@@ -17,10 +17,9 @@
 
       <input type="radio" value="event" id="event" />
       <label class="radio" for="event"> Event</label>
-
+      <br />
       <input type="radio" value="e-commerce" id="e-commerce" />
       <label class="radio" for="e-commerce"> E-commerce</label>
-      <br />
     </div>
     <div class="buttons">
       <button class="backButton">Back</button>

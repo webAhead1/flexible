@@ -14,10 +14,6 @@ module.exports = {
         text: "#989595",
         white: "#FFFFFF",
         red: "#D11F1F",
-        back: "#565454",
-        black: "#000000",
-        gray: "#f3f4f6",
-        navyColor: "#2B4F60",
       },
       height: {
         106: "6.625rem",
