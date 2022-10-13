@@ -14,7 +14,9 @@ module.exports = {
         text: "#989595",
         white: "#FFFFFF",
         red: "#D11F1F",
+        navyColor: "#2B4F60",
       },
+
       height: {
         106: "6.625rem",
       },
