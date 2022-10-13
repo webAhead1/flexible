@@ -1,9 +1,13 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-import QuestionnaireOrTemplates from "./views/QuestionnaireOrTemplates.vue"
+import Navbar from "./components/Navbar.vue";
 </script>
 
 <template>
-  <QuestionnaireOrTemplates />
-  <RouterView />
+  <header>
+    <Navbar />
+  </header>
+  <body>
+    <RouterView />
+  </body>
 </template>
