@@ -7,14 +7,14 @@
       </div>
     </router-link>
 
-    <div class="menu-item" style="focus:border-bottom: 2px solid black">
+    <div class="menu-item" style="focus:border-bottom: 2px solid black;">
       <router-link
         :to="{ path: '/', hash: '#about' }"
         class="menu-link"
         @click="focused = 'aboutUs'"
       >
         <div v-if="focused === 'aboutUs'" class="menu-txt underlined">
-          About us
+          About Us
         </div>
         <div v-else class="menu-txt">About Us</div>
       </router-link>

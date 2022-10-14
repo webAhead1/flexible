@@ -1,4 +1,3 @@
-<script></script>
 <template>
   <div class="signInUpNavbar">
     <router-link to="/">
