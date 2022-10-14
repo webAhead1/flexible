@@ -9,13 +9,12 @@ module.exports = {
       boxShadow: {
         boxShadow: "inset 0px 4px 4px rgba(0, 0, 0, 0.25)",
       },
-    },
-    colors: {
-      backgroundColor: "#D7CEC7",
-      text: "#989595",
-      white: "#FFFFFF",
-      red: "#D11F1F",
-      back: "#565454",
+      colors: {
+        backgroundColor: "#D7CEC7",
+        text: "#989595",
+        red: "#D11F1F",
+        back: "#565454",
+      },
     },
   },
   plugins: [],
