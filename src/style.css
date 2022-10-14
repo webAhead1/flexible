@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -36,7 +36,47 @@
 }
 
 .polygon {
-    @apply absolute w-0 h-0 left-0 bottom-0 border-l-[82rem] border-l-[#013565F0] border-b-[59rem] border-b-transparent 
+    @apply absolute w-0 h-0 left-0 bottom-0 border-l-[82rem] border-l-[#013565F0] border-b-[59rem] border-b-transparent     
+}
+
+.nameQ {
+  @apply text-black font-poppins mr-24 ml-24 text-center md:text-center text-4xl mt-[30px] leading-loose not-italic font-semibold;
+}
+
+.background {
+  @apply flex-auto ml-[260px] rounded-[10px] h-[766.46px] w-[721.38px] z-0 bg-backgroundColor;
+}
+
+.buttons {
+  @apply flex flex-row justify-between mr-[70px] ml-[70px] mt-[40px];
+}
+.backButton {
+  @apply shadow-boxShadow bg-back text-white  rounded-[18px] h-[70px] w-[180px] text-3xl leading-loose font-normal text-center;
+}
+.nextButton {
+  @apply shadow-boxShadow bg-red text-white rounded-[18px] h-[70px] w-[180px] text-3xl leading-loose font-normal text-center;
+}
+.checkboxes {
+  @apply text-black font-poppins font-normal text-3xl not-italic leading-loose ml-[120px];
+}
+.checkbox1 {
+  @apply w-[214px] h-[72px];
+}
+.checkbox2 {
+  @apply w-[214px] h-[72px];
+}
+.checkbox3 {
+  @apply w-[214px] h-[72px];
+}
+.checkbox4 {
+  @apply w-[214px] h-[72px];
+}
+
+#musicplayer,
+#gallery,
+#forum,
+#socialmedialinks {
+  @apply mt-[35px] w-[35px] h-[32px];
 }
 .pricingTxt {
   @apply text-white text-[37px] flex justify-center items-end h-[90px];
