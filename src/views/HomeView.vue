@@ -1,9 +1,9 @@
 <template>
     <Navbar id="Navbar" />
   <main>
-    <QuestionnaireOrTemplates id="QuestionnaireOrTemplates" />
+    <QuestionnaireOrTemplates id="questionnaireOrTemplates" />
     <Pricing id="pricing" />
-    <ContactUs id="ContactUs" />
+    <ContactUs id="contact" />
   </main>
 </template>
 
