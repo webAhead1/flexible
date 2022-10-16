@@ -1,7 +1,4 @@
 <template>
-  <header>
-    <Navbar />
-  </header>
   <div class="flex justify-center">
     <div class="grid grid-cols-2 gap-[40px] mt-[120px]">
       <div

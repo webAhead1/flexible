@@ -77,7 +77,7 @@ export default {
   },
   data() {
     return {
-      focused: "",
+      focused: "aboutus",
     };
   },
   methods: {
