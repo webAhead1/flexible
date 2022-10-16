@@ -28,7 +28,7 @@ body {
 }
 
 .name-input.errorEmpty {
-    @apply border-red-700
+    @apply border-red
 }
 
 .name-input.notEmpty {
@@ -41,7 +41,7 @@ body {
 }
 
 .email-input.errorEmpty {
-    @apply border-red-700
+    @apply border-red
 }
 
 .email-input.notEmpty {
@@ -53,7 +53,7 @@ body {
 }
 
 .message-input.errorEmpty {
-    @apply border-red-700
+    @apply border-red
 }
 
 .message-input.notEmpty {
