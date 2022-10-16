@@ -1,5 +1,5 @@
 <template>
-  <div class="background">
+  <div class="checkboxes-background">
     <h1 class="nameQ">What do you want to add to your website?</h1>
     <br />
     <div class="checkboxes">
