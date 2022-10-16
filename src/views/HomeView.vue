@@ -1,11 +1,11 @@
 <template>
   <main>
-    <div class="flex justify-around space-x-4">
+    <div id="home" class="flex justify-around space-x-4">
       <GetStarted />
       <Slider />
     </div>
     <About id="about" />
-    <QuestionnaireOrTemplates />
+    <QuestionnaireOrTemplates id="quesOrTemp" />
     <Pricing id="pricing" />
     <ContactUs id="contact" />
   </main>
