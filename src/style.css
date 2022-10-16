@@ -1,16 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html {
-  @apply scroll-pt-[100px];
-}
-body {
-  @apply mt-[7rem] bg-[#D7CEC7];
-}
-
-.background {
+/* .navBar {
+  @apply w-full mb-[3rem] bg-[#D7CEC7] top-0 text-center text-[26px] 
+  font-poppins fixed h-[6.625rem] flex shadow-[0px_4px_4px_0px_#00000080] z-50;
+} */
+.template-background {
   @apply flex justify-start flex-col items-start m-auto rounded-[12px] mt-[10rem] h-[35rem] w-[44rem] bg-[#D7CEC7] shadow-[0px_4px_4px_0px_#00000080];
 }
 .checkboxes-background {
@@ -22,36 +19,52 @@ body {
 .startButton {
   @apply shadow-boxShadow m-auto mt-[10rem] bg-red text-white rounded-[1rem] h-[4.5rem] w-[12rem] text-3xl leading-loose font-poppins items-center text-center;
 }
-.questionnaire-or-templates-container {
-  @apply flex flex-row space-x-[5rem] h-[935px] justify-center;
+.logo {
+  @apply h-[16px] top-[opx] z-10;
 }
+/* .logoWithFlexible {
+  @apply flex items-center ml-[614px] text-black py-[0.80rem] truncate text-[34px];
+} */
+.questionnaire-or-templates-container {
+  @apply flex flex-row space-x-[5rem] justify-center;
+}
+
 .build-website-option {
   @apply relative top-[6rem] w-[30rem] flex items-center flex-col;
 }
+
 .or-container {
   @apply relative top-[28rem] h-[70px] w-[70px] text-3xl bg-[#B1A198] flex items-center justify-center rounded-[15px];
 }
+
 .template-option {
   @apply relative top-[6rem] w-[30rem] flex items-center flex-col;
 }
+
 .build-website-option-title {
   @apply bg-white h-[3rem] w-3/4 rounded-[15px] flex items-center justify-center text-3xl text-[#013565];
 }
+
 .template-option-title {
   @apply bg-[#013565] h-[3rem] w-3/4 rounded-[15px] flex items-center justify-center text-3xl text-[white];
 }
+
 .build-website-card {
   @apply bg-[#908077] bg-no-repeat bg-center h-[40rem] w-full rounded-[20px] mt-[2rem] shadow-md shadow-gray-700 p-[2rem];
 }
+
 .template-card {
   @apply bg-[#908077] bg-contain bg-no-repeat  bg-center h-[40rem] w-full rounded-[20px] mt-[2rem] shadow-md shadow-gray-700 p-[2rem];
 }
+
 .polygon {
   @apply absolute w-0 h-0 left-0 border-l-[70rem] border-l-[#013565] border-b-[59rem] border-b-transparent;
 }
+
 .nameQ {
   @apply text-black font-poppins mr-24 ml-24 text-center md:text-center text-4xl mt-[30px] leading-loose not-italic font-semibold;
 }
+
 .background {
   @apply flex-auto ml-[260px] rounded-[10px] h-[766.46px] w-[721.38px] z-0 bg-backgroundColor;
 }
@@ -80,13 +93,13 @@ body {
 .checkbox4 {
   @apply w-[214px] h-[72px];
 }
+
 #musicplayer,
 #gallery,
 #forum,
 #socialmedialinks {
   @apply mt-[35px] w-[35px] h-[32px];
 }
-
 .pricingTxt {
   @apply text-white text-[37px] flex justify-center items-end h-[90px];
 }
@@ -123,13 +136,22 @@ body {
 .cardButton {
   @apply flex justify-center h-[74px] items-center text-[30px] hover:bg-white hover:rounded-[18px] active:h-[79px] active:bg-gray-100 active:shadow-[0px_4px_4px_#00000090];
 }
-
+/* another active design for button */
+/* .cardButton {
+  @apply flex justify-center h-[79px] items-center text-[30px] hover:bg-white hover:rounded-[18px] active:h-[82px] active:bg-gray-200 active:shadow-[0px_4px_4px_#00000090];
+} */
+html {
+  @apply scroll-pt-[100px];
+}
+body {
+  @apply mt-[7rem] bg-[#D7CEC7];
+}
 .signInUpNavbar {
-  @apply flex justify-center w-full bg-[#D7CEC7F7] top-0 text-center 
-  font-poppins fixed h-106 shadow-[0px_4px_4px_0px_#00000080];
+  @apply w-full mb-[3rem] bg-[#D7CEC7F7] top-0 text-center 
+  font-poppins fixed h-106 shadow-[0px_4px_4px_0px_#00000080] z-50;
 }
 .logoWithFlexible1 {
-  @apply flex justify-center items-center text-black py-5 text-[34px];
+  @apply flex justify-center w-full items-center text-black py-5 text-[34px];
 }
 input {
   @apply w-[459px] h-[70px] mb-5 rounded-[18px] px-3 py-2 bg-[#FFFFFF99] focus:bg-white focus:outline-none shadow-[0px_4px_4px_0px_#00000080];
@@ -138,12 +160,6 @@ input {
   @apply flex justify-center;
 }
 
-.b1 {
-  @apply flex justify-center py-[40px];
-}
-.b1-1 {
-  @apply flex justify-center py-[153px];
-}
 .txt-and-button {
   @apply text-[30px] font-poppins;
 }
@@ -167,14 +183,18 @@ input {
 }
 
 .menu {
-  @apply w-full z-10 mb-[3rem] bg-[#D7CEC7] top-0 text-center text-[26px] 
-  font-poppins fixed h-106 flex shadow-[0px_4px_4px_0px_#00000080];
+  @apply w-full mb-[3rem] bg-[#D7CEC7] top-0 text-center text-[26px] 
+  font-poppins fixed h-106 flex shadow-[0px_4px_4px_0px_#00000080] z-50;
 }
 .menu-item {
   @apply flex focus:border focus:border-b-2;
 }
 .menu-link {
   @apply py-7 px-3 ml-14 items-center text-black active:shadow-[0px_4px_4px_0px_#00000080];
+}
+.menu-txt {
+  /* this is for example */
+  @apply hover:bg-[#D7CEC7];
 }
 .logo {
   @apply h-16 top-0 z-10;
