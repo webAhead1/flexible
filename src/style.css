@@ -13,6 +13,9 @@ body {
 .background {
   @apply flex justify-start flex-col items-start m-auto rounded-[12px] mt-[10rem] h-[35rem] w-[44rem] bg-[#D7CEC7] shadow-[0px_4px_4px_0px_#00000080];
 }
+.checkboxes-background {
+  @apply flex justify-start flex-col items-start m-auto rounded-[12px] mt-[10rem] h-[44rem] w-[44rem] bg-[#D7CEC7] shadow-[0px_4px_4px_0px_#00000080];
+}
 .firstSentence {
   @apply ml-[4rem] mr-[4rem] mt-[120px] text-center not-italic text-black font-poppins text-[33px] font-semibold leading-[50px];
 }
@@ -54,7 +57,7 @@ body {
 }
 
 .buttons {
-  @apply flex flex-row justify-between mr-[70px] ml-[70px] mt-[40px];
+  @apply flex justify-around mt-[40px] w-[44rem];
 }
 .backButton {
   @apply shadow-boxShadow bg-back text-white  rounded-[18px] h-[70px] w-[180px] text-3xl leading-loose font-normal text-center;
@@ -63,7 +66,7 @@ body {
   @apply shadow-boxShadow bg-red text-white rounded-[18px] h-[70px] w-[180px] text-3xl leading-loose font-normal text-center;
 }
 .checkboxes {
-  @apply text-black font-poppins font-normal text-3xl not-italic leading-loose ml-[120px];
+  @apply text-black font-poppins font-normal text-3xl not-italic leading-loose ml-[7rem];
 }
 .checkbox1 {
   @apply w-[214px] h-[72px];
