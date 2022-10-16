@@ -6,14 +6,12 @@
   </main>
 </template>
 <script>
-import Pricing from "../components/Pricing/Pricing.vue";
-import Navbar from "../components/Navbar.vue";
-import QuestionnaireOrTemplates from "../components/QuestionnaireOrTemplates/QuestionnaireOrTemplates.vue";
-import ContactUs from "../components/ContactUs/ContactUs.vue";
+import Pricing from '../components/Pricing/Pricing.vue';
+import QuestionnaireOrTemplates from '../components/QuestionnaireOrTemplates/QuestionnaireOrTemplates.vue';
+import ContactUs from '../components/ContactUs/ContactUs.vue';
 export default {
   components: {
     Pricing,
-    Navbar,
     QuestionnaireOrTemplates,
     ContactUs,
   },
