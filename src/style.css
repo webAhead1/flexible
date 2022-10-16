@@ -95,7 +95,6 @@
 #overlay.active {
     @apply opacity-100 pointer-events-auto
 }
-.navBar {
 /* .navBar {
   @apply w-full mb-[3rem] bg-[#D7CEC7] top-0 text-center text-[26px] 
   font-poppins fixed h-[6.625rem] flex shadow-[0px_4px_4px_0px_#00000080] z-50;
