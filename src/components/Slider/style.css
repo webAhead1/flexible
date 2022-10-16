@@ -1,40 +1,12 @@
-.prev {
-  @apply absolute left-0;
-}
-
-.next {
-  @apply absolute right-0;
-}
-
-.slider-image {
-  @apply rounded-2xl h-[600px] w-[600px] shadow-md;
-}
-
 .slider-container {
-  @apply absolute left-[60rem] top-[15rem] rounded-2xl border-2 h-[530px] w-[900px] overflow-hidden;
+  @apply flex flex-col items-center;
 }
-
-.next-arrow {
-  @apply h-[2rem];
+.slider {
+  @apply rounded-2xl border-2 border-black h-[480px] w-[700px] overflow-hidden;
 }
-
-.prev-arrow {
-  @apply h-[2rem];
+.slider-image {
+  @apply w-full h-full;
 }
-
-.about-container{
-  @apply top-[60rem] left-[300px] w-[1479px]  font-['Poppins'] text-4xl font-normal absolute
-   text-center text-black not-italic leading-[803px] ;
-}
-.about{
-  @apply h-12 absolute w-[443px] left-[499px] top-[112px]  leading-[56px];
-}
-.about-text{
-  @apply text-3xl absolute w-[794px] left-[306px] top-[250px] leading-[40px];
-}
-/* .original{
-  @apply 
-} */
-.original.active{
-  @apply bg-blue-500
+.slider-buttons {
+  @apply flex py-2 gap-2;
 }

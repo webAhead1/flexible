@@ -1,10 +1,9 @@
-.about-container{
-    @apply top-[60rem] left-[300px] w-[1479px]  font-['Poppins'] text-4xl font-normal absolute
-     text-center text-black not-italic leading-[803px] ;
-  }
-  .about{
-    @apply h-12 absolute w-[443px] left-[499px] top-[112px]  leading-[56px];
-  }
-  .about-text{
-    @apply text-3xl absolute w-[794px] left-[306px] top-[250px] leading-[40px];
-  }
+.about-container {
+  @apply flex flex-col justify-center items-center font-poppins space-y-10;
+}
+.about {
+  @apply text-4xl;
+}
+.about-text {
+  @apply text-3xl w-[700px] text-center;
+}
