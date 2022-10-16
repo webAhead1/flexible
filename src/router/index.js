@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import SignUp from "../views/SignUp.vue";
-import SignIn from "../views/SignIn.vue";
-import Templates from "../components/temps/Templates.vue";
+import SignUp from "../views/SignInUp/SignUp.vue";
+import SignIn from "../views/SignInUp/SignIn.vue";
+import StartQuestionnaire from "../views/StartQuestionnaire/StartQuestionnaire.vue";
+import Templates from "../views/temps/Templates.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -24,8 +25,13 @@ const router = createRouter({
     },
     {
       path: "/templates",
-      name: "Templates",
+      name: "templates",
       component: Templates,
+    },
+    {
+      path: "/questionnaire",
+      name: "questionnaire",
+      component: StartQuestionnaire,
     },
   ],
   scrollBehavior(to, from, SavedPosition) {

@@ -1,0 +1,10 @@
+.template-background {
+  @apply flex justify-start flex-col items-start m-auto rounded-[12px] mt-[10rem] h-[35rem] w-[44rem] bg-[#D7CEC7] shadow-[0px_4px_4px_0px_#00000080];
+}
+
+.firstSentence {
+  @apply ml-[4rem] mr-[4rem] mt-[120px] text-center not-italic text-black font-poppins text-[33px] font-semibold leading-[50px];
+}
+.startButton {
+  @apply shadow-boxShadow m-auto mt-[10rem] bg-red text-white rounded-[1rem] h-[4.5rem] w-[12rem] text-3xl leading-loose font-poppins items-center text-center;
+}

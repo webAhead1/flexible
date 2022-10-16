@@ -7,6 +7,7 @@ export default {
   components: {
     Footer,
     Navbar,
+    RouterView,
   },
   data() {
     return {

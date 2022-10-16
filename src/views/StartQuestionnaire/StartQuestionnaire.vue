@@ -1,7 +1,4 @@
-<script>
-import Navbar from "./Navbar.vue";
-export default { components: { Navbar } };
-</script>
+<script></script>
 
 <template>
   <div class="template-background">

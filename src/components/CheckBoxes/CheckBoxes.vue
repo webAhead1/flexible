@@ -20,7 +20,7 @@
         Social Media Links</label
       >
     </div>
-    <div class="buttons">
+    <div class="checkbox-buttons">
       <button class="backButton">Back</button>
       <button class="nextButton">Next</button>
     </div>

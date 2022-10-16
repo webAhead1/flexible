@@ -28,7 +28,6 @@
 <script setup>
 import "./style.css";
 import { reactive } from "vue";
-import Navbar from "../Navbar.vue";
 const templates = reactive([
   { id: 1, hidden: true },
   { id: 2, hidden: true },
