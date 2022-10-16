@@ -1,6 +1,6 @@
 <template>
   <div class="background">
-    <h1 class="nameQ">What do you want to add to your website?</h1>
+    <h1 class="nameQ3">What do you want to add to your website?</h1>
     <br />
     <div class="checkboxes">
       <input type="checkbox" value="musicplayer" id="musicplayer" />

@@ -10,7 +10,6 @@ import CheckBoxes from "./components/CheckBoxes.vue";
     <Navbar />
   </header>
   <body>
-    <CheckBoxes />
     <RouterView />
   </body>
 </template>

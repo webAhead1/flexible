@@ -2,12 +2,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.navBar {
-  @apply w-full mb-[3rem] bg-[#D7CEC7] top-0 text-center text-[26px] 
-  font-poppins fixed h-[6.625rem] flex shadow-[0px_4px_4px_0px_#00000080];
+.nameQ1 {
+  @apply font-poppins mr-24 ml-24 text-center md:text-center text-4xl mt-[120px] leading-loose not-italic font-semibold;
 }
-
+.text {
+  @apply shadow-[0px_4px_4px_0px_#00000080]  py-2 px-3 text-text leading-tight focus:outline-none ml-28 w-[347.85px] h-[55.07px] rounded-[18px] text-3xl;
+}
+.domain {
+  @apply flex flex-row;
+}
+.com {
+  @apply w-[262px] h-[72px] font-poppins text-4xl leading-loose font-normal;
+}
 .background {
   @apply flex justify-start flex-col items-start m-auto rounded-[12px] mt-[10rem] h-[35rem] w-[44rem] bg-[#D7CEC7] shadow-[0px_4px_4px_0px_#00000080];
 }
@@ -24,47 +30,43 @@
   @apply flex items-center ml-[614px] text-black py-[0.80rem] truncate text-[34px];
 }
 .questionnaire-or-templates-container {
-    @apply flex flex-row space-x-[5rem] justify-center
+  @apply flex flex-row space-x-[5rem] justify-center;
 }
 
 .build-website-option {
-    @apply relative top-[6rem] w-[30rem] flex items-center flex-col
+  @apply relative top-[6rem] w-[30rem] flex items-center flex-col;
 }
 
 .or-container {
-    @apply relative top-[28rem] h-[70px] w-[70px] text-3xl bg-[#B1A198] flex items-center justify-center rounded-[15px]
+  @apply relative top-[28rem] h-[70px] w-[70px] text-3xl bg-[#B1A198] flex items-center justify-center rounded-[15px];
 }
 
 .template-option {
-    @apply relative top-[6rem] w-[30rem] flex items-center flex-col
+  @apply relative top-[6rem] w-[30rem] flex items-center flex-col;
 }
 
 .build-website-option-title {
-    @apply bg-white h-[3rem] w-3/4 rounded-[15px] flex items-center justify-center text-3xl text-[#013565]
+  @apply bg-white h-[3rem] w-3/4 rounded-[15px] flex items-center justify-center text-3xl text-[#013565];
 }
 
 .template-option-title {
-    @apply bg-[#013565] h-[3rem] w-3/4 rounded-[15px] flex items-center justify-center text-3xl text-[white]
+  @apply bg-[#013565] h-[3rem] w-3/4 rounded-[15px] flex items-center justify-center text-3xl text-[white];
 }
 
 .build-website-card {
-    @apply bg-[#908077] bg-no-repeat bg-center h-[40rem] w-full rounded-[20px] mt-[2rem] shadow-md shadow-gray-700 p-[2rem]
+  @apply bg-[#908077] bg-no-repeat bg-center h-[40rem] w-full rounded-[20px] mt-[2rem] shadow-md shadow-gray-700 p-[2rem];
 }
 
 .template-card {
-    @apply bg-[#908077] bg-contain bg-no-repeat  bg-center h-[40rem] w-full rounded-[20px] mt-[2rem] shadow-md shadow-gray-700 p-[2rem]
+  @apply bg-[#908077] bg-contain bg-no-repeat  bg-center h-[40rem] w-full rounded-[20px] mt-[2rem] shadow-md shadow-gray-700 p-[2rem];
 }
 
 .polygon {
-    @apply absolute w-0 h-0 left-0 bottom-0 border-l-[82rem] border-l-[#013565F0] border-b-[59rem] border-b-transparent     
+  @apply absolute w-0 h-0 left-0 bottom-0 border-l-[82rem] border-l-[#013565F0] border-b-[59rem] border-b-transparent;
 }
 
-.nameQ {
+.nameQ3 {
   @apply text-black font-poppins mr-24 ml-24 text-center md:text-center text-4xl mt-[30px] leading-loose not-italic font-semibold;
-}
-
-.background {
-  @apply flex-auto ml-[260px] rounded-[10px] h-[766.46px] w-[721.38px] z-0 bg-backgroundColor;
 }
 
 .buttons {
@@ -96,7 +98,7 @@
 #gallery,
 #forum,
 #socialmedialinks {
-  @apply mt-[35px] w-[35px] h-[32px];
+  @apply mt-[35px] w-[35px] h-[32px] shadow-none;
 }
 .pricingTxt {
   @apply text-white text-[37px] flex justify-center items-end h-[90px];
