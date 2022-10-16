@@ -233,10 +233,10 @@
   @apply flex justify-center h-[79px] items-center text-[30px] hover:bg-white hover:rounded-[18px] active:h-[82px] active:bg-gray-200 active:shadow-[0px_4px_4px_#00000090];
 } */
 html {
-  @apply scroll-pt-[100px] w-full h-full bg-[#D7CEC7];
+  @apply scroll-pt-[100px];
 }
 body {
-  @apply mt-[7rem] bg-[#D7CEC7] w-full h-full flex justify-center;
+  @apply mt-[7rem] bg-[#D7CEC7];
 }
 .signInUpNavbar {
   @apply w-full mb-[3rem] bg-[#D7CEC7F7] top-0 text-center 

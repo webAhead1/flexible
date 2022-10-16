@@ -1,6 +1,6 @@
 <template>
-  <main>
     <Navbar id="Navbar" />
+  <main>
     <QuestionnaireOrTemplates id="QuestionnaireOrTemplates" />
     <Pricing id="pricing" />
     <ContactUs id="ContactUs" />

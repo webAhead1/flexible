@@ -1,6 +1,6 @@
 <template>
     <body>
-        <div class="contact-card">
+        <div class="contact-card m-auto">
             <div class="card-title">Contact Us</div>
             <div class="card-body">
                 <div class="contact-name-label">Name</div>
