@@ -3,8 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.contact-container {
+  @apply h-[100vh]
+}
+
 .contact-card {
-    @apply h-[44rem] w-[35rem] rounded-[20px] relative top-[7rem] shadow-md shadow-gray-600 border-[#878787]
+    @apply h-[44rem] w-[35rem] rounded-[20px] relative shadow-md shadow-gray-600 border-[#878787] m-auto top-[4rem]
 }
 
 .card-title {
@@ -118,7 +122,7 @@
   @apply flex items-center ml-[614px] text-black py-[0.80rem] truncate text-[34px];
 } */
 .questionnaire-or-templates-container {
-  @apply flex flex-row space-x-[5rem] justify-center;
+  @apply flex flex-row space-x-[5rem] justify-center h-[100vh];
 }
 
 .build-website-option {
