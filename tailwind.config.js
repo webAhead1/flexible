@@ -21,9 +21,6 @@ module.exports = {
       height: {
         106: "6.625rem",
       },
-      boxShadow: {
-        boxShadow: "inset 0px 4px 4px rgba(0, 0, 0, 0.25)",
-      },
     },
   },
   plugins: [],

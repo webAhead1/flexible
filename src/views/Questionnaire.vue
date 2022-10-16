@@ -1,59 +1,80 @@
-<script setup>
+<script>
+import Navbar from "../components/Navbar.vue";
 import Template from "../components/Template.vue";
 import TextBox from "../components/TextBox.vue";
 import CheckBoxes from "../components/CheckBoxes.vue";
-// import ThirdQuestionPage from "../components/ThirdQuestionPage.vue";
-// import FourthQuestionPage from "../components/FourthQuestionPage.vue";
-// import LastQuestionPage from "../components/LastQuestionPage.vue";
-import { reactive } from "vue";
-const states = reactive({
-  currentStep: 1,
-});
-</script>
-<template>
-  <div class="background">
-    <Template v-if="states.currentStep == 1" />
-    <TextBox v-else-if="states.currentStep == 2" />
-    <CheckBoxes v-else-if="states.currentStep == 3" />
-    <!-- <ThirdQuestionPage v-else-if="states.currentStep == 4" />
-    <FourthQuestionPage v-else-if="states.currentStep == 5" />
-    <LastQuestionPage v-else-if="states.currentStep == 6" /> -->
-    <div class="flex justify-center">
-      <button
-        @click="states.currentStep--"
-        v-if="states.currentStep > 2"
-        class="shadow-[inset-0px_4px_4px_rgba(0, 0, 0, 0.25)] mt-[-171px] mr-[150px] rounded-[18px] w-[197px] h-[79px] bg-[#4F7A8E] text-center not-italic text-black font-poppins text-[33px] font-normal leading-[50px]"
-      >
-        Back
-      </button>
-      <button
-        v-if="states.currentStep == 2"
-        class="shadow-[inset-0px_4px_4px_rgba(0, 0, 0, 0.25)] mt-[-171px] mr-[150px] rounded-[18px] w-[197px] h-[79px] bg-[#565454] text-center not-italic text-black font-poppins text-[33px] font-normal leading-[50px]"
-      >
-        Back
-      </button>
-      <button
-        @click="states.currentStep++"
-        v-if="states.currentStep == 1"
-        class="startButton"
-      >
-        Start
-      </button>
-      <button
-        @click="states.currentStep++"
-        v-else-if="states.currentStep != 6"
-        class="shadow-[inset-0px_4px_4px_rgba(0, 0, 0, 0.25)] mt-[-171px] rounded-[18px] ml-[150px] w-[197px] h-[79px] bg-[#4F7A8E] text-center not-italic text-black font-poppins text-[33px] font-normal leading-[50px]"
-      >
-        Next
-      </button>
+import RadioButtons from "../components/RadioButtons.vue";
+import ContactQuestion from "../components/ContactQuestion.vue";
 
-      <button
-        @click="alert('This is the last question')"
-        v-if="states.currentStep == 6"
-        class="shadow-[inset-0px_4px_4px_rgba(0, 0, 0, 0.25)] mt-[-171px] rounded-[18px] ml-[150px] w-[197px] h-[79px] bg-[#4F7A8E] text-center not-italic text-black font-poppins text-[33px] font-normal leading-[50px]"
-      >
-        Submit
-      </button>
+export default {
+  data() {
+    return {
+      currentStep: 1,
+      text: "",
+    };
+  },
+
+  methods: {
+    getData() {
+      if (this.currentStep == 2) {
+        TextBox.methods.handleSubmit;
+      }
+
+      this.currentStep++;
+    },
+  },
+  components: {
+    Navbar,
+    Template,
+    CheckBoxes,
+    TextBox,
+    RadioButtons,
+    ContactQuestion,
+  },
+};
+</script>
+
+<template>
+  <Navbar />
+  <body class="bg-[#013565] pt-[5rem] pb-[5rem]">
+    <div class="template-background">
+      <Template v-if="currentStep == 1" />
+      <TextBox v-else-if="currentStep == 2" />
+      <RadioButtons v-else-if="currentStep == 3" />
+      <CheckBoxes v-else-if="currentStep == 4" />
+      <ContactQuestion v-else-if="currentStep == 5" />
+      <div class="buttons">
+        <button
+          class="backButton"
+          @click="currentStep--"
+          v-if="currentStep > 2"
+        >
+          Back
+        </button>
+        <button class="backButton" v-if="currentStep == 2">Back</button>
+        <button
+          @click="currentStep++"
+          v-if="currentStep == 1"
+          class="startButton"
+        >
+          Start
+        </button>
+        <button
+          @click="getData"
+          v-else-if="currentStep != 5"
+          class="nextButton"
+        >
+          Next
+        </button>
+
+        <button
+          @click="alert('This is the last question')"
+          v-if="currentStep == 5"
+          class="nextButton"
+        >
+          Submit
+        </button>
+      </div>
     </div>
-  </div>
+  </body>
 </template>

@@ -38,12 +38,16 @@ const router = createRouter({
     if (to.hash) {
       const el = window.location.href.split("#")[1];
       if (el.length) {
-        document.getElementById(el).scrollIntoView({ behavior: "smooth" });
+        setTimeout(() => {
+          document.getElementById(el).scrollIntoView({ behavior: "smooth" });
+        }, 0);
       }
     } else if (SavedPosition) {
       return SavedPosition;
     } else {
-      document.getElementById("app").scrollIntoView({ behavior: "smooth" });
+      setTimeout(() => {
+        document.getElementById("app").scrollIntoView({ behavior: "smooth" });
+      }, 0);
     }
   },
 });
