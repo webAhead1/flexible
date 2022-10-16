@@ -37,7 +37,7 @@
   </body>
 </template>
 <script>
-import SignInUpNavbar from '../components/SignInUpNavbar.vue';
+import SignInUpNavbar from "@/components/SignInUpNavbar.vue";
 export default {
   components: {
     SignInUpNavbar,

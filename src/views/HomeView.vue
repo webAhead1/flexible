@@ -1,20 +1,21 @@
 <template>
-  <Navbar />
   <main>
-    <Pricing id="pricing" />
     <QuestionnaireOrTemplates />
+    <Pricing id="pricing" />
+    <ContactUs id="contact" />
   </main>
 </template>
-
 <script>
-import Pricing from '../components/Pricing.vue';
+import Pricing from '../components/Pricing/Pricing.vue';
 import Navbar from '../components/Navbar.vue';
-import QuestionnaireOrTemplates from '../components/QuestionnaireOrTemplates.vue';
+import QuestionnaireOrTemplates from '../components/QuestionnaireOrTemplates/QuestionnaireOrTemplates.vue';
+import ContactUs from '../components/ContactUs/ContactUs.vue';
 export default {
   components: {
     Pricing,
     Navbar,
     QuestionnaireOrTemplates,
+    ContactUs,
   },
 };
 </script>
