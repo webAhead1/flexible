@@ -1,0 +1,11 @@
+.getStarted-container{
+    @apply absolute top-[22rem] left-[20px]
+  }
+  .get-started-button {
+    @apply relative top-[3rem] h-[3rem] w-[15rem] left-[320px] rounded-[12px] text-[#FFFFFF]
+     text-2xl  bg-[#D11F1F] text-[32px] shadow-md;
+  } 
+  
+  .intro-text {
+    @apply relative left-[320px] text-4xl w-[25rem] text-center text-[34px];
+  }
