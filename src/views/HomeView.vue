@@ -1,8 +1,8 @@
 <template>
   <Navbar />
   <main>
-    <Pricing id="pricing" />
     <QuestionnaireOrTemplates />
+    <Pricing id="pricing" />
     <h1 class="example" id="home">Welcome to the Home page</h1>
   </main>
 </template>
