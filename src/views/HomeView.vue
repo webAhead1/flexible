@@ -1,14 +1,14 @@
 <template>
   <main>
-    <h1 class="example" id="home">Welcome to the Home page</h1>
+    <Footer />
   </main>
 </template>
 
 <script>
-import Pricing from "../components/Pricing.vue";
+import Footer from "../components/Footer.vue";
 export default {
   components: {
-    Pricing,
+    Footer,
   },
 };
 </script>

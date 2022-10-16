@@ -105,3 +105,11 @@ input {
 .logoWithFlexible {
   @apply flex items-center text-black py-[0.80rem] truncate text-[34px];
 }
+
+.footer-container {
+  @apply w-full h-[4rem] bg-[#013565] absolute bottom-0 flex flex-row items-center text-white p-[1rem]
+}
+
+.footer-copyright-formality {
+  @apply flex justify-end w-full
+}
