@@ -1,9 +1,9 @@
 .signInUpNavbar {
-  @apply w-full mb-[3rem] bg-[#D7CEC7F7] top-0 text-center 
+  @apply flex justify-center w-full mb-[3rem] bg-[#D7CEC7] top-0 text-center 
     font-poppins fixed h-106 shadow-[0px_4px_4px_0px_#00000080] z-50;
 }
 .logoWithFlexible1 {
-  @apply flex justify-center w-full items-center text-black py-5 text-[34px];
+  @apply flex justify-center w-[10rem] items-center text-black py-5 text-[34px];
 }
 input {
   @apply w-[459px] h-[70px] mb-5 rounded-[18px] px-3 py-2 bg-[#FFFFFF99] focus:bg-white focus:outline-none shadow-[0px_4px_4px_0px_#00000080];
@@ -11,7 +11,6 @@ input {
 .btnBg {
   @apply flex justify-center;
 }
-
 .txt-and-button {
   @apply text-[30px] font-poppins;
 }
