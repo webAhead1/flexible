@@ -2,11 +2,40 @@
   @apply flex flex-col items-center;
 }
 .slider {
-  @apply rounded-2xl border-2 border-black h-[480px] w-[700px] overflow-hidden;
-}
-.slider-image {
-  @apply w-full h-full;
+  @apply rounded-2xl h-[550px] w-[700px] overflow-hidden;
 }
 .slider-buttons {
   @apply flex py-2 gap-2;
+}
+.slides {
+  @apply w-[220rem] h-[500px] flex;
+}
+.slider-input {
+  @apply hidden;
+}
+.slider-image {
+  @apply rounded-2xl p-1 top-0 w-full h-[480px];
+}
+.slide {
+  @apply w-1/5 duration-1000;
+}
+
+/*css for manual slide navigation*/
+.navigation-manual {
+  @apply relative w-full flex justify-center;
+}
+.manual-btn {
+  @apply hover:bg-blue-500 cursor-pointer duration-1000 border-2 border-solid border-gray-500 p-1 rounded-[10px];
+}
+.manual-btn {
+  @apply [&:not(:last-child)]:mr-[40px];
+}
+#radio1:checked ~ .first {
+  @apply ml-[0];
+}
+#radio2:checked ~ .first {
+  @apply ml-[-20%];
+}
+#radio3:checked ~ .first {
+  @apply ml-[-40%];
 }

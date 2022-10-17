@@ -1,55 +1,57 @@
 <template>
+  <!--image slider start-->
   <div class="slider-container">
     <div class="slider">
-      <div id="item1" class="slider-image">
-        <img
-          src="https://bootstrapmade.com/content/templatefiles/Yummy/Yummy-bootstrap-website-template.png"
-        />
+      <div class="slides">
+        <!--radio buttons start-->
+        <input class="slider-input" type="radio" name="radio-btn" id="radio1" />
+        <input class="slider-input" type="radio" name="radio-btn" id="radio2" />
+        <input class="slider-input" type="radio" name="radio-btn" id="radio3" />
+        <!--radio buttons end-->
+        <!--slide images start-->
+        <div class="slide first">
+          <img
+            src="https://bootstrapmade.com/content/templatefiles/Yummy/Yummy-bootstrap-website-template.png"
+            alt=""
+            class="slider-image"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="https://colorlib.com/wp/wp-content/uploads/sites/2/mahabis-creative-shoe-store.jpg"
+            alt=""
+            class="slider-image"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="https://agentestudio.com/uploads/ckeditor/pictures/1687/blog-design-19.png"
+            alt=""
+            class="slider-image"
+          />
+        </div>
       </div>
-      <div id="item2" class="slider-image">
-        <img
-          src="https://colorlib.com/wp/wp-content/uploads/sites/2/mahabis-creative-shoe-store.jpg"
-        />
+      <!--manual navigation start-->
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
       </div>
-      <div id="item3" class="slider-image">
-        <img
-          src="https://agentestudio.com/uploads/ckeditor/pictures/1687/blog-design-19.png"
-        />
-      </div>
+      <!--manual navigation end-->
+
+      <!--slide images end-->
     </div>
-    <div class="slider-buttons">
-      <a href="#item1">
-        <img
-          src="https://img.icons8.com/material-rounded/24/000000/circled.png"
-        />
-      </a>
-      <a href="#item2">
-        <img
-          src="https://img.icons8.com/material-rounded/24/000000/circled.png"
-        />
-      </a>
-      <a href="#item3">
-        <img
-          src="https://img.icons8.com/material-rounded/24/000000/circled.png"
-        />
-      </a>
-    </div>
+    <!--image slider end-->
   </div>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      counter: 1,
-      timer: null,
-    };
-  },
-  mounted() {
-    this.timer = setInterval(() => {
-      this.counter++;
-      if (this.counter > 3) this.counter = 1;
-    }, 5000);
-  },
-};
+var counter = 1;
+setInterval(function () {
+  document.getElementById('radio' + counter).checked = true;
+  counter++;
+  if (counter > 3) {
+    counter = 1;
+  }
+}, 5000);
 </script>
