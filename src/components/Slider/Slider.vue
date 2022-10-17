@@ -33,9 +33,9 @@
       </div>
       <!--manual navigation start-->
       <div class="navigation-manual">
-        <label for="radio1" class="manual-btn"></label>
-        <label for="radio2" class="manual-btn"></label>
-        <label for="radio3" class="manual-btn"></label>
+        <label id="radiohighlight1" @click="activate1" class="manual-btn"></label>
+        <label id="radiohighlight2" @click="activate2" class="manual-btn"></label>
+        <label id="radiohighlight3" @click="activate3" class="manual-btn"></label>
       </div>
       <!--manual navigation end-->
 
@@ -46,12 +46,62 @@
 </template>
 
 <script>
-var counter = 1;
-setInterval(function () {
-  document.getElementById('radio' + counter).checked = true;
-  counter++;
-  if (counter > 3) {
-    counter = 1;
+export default {
+  methods: {
+activate1() {
+  document.getElementById('radiohighlight1').classList.add("active")
+  document.getElementById('radio1').classList.add("active")
+  document.getElementById('radio1').checked = true
+  document.getElementById('radiohighlight2').classList.remove("active")
+  document.getElementById('radiohighlight3').classList.remove("active")
+  document.getElementById('radio2').classList.remove("active")
+  document.getElementById('radio3').classList.remove("active")
+},
+activate2() {
+  document.getElementById('radiohighlight2').classList.add("active")
+  document.getElementById('radio2').classList.add("active")
+  document.getElementById('radio2').checked = true
+  document.getElementById('radiohighlight1').classList.remove("active")
+  document.getElementById('radiohighlight3').classList.remove("active")
+  document.getElementById('radio1').classList.remove("active")
+  document.getElementById('radio3').classList.remove("active")
+},
+activate3() {
+  document.getElementById('radiohighlight3').classList.add("active")
+  document.getElementById('radio3').classList.add("active")
+  document.getElementById('radio3').checked = true
+  document.getElementById('radiohighlight1').classList.remove("active")
+  document.getElementById('radiohighlight2').classList.remove("active")
+  document.getElementById('radio1').classList.remove("active")
+  document.getElementById('radio2').classList.remove("active")
+},
   }
-}, 5000);
+}
+
+window.onload = function() {
+  var counter = 1;
+  document.getElementById('radiohighlight1').classList.add("active")
+  setInterval(function () {
+    const currentButton = document.getElementById('radio' + counter);
+    currentButton.checked = true;
+    const currentHighlight = document.getElementById('radiohighlight'+ counter)
+    currentHighlight.classList.add("active")
+    if (currentHighlight.id == "radiohighlight1") {
+      document.getElementById('radiohighlight2').classList.remove("active")
+      document.getElementById('radiohighlight3').classList.remove("active")
+    }
+    if (currentHighlight.id == "radiohighlight2") {
+      document.getElementById('radiohighlight1').classList.remove("active")
+      document.getElementById('radiohighlight3').classList.remove("active")
+    }
+    if (currentHighlight.id == "radiohighlight3") {
+      document.getElementById('radiohighlight1').classList.remove("active")
+      document.getElementById('radiohighlight2').classList.remove("active")
+    }
+    counter++;
+    if (counter > 3) {
+      counter = 1;
+    }
+  }, 5000);
+}
 </script>
