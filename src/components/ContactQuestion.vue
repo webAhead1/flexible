@@ -6,8 +6,8 @@
     <label class="checkbox" for="phone"> Phone</label>
     <br />
 
-    <input type="checkbox" value="email" id="email" />
-    <label class="checkbox" for="email"> Email</label>
+    <input type="checkbox" value="e-mail" id="e-mail" />
+    <label class="checkbox" for="e-mail"> Email</label>
     <br />
 
     <input type="checkbox" value="fax" id="fax" />

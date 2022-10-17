@@ -69,7 +69,7 @@
 }
 
 #phone,
-#email,
+#e-mail,
 #fax,
 #no-contact {
   @apply mt-[35px] w-[35px] h-[32px] shadow-none;
