@@ -1,0 +1,9 @@
+.about-container {
+  @apply flex flex-col justify-center items-center font-poppins space-y-10;
+}
+.about {
+  @apply text-4xl;
+}
+.about-text {
+  @apply text-3xl w-[700px] text-center;
+}

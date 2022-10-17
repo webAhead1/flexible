@@ -1,202 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import "./components/QuestionnaireComponents/style.css";
+@import "./components/ContactUs/style.css";
+@import "./components/Pricing/style.css";
+@import "./components/QuestionnaireOrTemplates/style.css";
+@import "./views/temps/style.css";
+@import "./views/SignInUp/style.css";
+@import "./components/GetStarted/style.css";
+@import "./components/Slider/style.css";
+@import "./components/About/style.css";
+@import "./views/Questionnaire/style.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.template-background {
-  @apply flex justify-start flex-col items-start m-auto border-solid border border-[#948C86] rounded-[12px] h-[44rem] w-[44rem] bg-[#D7CEC7] shadow-[0px_4px_4px_0px_#00000080];
-}
-.firstSentence {
-  @apply ml-[4rem] mr-[4rem] mt-[120px] text-center not-italic text-black font-poppins text-[33px] font-semibold leading-[50px];
-}
-.nameQ1 {
-  @apply ml-[5.5rem] mr-[5.5rem] mt-[2.5rem] text-center not-italic text-black font-poppins text-[33px] font-semibold leading-[50px];
-}
-.nameQ2 {
-  @apply font-poppins mr-24 ml-24 text-center md:text-center text-4xl mt-[120px] leading-loose not-italic font-semibold;
-}
-.nameQ3 {
-  @apply text-black font-poppins mr-24 ml-24 text-center md:text-center text-4xl mt-[30px] leading-loose not-italic font-semibold;
-}
-.text {
-  @apply ml-[4rem] shadow-[0px_4px_4px_0px_#00000080]  py-2 px-3 text-text leading-tight focus:outline-none w-[347.85px] h-[55.07px] rounded-[18px] text-3xl;
-}
-.domain {
-  @apply flex flex-row;
-}
-.com {
-  @apply w-[262px] h-[72px] font-poppins text-4xl leading-loose font-normal;
-}
-.startButton {
-  @apply shadow-boxShadow m-auto mt-[10rem] bg-red text-white rounded-[1rem] h-[4.5rem] w-[12rem] text-3xl leading-loose font-poppins items-center text-center;
-}
-.buttons {
-  @apply flex flex-row justify-between m-auto mt-[0.8rem];
-}
-
-.backButton {
-  @apply shadow-boxShadow bg-red rounded-[1rem] h-[4.5rem] w-[12rem] mr-[12rem] text-white text-3xl leading-loose font-poppins items-center text-center;
-}
-.nextButton {
-  @apply shadow-boxShadow bg-red rounded-[1rem] h-[4.5rem] w-[12rem] text-white text-3xl leading-loose font-poppins items-center text-center;
-}
-.radios {
-  @apply text-black font-poppins font-normal text-3xl not-italic leading-loose ml-[7rem];
-}
-.radio {
-  @apply w-[150px] mt-[0.8rem];
-}
-
-#blog,
-#portfolio,
-#restaurant,
-#event,
-#e-commerce {
-  @apply mt-[35px] border-none w-[35px] h-[32px] shadow-none;
-}
-.checkboxes {
-  @apply text-black font-poppins font-normal text-3xl not-italic leading-loose ml-[7rem];
-}
-.checkbox {
-  @apply w-[214px] h-[72px];
-}
-
-#musicplayer,
-#gallery,
-#forum,
-#socialmedialinks {
-  @apply mt-[35px] w-[35px] h-[32px] shadow-none;
-}
-
-#phone,
-#e-mail,
-#fax,
-#no-contact {
-  @apply mt-[35px] w-[35px] h-[32px] shadow-none;
-}
-
-.logo {
-  @apply h-[16px] top-[opx] z-10;
-}
-
-.questionnaire-or-templates-container {
-  @apply flex flex-row space-x-[5rem] justify-center;
-}
-
-.build-website-option {
-  @apply relative top-[6rem] w-[30rem] flex items-center flex-col;
-}
-
-.or-container {
-  @apply relative top-[28rem] h-[70px] w-[70px] text-3xl bg-[#B1A198] flex items-center justify-center rounded-[15px];
-}
-
-.template-option {
-  @apply relative top-[6rem] w-[30rem] flex items-center flex-col;
-}
-
-.build-website-option-title {
-  @apply bg-white h-[3rem] w-3/4 rounded-[15px] flex items-center justify-center text-3xl text-[#013565];
-}
-
-.template-option-title {
-  @apply bg-[#013565] h-[3rem] w-3/4 rounded-[15px] flex items-center justify-center text-3xl text-[white];
-}
-
-.build-website-card {
-  @apply bg-[#908077] bg-no-repeat bg-center h-[40rem] w-full rounded-[20px] mt-[2rem] shadow-md shadow-gray-700 p-[2rem];
-}
-
-.template-card {
-  @apply bg-[#908077] bg-contain bg-no-repeat  bg-center h-[40rem] w-full rounded-[20px] mt-[2rem] shadow-md shadow-gray-700 p-[2rem];
-}
-
-.polygon {
-  @apply absolute w-0 h-0 left-0 border-l-[70rem] border-l-[#013565] border-b-[59rem] border-b-transparent;
-}
-
-.pricingTxt {
-  @apply text-white text-[37px] flex justify-center items-end h-[90px];
-}
-.cardName {
-  @apply flex justify-center pt-5 text-[30px];
-}
-.cardPrice {
-  @apply flex pt-5 font-bold text-[47px];
-}
-.priceDetails {
-  @apply flex items-center pt-[12px] text-[20px] font-normal;
-}
-.cardSentence {
-  @apply flex justify-center pt-2 text-[20px];
-}
-.offers {
-  @apply flex flex-col items-center pt-8;
-}
-.cardOffers {
-  @apply flex flex-col items-center  text-[20px];
-}
-.line {
-  @apply my-2 w-[284px] h-[2px] border-[1px] bg-black border-black;
-}
-.btnPosition {
-  @apply absolute bottom-5 left-[47px];
-}
-.pricingBtn {
-  @apply bg-[#B1A198] shadow-[0px_4px_4px_#00000080] rounded-[18px] w-[238px] h-[79px];
-}
-.btn {
-  @apply flex justify-center text-white bg-[#D11F1F] w-[237px] h-[79px] text-[34px] rounded-[18px] hover:opacity-80 hover:text-black  hover:bg-[#FFFFFF99] active:drop-shadow-xl active:bg-gray-100 shadow-[0px_4px_4px_0px_#00000080];
-}
-.cardButton {
-  @apply flex justify-center h-[74px] items-center text-[30px] hover:bg-white hover:rounded-[18px] active:h-[79px] active:bg-gray-100 active:shadow-[0px_4px_4px_#00000090];
-}
-/* another active design for button */
-/* .cardButton {
-  @apply flex justify-center h-[79px] items-center text-[30px] hover:bg-white hover:rounded-[18px] active:h-[82px] active:bg-gray-200 active:shadow-[0px_4px_4px_#00000090];
-} */
+/* Global styling */
 html {
   @apply scroll-pt-[100px];
 }
 body {
   @apply mt-[7rem] bg-[#D7CEC7];
 }
-.signInUpNavbar {
-  @apply w-full mb-[3rem] bg-[#D7CEC7F7] top-0 text-center 
-  font-poppins fixed h-106 shadow-[0px_4px_4px_0px_#00000080] z-50;
-}
-.logoWithFlexible1 {
-  @apply flex justify-center w-full items-center text-black py-5 text-[34px];
-}
-input {
-  @apply w-[459px] h-[70px] mb-5 rounded-[18px] px-3 py-2 bg-[#FFFFFF99] focus:bg-white focus:outline-none shadow-[0px_4px_4px_0px_#00000080];
-}
-.btnBg {
-  @apply flex justify-center;
-}
-
-.txt-and-button {
-  @apply text-[30px] font-poppins;
-}
-.txt {
-  @apply pl-2 text-[#0C0C0C] pb-1;
-}
-.signBg1 {
-  @apply bg-[#D7CEC7] w-[600px] rounded-[20px] border border-black;
-}
-.signBg {
-  @apply bg-[#F1E8E2C2] rounded-t-[20px] h-[70px];
-}
-.signText {
-  @apply flex justify-center text-black font-poppins pt-3 text-[34px];
-}
-.accountQuestion {
-  @apply text-center text-[20px] text-black;
-}
-.hereStyle {
-  @apply text-[#013565F0] hover:underline;
-}
-
+/* Navbar styling */
 .menu {
   @apply w-full mb-[3rem] bg-[#D7CEC7] top-0 text-center text-[26px] 
   font-poppins fixed h-106 flex shadow-[0px_4px_4px_0px_#00000080] z-50;
@@ -207,13 +31,20 @@ input {
 .menu-link {
   @apply py-7 px-3 ml-14 items-center text-black active:shadow-[0px_4px_4px_0px_#00000080];
 }
-.menu-txt {
-  /* this is for example */
-  @apply hover:bg-[#D7CEC7];
-}
 .logo {
   @apply h-16 top-0 z-10;
 }
 .logoWithFlexible {
   @apply flex items-center text-black py-[0.80rem] truncate text-[34px];
+}
+.underlined {
+  @apply border-b-4 border-solid border-[#908077] rounded;
+}
+/* Footer styling */
+.footer-container {
+  @apply w-full h-[4rem] bg-[#013565] bottom-0 flex flex-row items-center text-white p-[1rem];
+}
+
+.footer-copyright-formality {
+  @apply flex justify-end w-full;
 }

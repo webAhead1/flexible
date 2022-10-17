@@ -19,7 +19,7 @@
               <input type="password" id="password" name="password" required />
               <div class="txt">Confirm Password</div>
               <input type="password" id="cPassword" name="cPassword" required />
-              <div class="btnBg pt-2">
+              <div class="btnBg pt-6">
                 <div class="btn">
                   <button>Submit</button>
                 </div>
@@ -37,7 +37,7 @@
   </body>
 </template>
 <script>
-import SignInUpNavbar from '../components/SignInUpNavbar.vue';
+import SignInUpNavbar from '@/components/SignInUpNavbar.vue';
 export default {
   components: {
     SignInUpNavbar,

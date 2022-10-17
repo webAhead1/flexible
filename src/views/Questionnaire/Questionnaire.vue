@@ -1,10 +1,10 @@
 <script>
-import Navbar from "../components/Navbar.vue";
-import Template from "../components/Template.vue";
-import TextBox from "../components/TextBox.vue";
-import CheckBoxes from "../components/CheckBoxes.vue";
-import RadioButtons from "../components/RadioButtons.vue";
-import ContactQuestion from "../components/ContactQuestion.vue";
+import Navbar from "@/components/Navbar.vue";
+import StartQuestionnaire from "@/components/QuestionnaireComponents/StartQuestionnaire.vue";
+import TextBox from "@/components/QuestionnaireComponents/TextBox.vue";
+import CheckBoxes from "@/components/QuestionnaireComponents/CheckBoxes.vue";
+import RadioButtons from "@/components/QuestionnaireComponents/RadioButtons.vue";
+import ContactQuestion from "@/components/QuestionnaireComponents/ContactQuestion.vue";
 
 export default {
   data() {
@@ -25,7 +25,7 @@ export default {
   },
   components: {
     Navbar,
-    Template,
+    StartQuestionnaire,
     CheckBoxes,
     TextBox,
     RadioButtons,
@@ -38,7 +38,7 @@ export default {
   <Navbar />
   <body class="bg-[#013565] pt-[5rem] pb-[5rem]">
     <div class="template-background">
-      <Template v-if="currentStep == 1" />
+      <StartQuestionnaire v-if="currentStep == 1" />
       <TextBox v-else-if="currentStep == 2" />
       <RadioButtons v-else-if="currentStep == 3" />
       <CheckBoxes v-else-if="currentStep == 4" />

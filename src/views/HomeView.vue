@@ -1,21 +1,30 @@
 <template>
-  <Navbar />
   <main>
+    <div id="home" class="flex justify-around space-x-4">
+      <GetStarted />
+      <Slider />
+    </div>
+    <About id="about" />
+    <QuestionnaireOrTemplates id="quesOrTemp" />
     <Pricing id="pricing" />
-    <QuestionnaireOrTemplates />
-    <h1 class="example" id="home">Welcome to the Home page</h1>
+    <ContactUs id="contact" />
   </main>
 </template>
-
 <script>
-import Pricing from "../components/Pricing.vue";
-import Navbar from "../components/Navbar.vue";
-import QuestionnaireOrTemplates from "../views/QuestionnaireOrTemplates.vue";
+import Pricing from '../components/Pricing/Pricing.vue';
+import QuestionnaireOrTemplates from '../components/QuestionnaireOrTemplates/QuestionnaireOrTemplates.vue';
+import ContactUs from '../components/ContactUs/ContactUs.vue';
+import Slider from '../components/Slider/Slider.vue';
+import About from '../components/About/About.vue';
+import GetStarted from '../components/GetStarted/GetStarted.vue';
 export default {
   components: {
+    Slider,
+    About,
+    GetStarted,
     Pricing,
-    Navbar,
     QuestionnaireOrTemplates,
+    ContactUs,
   },
 };
 </script>

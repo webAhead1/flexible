@@ -13,53 +13,45 @@
         class="menu-link"
         @click="focused = 'aboutUs'"
       >
-        <div v-if="focused === 'aboutUs'" class="menu-txt underlined">
-          About Us
-        </div>
-        <div v-else class="menu-txt">About Us</div>
+        <div v-if="focused === 'aboutUs'" class="underlined">About Us</div>
+        <div v-else>About Us</div>
       </router-link>
       <router-link
         to="/templates"
         class="menu-link"
         @click="focused = 'templates'"
       >
-        <div v-if="focused === 'templates'" class="menu-txt underlined">
-          Templates
-        </div>
-        <div v-else class="menu-txt">Templates</div>
+        <div v-if="focused === 'templates'" class="underlined">Templates</div>
+        <div v-else>Templates</div>
       </router-link>
       <router-link
         to="/questionnaire"
         class="menu-link"
         @click="focused = 'questionnaire'"
       >
-        <div v-if="focused === 'questionnaire'" class="menu-txt underlined">
+        <div v-if="focused === 'questionnaire'" class="underlined">
           Questionnaire
         </div>
-        <div v-else class="menu-txt">Questionnaire</div>
+        <div v-else>Questionnaire</div>
       </router-link>
       <router-link
         :to="{ path: '/', hash: '#pricing' }"
         class="menu-link"
         @click="focused = 'pricing'"
       >
-        <div v-if="focused === 'pricing'" class="menu-txt underlined">
-          Pricing
-        </div>
-        <div v-else class="menu-txt">Pricing</div>
+        <div v-if="focused === 'pricing'" class="underlined">Pricing</div>
+        <div v-else>Pricing</div>
       </router-link>
       <router-link
         :to="{ path: '/', hash: '#contact' }"
         class="menu-link"
         @click="focused = 'contact'"
       >
-        <div v-if="focused === 'contact'" class="menu-txt underlined">
-          Contact Us
-        </div>
-        <div v-else class="menu-txt">Contact Us</div>
+        <div v-if="focused === 'contact'" class="underlined">Contact Us</div>
+        <div v-else>Contact Us</div>
       </router-link>
       <router-link to="/sign-in" id="signin" class="menu-link">
-        <span class="menu-txt">Sign in</span>
+        <span>Sign in</span>
       </router-link>
     </div>
   </ul>
@@ -67,26 +59,26 @@
 <script>
 export default {
   created() {
-    window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll);
     window.onscroll = function () {
       this.handleScroll;
     };
   },
   destroyed() {
-    window.removeEventListener("scroll", this.handleScroll);
+    window.removeEventListener('scroll', this.handleScroll);
   },
   data() {
     return {
-      focused: "",
+      focused: 'aboutus',
     };
   },
   methods: {
     handleScroll() {
       let sticky = document.getElementById.offsetTop;
       if (window.pageYOffset >= sticky) {
-        document.getElementById("menu").classList.add("sticky");
+        document.getElementById('menu').classList.add('sticky');
       } else {
-        document.getElementById("menu").classList.remove("sticky");
+        document.getElementById('menu').classList.remove('sticky');
       }
     },
   },

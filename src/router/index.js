@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import SignUp from "../views/SignUp.vue";
-import SignIn from "../views/SignIn.vue";
-import Templates from "../components/temps/Templates.vue";
-import Questionnaire from "../views/Questionnaire.vue";
+import SignUp from "../views/SignInUp/SignUp.vue";
+import SignIn from "../views/SignInUp/SignIn.vue";
+import Templates from "../views/temps/Templates.vue";
+import Questionnaire from "../views/Questionnaire/Questionnaire.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -25,7 +25,7 @@ const router = createRouter({
     },
     {
       path: "/templates",
-      name: "Templates",
+      name: "templates",
       component: Templates,
     },
     {
@@ -38,16 +38,13 @@ const router = createRouter({
     if (to.hash) {
       const el = window.location.href.split("#")[1];
       if (el.length) {
-        setTimeout(() => {
-          document.getElementById(el).scrollIntoView({ behavior: "smooth" });
-        }, 0);
+        const element = document.getElementById(el);
+        if (element) element.scrollIntoView({ behavior: "smooth" });
       }
     } else if (SavedPosition) {
       return SavedPosition;
     } else {
-      setTimeout(() => {
-        document.getElementById("app").scrollIntoView({ behavior: "smooth" });
-      }, 0);
+      document.getElementById("app").scrollIntoView({ behavior: "smooth" });
     }
   },
 });

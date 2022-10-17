@@ -1,7 +1,4 @@
 <template>
-  <header>
-    <Navbar />
-  </header>
   <div class="flex justify-center">
     <div class="grid grid-cols-2 gap-[40px] mt-[120px]">
       <div
@@ -31,7 +28,6 @@
 <script setup>
 import "./style.css";
 import { reactive } from "vue";
-import Navbar from "../Navbar.vue";
 const templates = reactive([
   { id: 1, hidden: true },
   { id: 2, hidden: true },
