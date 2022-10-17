@@ -6,6 +6,9 @@
 @import "./views/temps/style.css";
 @import "./views/SignInUp/style.css";
 @import "./views/StartQuestionnaire/style.css";
+@import "./components/GetStarted/style.css";
+@import "./components/Slider/style.css";
+@import "./components/About/style.css";
 
 @tailwind base;
 @tailwind components;
