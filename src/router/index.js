@@ -2,8 +2,8 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import SignUp from "../views/SignInUp/SignUp.vue";
 import SignIn from "../views/SignInUp/SignIn.vue";
-import StartQuestionnaire from "../views/StartQuestionnaire/StartQuestionnaire.vue";
 import Templates from "../views/temps/Templates.vue";
+import Questionnaire from "../views/Questionnaire/Questionnaire.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -31,7 +31,7 @@ const router = createRouter({
     {
       path: "/questionnaire",
       name: "questionnaire",
-      component: StartQuestionnaire,
+      component: Questionnaire,
     },
   ],
   scrollBehavior(to, from, SavedPosition) {
