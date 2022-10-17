@@ -39,3 +39,6 @@
 #radio3:checked ~ .first {
   @apply ml-[-40%];
 }
+.active {
+  @apply bg-orange-600;
+}
