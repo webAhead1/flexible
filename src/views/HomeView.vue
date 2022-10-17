@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div id="home" class="flex justify-around space-x-4">
+    <div id="home" class="flex justify-around pt-[5rem] space-x-4">
       <GetStarted />
       <Slider />
     </div>

@@ -1,5 +1,5 @@
 .about-container {
-  @apply flex flex-col justify-center items-center font-poppins space-y-10;
+  @apply flex flex-col justify-center items-center font-poppins py-[8rem] space-y-10;
 }
 .about {
   @apply text-4xl;
