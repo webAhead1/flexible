@@ -1,308 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import "./components/QuestionnaireComponents/style.css";
+@import "./components/ContactUs/style.css";
+@import "./components/Pricing/style.css";
+@import "./components/QuestionnaireOrTemplates/style.css";
+@import "./views/temps/style.css";
+@import "./views/SignInUp/style.css";
+@import "./components/GetStarted/style.css";
+@import "./components/Slider/style.css";
+@import "./components/About/style.css";
+@import "./views/Questionnaire/style.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.nameQ {
-  @apply font-poppins mr-24 ml-24 text-center md:text-center text-4xl mt-[120px] leading-loose not-italic font-semibold;
-}
-.text {
-  @apply shadow-[0px_4px_4px_0px_#00000080]  py-2 px-3 text-text leading-tight focus:outline-none ml-28 w-[23.5rem] h-[4rem] rounded-[18px] text-3xl;
-}
-.background {
-  @apply flex-auto justify-center ml-[17rem] rounded-[10px] h-[50rem] w-[46rem] z-0 bg-backgroundColor shadow-[0px_4px_4px_0px_#00000080];
-}
-.domain {
-  @apply flex flex-row;
-}
-.buttons {
-  @apply flex flex-row justify-between mr-[5rem] ml-[5rem] mt-[13rem];
-}
-.backButton {
-  @apply shadow-boxShadow bg-back text-white  rounded-[18px] h-[5rem] w-[12rem] text-3xl leading-loose font-normal text-center;
-}
-.nextButton {
-  @apply shadow-boxShadow bg-red text-white rounded-[18px] h-[5rem] w-[12rem] text-3xl leading-loose font-normal text-center;
-}
-.contact-container {
-  @apply h-[100vh];
-}
-
-.contact-card {
-  @apply h-[44rem] w-[35rem] rounded-[20px] relative shadow-md shadow-gray-600 border-[#878787] m-auto top-[4rem];
-}
-
-.card-title {
-  @apply text-[30px] flex justify-center items-center bg-[#F1E8E2C2] w-full h-[4rem] rounded-tr-[20px] rounded-tl-[20px];
-}
-
-.card-body {
-  @apply h-[80%] bg-[#D7CEC7] pt-[2rem] pl-[4rem] pr-[4rem] flex flex-col;
-}
-
-.name-input {
-  @apply w-full h-[3rem] min-h-[3rem] border-2 rounded-[18px] pl-[1rem] text-[20px] shadow-md shadow-gray-600 mb-[1rem];
-}
-
-.name-input.errorEmpty {
-  @apply border-red;
-}
-
-.name-input.notEmpty {
-  @apply border-transparent;
-}
-
-.email-input {
-  @apply w-full h-[3rem] min-h-[3rem] border-2 rounded-[18px] pl-[1rem] text-[20px] shadow-md shadow-gray-600 mb-[1rem];
-}
-
-.email-input.errorEmpty {
-  @apply border-red;
-}
-
-.email-input.notEmpty {
-  @apply border-transparent;
-}
-
-.message-input {
-  @apply w-full h-[10rem] max-h-[15rem] border-2 rounded-[18px] pl-[1rem] text-[20px] break-normal p-[10px] shadow-md shadow-gray-600;
-}
-
-.message-input.errorEmpty {
-  @apply border-red;
-}
-
-.message-input.notEmpty {
-  @apply border-transparent;
-}
-
-.submit-button {
-  @apply bg-[#D11F1F] w-[11rem] h-[3rem] rounded-[16px] self-center text-[23px] absolute bottom-[2rem] text-white shadow-md shadow-gray-600;
-}
-
-.contact-name-label {
-  @apply text-[25px] relative left-[10px];
-}
-
-.contact-email-label {
-  @apply text-[25px] relative left-[10px];
-}
-
-.contact-message-label {
-  @apply text-[25px] relative left-[10px];
-}
-
-.modal {
-  @apply fixed top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 border-black border-[1px] rounded-[10px] z-10 bg-slate-100 w-[500px] scale-0 ease-in-out duration-200 h-[6rem];
-}
-
-.modal.active {
-  @apply scale-100;
-}
-
-.modal-text {
-  @apply p-[10px];
-}
-
-.ok-button-container {
-  @apply flex justify-center;
-}
-
-.ok-button {
-  @apply border-[1px] border-black rounded-[5px] bg-[#2b4f6086] m-[10px] w-[2rem] h-[2rem];
-}
-
-#overlay {
-  @apply fixed top-0 left-0 right-0 bottom-0 bg-[#0000007c] pointer-events-none opacity-0 ease-in-out duration-200;
-}
-
-#overlay.active {
-  @apply opacity-100 pointer-events-auto;
-}
-/* .navBar {
-  @apply w-full mb-[3rem] bg-[#D7CEC7] top-0 text-center text-[26px] 
-  font-poppins fixed h-[6.625rem] flex shadow-[0px_4px_4px_0px_#00000080] z-50;
-} */
-.template-background {
-  @apply flex justify-start flex-col items-start m-auto rounded-[12px] mt-[10rem] h-[35rem] w-[44rem] bg-[#D7CEC7] shadow-[0px_4px_4px_0px_#00000080];
-}
-.checkboxes-background {
-  @apply flex justify-start flex-col items-start m-auto rounded-[12px] mt-[10rem] h-[44rem] w-[44rem] bg-[#D7CEC7] shadow-[0px_4px_4px_0px_#00000080];
-}
-.firstSentence {
-  @apply ml-[4rem] mr-[4rem] mt-[120px] text-center not-italic text-black font-poppins text-[33px] font-semibold leading-[50px];
-}
-.com {
-  @apply w-[17rem] h-[4.5rem] font-poppins text-4xl leading-loose font-normal;
-}
-.navBar {
-  @apply w-full mb-[3rem] bg-[#D7CEC7] top-0 text-center text-[26px] 
-  font-poppins fixed h-[6.625rem] flex shadow-[0px_4px_4px_0px_#00000080];
-}
-
-.logo {
-  @apply h-[16px] top-[opx] z-10;
-}
-/* .logoWithFlexible {
-  @apply flex items-center ml-[614px] text-black py-[0.80rem] truncate text-[34px];
-} */
-.questionnaire-or-templates-container {
-  @apply flex flex-row space-x-[5rem] justify-center h-[100vh];
-}
-
-.build-website-option {
-  @apply relative top-[6rem] w-[30rem] flex items-center flex-col;
-}
-
-.or-container {
-  @apply relative top-[28rem] h-[70px] w-[70px] text-3xl bg-[#B1A198] flex items-center justify-center rounded-[15px];
-}
-
-.template-option {
-  @apply relative top-[6rem] w-[30rem] flex items-center flex-col;
-}
-
-.build-website-option-title {
-  @apply bg-white h-[3rem] w-3/4 rounded-[15px] flex items-center justify-center text-3xl text-[#013565];
-}
-
-.template-option-title {
-  @apply bg-[#013565] h-[3rem] w-3/4 rounded-[15px] flex items-center justify-center text-3xl text-[white];
-}
-
-.build-website-card {
-  @apply bg-[#908077] bg-no-repeat bg-center h-[40rem] w-full rounded-[20px] mt-[2rem] shadow-md shadow-gray-700 p-[2rem];
-}
-
-.template-card {
-  @apply bg-[#908077] bg-contain bg-no-repeat  bg-center h-[40rem] w-full rounded-[20px] mt-[2rem] shadow-md shadow-gray-700 p-[2rem];
-}
-
-.polygon {
-  @apply absolute w-0 h-0 left-0 border-l-[70rem] border-l-[#013565] border-b-[59rem] border-b-transparent;
-}
-
-.nameQ {
-  @apply text-black font-poppins mr-24 ml-24 text-center md:text-center text-4xl mt-[30px] leading-loose not-italic font-semibold;
-}
-
-.background {
-  @apply flex-auto ml-[260px] rounded-[10px] h-[766.46px] w-[721.38px] z-0 bg-backgroundColor;
-}
-
-.buttons {
-  @apply flex justify-around mt-[40px] w-[44rem];
-}
-.backButton {
-  @apply shadow-boxShadow bg-back text-white  rounded-[18px] h-[70px] w-[180px] text-3xl leading-loose font-normal text-center;
-}
-.nextButton {
-  @apply shadow-boxShadow bg-red text-white rounded-[18px] h-[70px] w-[180px] text-3xl leading-loose font-normal text-center;
-}
-.checkboxes {
-  @apply text-black font-poppins font-normal text-3xl not-italic leading-loose ml-[7rem];
-}
-.checkbox1 {
-  @apply w-[214px] h-[72px];
-}
-.checkbox2 {
-  @apply w-[214px] h-[72px];
-}
-.checkbox3 {
-  @apply w-[214px] h-[72px];
-}
-.checkbox4 {
-  @apply w-[214px] h-[72px];
-}
-
-#musicplayer,
-#gallery,
-#forum,
-#socialmedialinks {
-  @apply mt-[35px] w-[35px] h-[32px];
-}
-.pricingTxt {
-  @apply text-white text-[37px] flex justify-center items-end h-[90px];
-}
-.cardName {
-  @apply flex justify-center pt-5 text-[30px];
-}
-.cardPrice {
-  @apply flex pt-5 font-bold text-[47px];
-}
-.priceDetails {
-  @apply flex items-center pt-[12px] text-[20px] font-normal;
-}
-.cardSentence {
-  @apply flex justify-center pt-2 text-[20px];
-}
-.offers {
-  @apply flex flex-col items-center pt-8;
-}
-.cardOffers {
-  @apply flex flex-col items-center  text-[20px];
-}
-.line {
-  @apply my-2 w-[284px] h-[2px] border-[1px] bg-black border-black;
-}
-.btnPosition {
-  @apply absolute bottom-5 left-[47px];
-}
-.pricingBtn {
-  @apply bg-[#B1A198] shadow-[0px_4px_4px_#00000080] rounded-[18px] w-[238px] h-[79px];
-}
-.btn {
-  @apply flex justify-center text-white bg-[#D11F1F] w-[237px] h-[79px] text-[34px] rounded-[18px] hover:opacity-80 hover:text-black  hover:bg-[#FFFFFF99] active:drop-shadow-xl active:bg-gray-100 shadow-[0px_4px_4px_0px_#00000080];
-}
-.cardButton {
-  @apply flex justify-center h-[74px] items-center text-[30px] hover:bg-white hover:rounded-[18px] active:h-[79px] active:bg-gray-100 active:shadow-[0px_4px_4px_#00000090];
-}
-/* another active design for button */
-/* .cardButton {
-  @apply flex justify-center h-[79px] items-center text-[30px] hover:bg-white hover:rounded-[18px] active:h-[82px] active:bg-gray-200 active:shadow-[0px_4px_4px_#00000090];
-} */
+/* Global styling */
 html {
   @apply scroll-pt-[100px];
 }
 body {
-  @apply mt-[7rem] bg-[#013565];
+  @apply mt-[7rem] bg-[#D7CEC7];
 }
-.signInUpNavbar {
-  @apply w-full mb-[3rem] bg-[#D7CEC7F7] top-0 text-center 
-  font-poppins fixed h-106 shadow-[0px_4px_4px_0px_#00000080] z-50;
-}
-.logoWithFlexible1 {
-  @apply flex justify-center w-full items-center text-black py-5 text-[34px];
-}
-input {
-  @apply w-[459px] h-[70px] mb-5 rounded-[18px] px-3 py-2 bg-[#FFFFFF99] focus:bg-white focus:outline-none shadow-[0px_4px_4px_0px_#00000080];
-}
-.btnBg {
-  @apply flex justify-center;
-}
-
-.txt-and-button {
-  @apply text-[30px] font-poppins;
-}
-.txt {
-  @apply pl-2 text-[#0C0C0C] pb-1;
-}
-.signBg1 {
-  @apply bg-[#D7CEC7] w-[600px] rounded-[20px] border border-black;
-}
-.signBg {
-  @apply bg-[#F1E8E2C2] rounded-t-[20px] h-[70px];
-}
-.signText {
-  @apply flex justify-center text-black font-poppins pt-3 text-[34px];
-}
-.accountQuestion {
-  @apply text-center text-[20px] text-black;
-}
-.hereStyle {
-  @apply text-[#013565F0] hover:underline;
-}
-
+/* Navbar styling */
 .menu {
   @apply w-full mb-[3rem] bg-[#D7CEC7] top-0 text-center text-[26px] 
   font-poppins fixed h-106 flex shadow-[0px_4px_4px_0px_#00000080] z-50;
@@ -313,19 +31,18 @@ input {
 .menu-link {
   @apply py-7 px-3 ml-14 items-center text-black active:shadow-[0px_4px_4px_0px_#00000080];
 }
-.menu-txt {
-  /* this is for example */
-  @apply hover:bg-[#D7CEC7];
-}
 .logo {
   @apply h-16 top-0 z-10;
 }
 .logoWithFlexible {
   @apply flex items-center text-black py-[0.80rem] truncate text-[34px];
 }
-
+.underlined {
+  @apply border-b-4 border-solid border-[#908077] rounded;
+}
+/* Footer styling */
 .footer-container {
-  @apply w-full h-[4rem] bg-[#013565] absolute bottom-0 flex flex-row items-center text-white p-[1rem];
+  @apply w-full h-[4rem] bg-[#013565] bottom-0 flex flex-row items-center text-white p-[1rem];
 }
 
 .footer-copyright-formality {

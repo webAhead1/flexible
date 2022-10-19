@@ -1,4 +1,5 @@
 <script></script>
+
 <template>
   <body>
     <div class="polygon"></div>

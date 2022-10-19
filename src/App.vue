@@ -1,23 +1,32 @@
-<script setup>
-import TextBox from "./components/TextBox.vue";
-import Template from "./components/Template.vue";
-import Navbar from "./components/Navbar.vue";
-import CheckBoxes from "./components/CheckBoxes.vue";
-import { RouterLink, RouterView } from "vue-router";
-</script>
 <script>
+import { RouterLink, RouterView } from "vue-router";
+import Footer from "./components/Footer.vue";
+import Navbar from "./components/Navbar.vue";
+
 export default {
-  components: TextBox,
-  Template,
-  CheckBoxes,
-  Navbar,
+  components: {
+    Footer,
+    Navbar,
+    RouterView,
+  },
+  data() {
+    return {
+      path: "",
+    };
+  },
 };
 </script>
+
 <template>
   <header>
-    <Navbar />
+    <Navbar
+      v-if="this.$route.name != 'signin' && this.$route.name != 'signup'"
+    />
   </header>
   <body>
     <RouterView />
   </body>
+  <footer>
+    <Footer />
+  </footer>
 </template>
