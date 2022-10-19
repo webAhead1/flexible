@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import SignUp from "../views/SignUp.vue";
 import SignIn from "../views/SignIn.vue";
-import Templates from '../components/temps/Templates.vue'
+import Templates from "../components/temps/Templates.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,12 +32,16 @@ const router = createRouter({
     if (to.hash) {
       const el = window.location.href.split("#")[1];
       if (el.length) {
-        document.getElementById(el).scrollIntoView({ behavior: "smooth" });
+        setTimeout(() => {
+          document.getElementById(el).scrollIntoView({ behavior: "smooth" });
+        }, 0);
       }
     } else if (SavedPosition) {
       return SavedPosition;
     } else {
-      document.getElementById("app").scrollIntoView({ behavior: "smooth" });
+      setTimeout(() => {
+        document.getElementById("app").scrollIntoView({ behavior: "smooth" });
+      }, 0);
     }
   },
 });
