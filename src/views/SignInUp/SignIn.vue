@@ -3,28 +3,13 @@
     <SignInUpNavbar />
   </header>
   <body>
-    <h1>Is Initialized: {{ Vue3GoogleOauth.isInit }}</h1>
-    <h1>Is Authorized: {{ Vue3GoogleOauth.isAuthorized }}</h1>
-    <h2 v-if="user">Logged in as:{{ user }}</h2>
-    <div class="btnBg pt-14">
-      <div class="btn">
-        <button
-          @click="handleSignIn"
-          :disabled="!Vue3GoogleOauth.isInit || Vue3GoogleOauth.isAuthorized"
-        >
-          Sign In
-        </button>
-      </div>
-    </div>
-    <div class="btnBg pt-14">
-      <div class="btn">
-        <button
-          @click="handleSignOut"
-          :disabled="!Vue3GoogleOauth.isAuthorized"
-        >
-          Log Out
-        </button>
-      </div>
+    <div class="m-auto min-h-[40px]" id="google">
+      <!-- <div
+        id="g_id_onload"
+        data-client_id="905632566241-c0mi3crlia5q8h6tqe9uc2u647sjkpji.apps.googleusercontent.com"
+        data-callback="handleCredentialResponse"
+      ></div>
+      <div class="g_id_signin" data-type="standard"></div> -->
     </div>
 
     <div class="flex justify-center py-[153px]">
@@ -56,47 +41,36 @@
 </template>
 
 <script>
-import { inject } from 'vue';
-import SignInUpNavbar from '@/components/SignInUpNavbar.vue';
+import SignInUpNavbar from "@/components/SignInUpNavbar.vue";
 export default {
   components: {
     SignInUpNavbar,
   },
-  setup() {
-    const Vue3GoogleOauth = inject('Vue3GoogleOauth');
-    return {
-      Vue3GoogleOauth,
+  mounted() {
+    console.log("first");
+    window.handleCredentialResponse = (response) => {
+      var base64Url = response.credential.split(".")[1];
+      var base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+      var jsonPayload = decodeURIComponent(
+        atob(base64)
+          .split("")
+          .map(function (c) {
+            return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+          })
+          .join("")
+      );
+      console.log(JSON.parse(jsonPayload));
+      localStorage.setItem;
     };
-  },
-  data() {
-    return {
-      user: '',
-    };
-  },
-  methods: {
-    async handleSignIn() {
-      try {
-        const googleUser = await this.$gAuth.signIn();
-        console.log(this.$gAuth.signIn);
-        if (!googleUser) {
-          return null;
-        }
-        this.user = googleUser.getBasicProfile().getEmail();
-      } catch (error) {
-        console.log(error);
-        return null;
-      }
-    },
-    async handleSignOut() {
-      try {
-        await this.$gAuth.signOut();
-        // console.log(this.$gAuth.signOut);
-        this.user = '';
-      } catch (error) {
-        console.log(error);
-        return null;
-      }
-    },
+    google.accounts.id.initialize({
+      client_id:
+        "905632566241-c0mi3crlia5q8h6tqe9uc2u647sjkpji.apps.googleusercontent.com",
+      callback: window.handleCredentialResponse,
+    });
+    google.accounts.id.renderButton(
+      document.getElementById("google"),
+      { theme: "outline", size: "large" } // customization attributes
+    );
   },
 };
 </script>
