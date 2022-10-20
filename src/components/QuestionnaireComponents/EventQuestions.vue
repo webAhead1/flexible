@@ -1,10 +1,22 @@
+<template>
+  <div class="flex justify-center font-poppins">
+    <div class="bg-[#013565] w-full h-[885px]">
+      <div class="pricingTxt">EventQuestions</div>
+      <div class="flex justify-center space-x-11">
+        <div v-for="question in Questions" class="mt-14">
+          <Event :question />
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
 <script>
+import Event from "./Event.vue";
 export default {
   data() {
     return {
       Questions: [
         { type: "textbox", question_text: "Event name:", answers: [] },
-
         {
           type: "radio",
           question_text: "How can people attend your event?",
@@ -24,6 +36,11 @@ export default {
             },
           ],
         },
+        {
+          type: "textbox",
+          question_text: "What is the event address?",
+          answers: [],
+        },
         { type: "textbox", question_text: "When is your event?", answers: [] },
         {
           type: "checkboxes",
@@ -40,5 +57,6 @@ export default {
       ],
     };
   },
+  components: { Event },
 };
 </script>

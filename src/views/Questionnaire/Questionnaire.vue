@@ -5,6 +5,7 @@ import TextBox from "@/components/QuestionnaireComponents/TextBox.vue";
 import CheckBoxes from "@/components/QuestionnaireComponents/CheckBoxes.vue";
 import RadioButtons from "@/components/QuestionnaireComponents/RadioButtons.vue";
 import ContactQuestion from "@/components/QuestionnaireComponents/ContactQuestion.vue";
+import EventQuestions from "@/components/QuestionnaireComponents/Event.vue";
 
 export default {
   data() {

@@ -8,6 +8,7 @@
     <QuestionnaireOrTemplates id="quesOrTemp" />
     <Pricing id="pricing" />
     <ContactUs id="contact" />
+    <EventQuestions />
   </main>
 </template>
 <script>
@@ -17,6 +18,7 @@ import ContactUs from "../components/ContactUs/ContactUs.vue";
 import Slider from "../components/Slider/Slider.vue";
 import About from "../components/About/About.vue";
 import GetStarted from "../components/GetStarted/GetStarted.vue";
+import EventQuestions from "../components/QuestionnaireComponents/EventQuestions.vue";
 export default {
   components: {
     Slider,
@@ -25,6 +27,7 @@ export default {
     Pricing,
     QuestionnaireOrTemplates,
     ContactUs,
+    EventQuestions,
   },
 };
 </script>
