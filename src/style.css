@@ -1,14 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-@import "./components/QuestionnaireComponents/style.css";
-@import "./components/ContactUs/style.css";
-@import "./components/Pricing/style.css";
-@import "./components/QuestionnaireOrTemplates/style.css";
-@import "./views/temps/style.css";
-@import "./views/SignInUp/style.css";
-@import "./components/GetStarted/style.css";
-@import "./components/Slider/style.css";
-@import "./components/About/style.css";
-@import "./views/Questionnaire/style.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import './components/QuestionnaireComponents/style.css';
+@import './components/ContactUs/style.css';
+@import './components/Pricing/style.css';
+@import './components/QuestionnaireOrTemplates/style.css';
+@import './views/temps/style.css';
+@import './views/SignInUp/style.css';
+@import './components/GetStarted/style.css';
+@import './components/Slider/style.css';
+@import './components/About/style.css';
+@import './views/Questionnaire/style.css';
+@import './views/Profile/style.css';
 
 @tailwind base;
 @tailwind components;

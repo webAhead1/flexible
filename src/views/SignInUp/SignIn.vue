@@ -19,13 +19,6 @@
                 </div>
               </div>
               <div class="google-button" id="google"></div>
-              <button
-                :disabled="!user"
-                :hidden="!user"
-                @click="handleSignOut(e)"
-              >
-                Sign Out
-              </button>
               <div class="accountQuestion py-4">
                 Don’t have an account yet? Click
                 <RouterLink class="hereStyle" to="/sign-up">here</RouterLink>
@@ -44,18 +37,11 @@ import SignInUpNavbar from '@/components/SignInUpNavbar.vue';
 export default {
   data() {
     return {
-      // to do global state or redux to manage this userObject
       user: '',
     };
   },
   components: {
     SignInUpNavbar,
-  },
-  methods: {
-    handleSignOut(event) {
-      this.user = '';
-      console.log('logged out' + this.user);
-    },
   },
   mounted() {
     const handleCredentialResponse = (response) => {
@@ -70,9 +56,9 @@ export default {
           .join('')
       );
       // console.log('Encoded JWT ID token:' + response.credential);
-      localStorage.setItem;
-      this.user = JSON.parse(jsonPayload);
-      console.log(this.user);
+      localStorage.setItem('user', jsonPayload);
+      window.location.href = '/profile';
+      // console.log(this.user);
     };
     google.accounts.id.initialize({
       client_id:
