@@ -3,8 +3,8 @@
     <SignInUpNavbar />
   </header>
   <body>
-    <div class="flex justify-center py-[40px]">
-      <div class="signBg1 h-[940px]">
+    <div class="flex justify-center py-4">
+      <div class="signBg1 h-[900px]">
         <div class="signBg">
           <div class="signText">Sign Up</div>
           <div class="flex justify-center">

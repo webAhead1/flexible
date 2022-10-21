@@ -59,26 +59,26 @@
 <script>
 export default {
   created() {
-    window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll);
     window.onscroll = function () {
       this.handleScroll;
     };
   },
   destroyed() {
-    window.removeEventListener("scroll", this.handleScroll);
+    window.removeEventListener('scroll', this.handleScroll);
   },
   data() {
     return {
-      focused: "aboutus",
+      focused: 'aboutus',
     };
   },
   methods: {
     handleScroll() {
       let sticky = document.getElementById.offsetTop;
       if (window.pageYOffset >= sticky) {
-        document.getElementById("menu").classList.add("sticky");
+        document.getElementById('menu').classList.add('sticky');
       } else {
-        document.getElementById("menu").classList.remove("sticky");
+        document.getElementById('menu').classList.remove('sticky');
       }
     },
   },
