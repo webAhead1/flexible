@@ -35,11 +35,6 @@
 <script>
 import SignInUpNavbar from '@/components/SignInUpNavbar.vue';
 export default {
-  data() {
-    return {
-      user: '',
-    };
-  },
   components: {
     SignInUpNavbar,
   },
@@ -58,7 +53,6 @@ export default {
       // console.log('Encoded JWT ID token:' + response.credential);
       localStorage.setItem('user', jsonPayload);
       window.location.href = '/profile';
-      // console.log(this.user);
     };
     google.accounts.id.initialize({
       client_id:
@@ -69,6 +63,9 @@ export default {
       document.getElementById('google'),
       { theme: 'outline', size: 'large', text: 'signin', width: '220px' } // customization attributes
     );
+    if (localStorage.getItem('user')) {
+      this.$router.push({ name: 'home' });
+    }
   },
 };
 </script>
