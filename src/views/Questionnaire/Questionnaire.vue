@@ -35,7 +35,6 @@ export default {
 </script>
 
 <template>
-  <Navbar />
   <body class="bg-[#013565] pt-[5rem] pb-[5rem]">
     <div class="template-background">
       <StartQuestionnaire v-if="currentStep == 1" />

@@ -1,35 +1,31 @@
+.polygon {
+  @apply absolute w-0 h-0 left-0 border-l-[65rem] border-l-[#013565] border-b-[50rem] border-b-transparent;
+}
+
 .questionnaire-or-templates-container {
-  @apply flex flex-row space-x-[5rem] justify-center h-[100vh];
+  @apply flex space-x-[5rem] items-center justify-center;
 }
 
 .build-website-option {
-  @apply relative top-[6rem] w-[30rem] flex items-center flex-col;
+  @apply z-10 my-6 w-[30rem] flex items-center flex-col;
 }
-
-.or-container {
-  @apply relative top-[28rem] h-[70px] w-[70px] text-3xl bg-[#B1A198] flex items-center justify-center rounded-[15px];
-}
-
-.template-option {
-  @apply relative top-[6rem] w-[30rem] flex items-center flex-col;
-}
-
 .build-website-option-title {
   @apply bg-white h-[3rem] w-3/4 rounded-[15px] flex items-center justify-center text-3xl text-[#013565];
 }
+.build-website-card {
+  @apply bg-[#908077] h-[40rem] w-full rounded-[20px] my-[2rem] shadow-md shadow-gray-700 p-[2rem];
+}
 
+.or-container {
+  @apply z-10 top-[28rem] h-[70px] w-[70px] text-3xl bg-[#B1A198] flex items-center justify-center rounded-[15px];
+}
+
+.template-option {
+  @apply z-10 my-6 w-[30rem] flex items-center flex-col;
+}
 .template-option-title {
   @apply bg-[#013565] h-[3rem] w-3/4 rounded-[15px] flex items-center justify-center text-3xl text-[white];
 }
-
-.build-website-card {
-  @apply bg-[#908077] bg-no-repeat bg-center h-[40rem] w-full rounded-[20px] mt-[2rem] shadow-md shadow-gray-700 p-[2rem];
-}
-
 .template-card {
-  @apply bg-[#908077] bg-contain bg-no-repeat  bg-center h-[40rem] w-full rounded-[20px] mt-[2rem] shadow-md shadow-gray-700 p-[2rem];
-}
-
-.polygon {
-  @apply absolute w-0 h-0 left-0 border-l-[70rem] border-l-[#013565] border-b-[59rem] border-b-transparent;
+  @apply bg-[#908077] h-[40rem] w-full rounded-[20px] my-[2rem] shadow-md shadow-gray-700 p-[2rem];
 }
