@@ -14,6 +14,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 /* Global styling */
 html {
   @apply scroll-pt-[100px];
@@ -40,6 +41,14 @@ body {
 }
 .underlined {
   @apply border-b-4 border-solid border-[#908077] rounded;
+}
+/* Sign in up navbar styling */
+.signInUpNavbar {
+  @apply w-full mb-[3rem] bg-[#D7CEC7] top-0 text-center 
+    font-poppins flex justify-center fixed h-106 shadow-[0px_4px_4px_0px_#00000080] z-50;
+}
+.logoWithFlexible1 {
+  @apply flex justify-center w-full items-center text-black py-5 text-[34px];
 }
 /* Footer styling */
 .footer-container {
