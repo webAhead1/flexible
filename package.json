@@ -8,6 +8,8 @@
     "build-css": "tailwindcss build src/style.css -o public/style.css"
   },
   "dependencies": {
+    "google-auth-library": "^8.6.0",
+    "jsonwebtoken": "^8.5.1",
     "vue": "^3.2.38",
     "vue-router": "^4.1.5"
   },

@@ -1,5 +1,5 @@
 <template>
-  <h1>{{ user }}</h1>
+  <h1>{{ user[1] }}</h1>
   <button @click="handleSignOut(e)">Sign Out</button>
 </template>
 <script>
