@@ -24,6 +24,7 @@
                   <button>Submit</button>
                 </div>
               </div>
+              <div class="google-button" id="google"></div>
               <div class="accountQuestion pt-4">
                 Already have an account? Click
                 <RouterLink class="hereStyle" to="/sign-in">here</RouterLink>

@@ -1,39 +1,41 @@
 <template>
-  <div class="contact-container">
-    <div class="contact-card">
-      <div class="card-title">Contact Us</div>
-      <div class="card-body">
-        <div class="contact-name-label">Name</div>
-        <input v-model="name" class="name-input" :class="nameIsEmpty" />
-        <br />
-        <div class="contact-email-label">Email</div>
-        <input v-model="email" class="email-input" :class="emailIsEmpty" />
-        <br />
-        <div class="contact-message-label">Tell us how we can help</div>
-        <textarea
-          v-model="message"
-          class="message-input"
-          :class="messageIsEmpty"
-        />
-        <br />
-        <button
-          @click="openModal()"
-          data-modal-target="#modal"
-          class="submit-button"
-        >
-          Submit
-        </button>
+  <div class="parallax">
+    <div class="contact-container">
+      <div class="contact-card">
+        <div class="card-title">Contact Us</div>
+        <div class="card-body">
+          <div class="contact-name-label">Name</div>
+          <input v-model="name" class="name-input" :class="nameIsEmpty" />
+          <br />
+          <div class="contact-email-label">Email</div>
+          <input v-model="email" class="email-input" :class="emailIsEmpty" />
+          <br />
+          <div class="contact-message-label">Tell us how we can help</div>
+          <textarea
+            v-model="message"
+            class="message-input"
+            :class="messageIsEmpty"
+          />
+          <br />
+          <button
+            @click="openModal()"
+            data-modal-target="#modal"
+            class="submit-button"
+          >
+            Submit
+          </button>
+        </div>
       </div>
+      <div class="modal" id="modal">
+        <div class="modal-text">
+          We got your request and we'll get back to you as soon as possible.
+        </div>
+        <div data-close-button class="ok-button-container">
+          <button @click="closeModal()" class="ok-button">Ok</button>
+        </div>
+      </div>
+      <div id="overlay"></div>
     </div>
-    <div class="modal" id="modal">
-      <div class="modal-text">
-        We got your request and we'll get back to you as soon as possible.
-      </div>
-      <div data-close-button class="ok-button-container">
-        <button @click="closeModal()" class="ok-button">Ok</button>
-      </div>
-    </div>
-    <div id="overlay"></div>
   </div>
 </template>
 

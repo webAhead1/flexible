@@ -1,5 +1,5 @@
 <template>
-  <h1>Hello Profile</h1>
+  <h1 class="example">Hello Profile</h1>
   <button @click="handleSignOut(e)">Sign Out</button>
 </template>
 <script>
