@@ -7,25 +7,60 @@
       </div>
     </router-link>
 
-    <div class="menu-item">
-      <router-link :to="{ path: '/', hash: '#about' }" class="menu-link">
-        <span class="menu-txt">About Us</span>
+    <div class="menu-item" style="focus:border-bottom: 2px solid black;">
+      <router-link
+        :to="{ path: '/', hash: '#about' }"
+        class="menu-link"
+        @click="focused = 'aboutUs'"
+      >
+        <div v-if="focused === 'aboutUs'" class="underlined">About Us</div>
+        <div v-else>About Us</div>
       </router-link>
-      <router-link to="/templates" class="menu-link">
-        <span class="menu-txt">Templates</span>
+      <router-link
+        to="/templates"
+        class="menu-link"
+        @click="focused = 'templates'"
+      >
+        <div v-if="focused === 'templates'" class="underlined">Templates</div>
+        <div v-else>Templates</div>
       </router-link>
-      <router-link to="/questionnaire" class="menu-link">
-        <span class="menu-txt">Questionnaire</span>
+      <router-link
+        to="/questionnaire"
+        class="menu-link"
+        @click="focused = 'questionnaire'"
+      >
+        <div v-if="focused === 'questionnaire'" class="underlined">
+          Questionnaire
+        </div>
+        <div v-else>Questionnaire</div>
       </router-link>
-      <router-link :to="{ path: '/', hash: '#pricing' }" class="menu-link">
-        <span class="menu-txt">Pricing</span>
+      <router-link
+        :to="{ path: '/', hash: '#pricing' }"
+        class="menu-link"
+        @click="focused = 'pricing'"
+      >
+        <div v-if="focused === 'pricing'" class="underlined">Pricing</div>
+        <div v-else>Pricing</div>
       </router-link>
-      <router-link :to="{ path: '/', hash: '#contact' }" class="menu-link">
-        <span class="menu-txt">Contact Us</span>
+      <router-link
+        :to="{ path: '/', hash: '#contact' }"
+        class="menu-link"
+        @click="focused = 'contact'"
+      >
+        <div v-if="focused === 'contact'" class="underlined">Contact Us</div>
+        <div v-else>Contact Us</div>
       </router-link>
-      <router-link to="/sign-in" id="signin" class="menu-link">
-        <span class="menu-txt">Sign in</span>
+      <router-link
+        v-if="!checkSignIn()"
+        to="/sign-in"
+        id="signin"
+        class="menu-link"
+      >
+        <span>Sign in</span>
       </router-link>
+      <button v-if="checkSignIn()" @click="handleSignOut(e)" class="menu-link">
+        <span>Sign Out</span>
+      </button>
     </div>
   </ul>
 </template>
@@ -40,7 +75,19 @@ export default {
   destroyed() {
     window.removeEventListener('scroll', this.handleScroll);
   },
+  data() {
+    return {
+      focused: 'aboutus',
+    };
+  },
   methods: {
+    handleSignOut(event) {
+      localStorage.removeItem('user');
+      window.location.href = '/';
+    },
+    checkSignIn() {
+      return !!localStorage.getItem('user');
+    },
     handleScroll() {
       let sticky = document.getElementById.offsetTop;
       if (window.pageYOffset >= sticky) {
