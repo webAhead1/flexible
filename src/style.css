@@ -9,7 +9,8 @@
 @import "./components/Slider/style.css";
 @import "./components/About/style.css";
 @import "./views/Questionnaire/style.css";
-
+@import "./views/Profile/style.css";
+@import "./components/ProfileComponent/style.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

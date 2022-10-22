@@ -1,0 +1,6 @@
+.userDetails-container {
+  @apply flex flex-col items-center self-center;
+}
+.user-name {
+  @apply left-[320px] text-4xl w-[25rem] text-center text-[34px];
+}

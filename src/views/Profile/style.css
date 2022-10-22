@@ -1,0 +1,3 @@
+.Profile-container {
+  @apply flex flex-col justify-center pt-[1.5rem] items-center font-poppins space-y-10;
+}

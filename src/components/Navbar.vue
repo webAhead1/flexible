@@ -50,8 +50,25 @@
         <div v-if="focused === 'contact'" class="underlined">Contact Us</div>
         <div v-else>Contact Us</div>
       </router-link>
-      <router-link to="/sign-in" id="signin" class="menu-link">
+      <router-link
+        v-if="!checkSignIn()"
+        to="/sign-in"
+        id="signin"
+        class="menu-link"
+      >
         <span>Sign in</span>
+      </router-link>
+      <button v-if="checkSignIn()" @click="handleSignOut(e)" class="menu-link">
+        <span>Sign Out</span>
+      </button>
+      <router-link
+        v-if="checkSignIn()"
+        to="/profile"
+        class="menu-link"
+        @click="focused = 'profile'"
+      >
+        <div v-if="focused === 'profile'" class="underlined">Profile</div>
+        <div v-else>Profile</div>
       </router-link>
     </div>
   </ul>
@@ -73,6 +90,13 @@ export default {
     };
   },
   methods: {
+    handleSignOut(event) {
+      localStorage.removeItem("user");
+      window.location.href = "/";
+    },
+    checkSignIn() {
+      return !!localStorage.getItem("user");
+    },
     handleScroll() {
       let sticky = document.getElementById.offsetTop;
       if (window.pageYOffset >= sticky) {

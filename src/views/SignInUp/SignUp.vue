@@ -3,8 +3,8 @@
     <SignInUpNavbar />
   </header>
   <body>
-    <div class="flex justify-center py-[40px]">
-      <div class="signBg1 h-[940px]">
+    <div class="flex justify-center py-4">
+      <div class="signBg1 h-[900px]">
         <div class="signBg">
           <div class="signText">Sign Up</div>
           <div class="flex justify-center">
@@ -41,6 +41,35 @@ import SignInUpNavbar from '@/components/SignInUpNavbar.vue';
 export default {
   components: {
     SignInUpNavbar,
+  },
+  mounted() {
+    const handleCredentialResponse = (response) => {
+      var base64Url = response.credential.split('.')[1];
+      var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+      var jsonPayload = decodeURIComponent(
+        atob(base64)
+          .split('')
+          .map(function (c) {
+            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+          })
+          .join('')
+      );
+      // console.log('Encoded JWT ID token:' + response.credential);
+      localStorage.setItem('user', jsonPayload);
+      window.location.href = '/profile';
+    };
+    google.accounts.id.initialize({
+      client_id:
+        '905632566241-c0mi3crlia5q8h6tqe9uc2u647sjkpji.apps.googleusercontent.com',
+      callback: handleCredentialResponse,
+    });
+    google.accounts.id.renderButton(
+      document.getElementById('google'),
+      { theme: 'outline', size: 'large', text: 'signin', width: '220px' } // customization attributes
+    );
+    if (localStorage.getItem('user')) {
+      this.$router.push({ name: 'home' });
+    }
   },
 };
 </script>
