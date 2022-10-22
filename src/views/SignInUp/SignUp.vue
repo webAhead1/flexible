@@ -2,67 +2,83 @@
   <header>
     <SignInUpNavbar />
   </header>
-  <body>
-    <div class="sign-container">
-      <div class="signBg1 h-[700px]">
-        <div class="signBg">
-          <div class="signText">Sign Up</div>
-          <div class="flex flex-col items-center justify-center">
-            <div class="txt-and-button pt-6">
-              <div class="flex flex-row justify-around">
-                <div class="flex flex-col justify-start">
-                  <div class="txt">First Name</div>
-                  <input type="text" id="fName" name="fName" required />
-                </div>
-                <div class="flex flex-col justify-start">
-                  <div class="txt">Last Name</div>
-                  <input type="text" id="lName" name="lName" required />
-                </div>
+  <div class="sign-container">
+    <div class="signBg1 h-[38rem]">
+      <div class="signBg">
+        <div class="signText">Sign Up</div>
+        <div class="flex flex-col items-center justify-center">
+          <div class="txt-and-button w-[37.5rem] pt-5">
+            <div class="flex flex-row justify-around">
+              <div class="flex flex-col justify-start">
+                <div class="txt">First Name</div>
+                <input
+                  class="detail-input"
+                  type="text"
+                  id="fName"
+                  name="fName"
+                  required
+                />
               </div>
-              <div class="txt">Email</div>
-              <input
-                class="emailInput"
-                type="email"
-                id="email"
-                name="email"
-                required
-              />
-              <div class="flex flex-row justify-around">
-                <div class="flex flex-col justify-start">
-                  <div class="txt">Password</div>
-                  <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    required
-                  />
-                </div>
-                <div class="flex flex-col justify-start">
-                  <div class="txt">Confirm Password</div>
-                  <input
-                    type="password"
-                    id="cPassword"
-                    name="cPassword"
-                    required
-                  />
-                </div>
+              <div class="flex flex-col justify-start">
+                <div class="txt">Last Name</div>
+                <input
+                  class="detail-input"
+                  type="text"
+                  id="lName"
+                  name="lName"
+                  required
+                />
               </div>
-              <div class="btnBg pt-6">
-                <div class="btn">
-                  <button>Submit</button>
-                </div>
+            </div>
+            <div class="flex flex-row justify-around">
+              <div class="flex flex-col justify-start">
+                <div class="txt">Email</div>
+                <input
+                  class="emailInput"
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                />
               </div>
-              <div class="accountQuestion pt-4">
-                Already have an account? Click
-                <RouterLink class="hereStyle" to="/sign-in">here</RouterLink>
-                to sign in
+            </div>
+            <div class="flex flex-row justify-around">
+              <div class="flex flex-col justify-start">
+                <div class="txt">Password</div>
+                <input
+                  class="detail-input"
+                  type="password"
+                  id="password"
+                  name="password"
+                  required
+                />
               </div>
+              <div class="flex flex-col justify-start">
+                <div class="txt">Confirm Password</div>
+                <input
+                  class="detail-input"
+                  type="password"
+                  id="cPassword"
+                  name="cPassword"
+                  required
+                />
+              </div>
+            </div>
+            <div class="btnBg">
+              <div class="btn">
+                <button>Submit</button>
+              </div>
+            </div>
+            <div class="accountQuestion pt-4">
+              Already have an account? Click
+              <RouterLink class="hereStyle" to="/sign-in">here</RouterLink>
+              to sign in
             </div>
           </div>
         </div>
       </div>
     </div>
-  </body>
+  </div>
 </template>
 <script>
 import SignInUpNavbar from '@/components/SignInUpNavbar.vue';

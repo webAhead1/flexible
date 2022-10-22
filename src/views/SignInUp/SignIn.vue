@@ -2,46 +2,52 @@
   <header>
     <SignInUpNavbar />
   </header>
-  <body>
-    <div class="sign-container">
-      <div class="signBg1 h-[620px]">
-        <div class="signBg">
-          <div class="signText">Sign In</div>
-          <div class="sign-body">
-            <div class="txt-and-button py-10">
-              <div class="txt">Email</div>
-              <input
-                class="emailInput"
-                type="email"
-                id="email"
-                name="email"
-                required
-              />
-              <div class="txt">Password</div>
-              <input
-                class="emailInput"
-                type="password"
-                id="password"
-                name="password"
-                required
-              />
-              <div class="btnBg py-10">
-                <div class="btn">
-                  <button>Sign In</button>
-                </div>
+  <div class="sign-container">
+    <div class="signBg1 h-[36rem]">
+      <div class="signBg">
+        <div class="signText">Sign In</div>
+        <div class="sign-body">
+          <div class="txt-and-button py-5">
+            <div class="flex flex-row justify-around">
+              <div class="flex flex-col justify-start">
+                <div class="txt">Email</div>
+                <input
+                  class="emailInput"
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                />
               </div>
-              <div class="google-button" id="google"></div>
-              <div class="accountQuestion py-4">
-                Don’t have an account yet? Click
-                <RouterLink class="hereStyle" to="/sign-up">here</RouterLink>
-                to sign up
+            </div>
+            <div class="flex flex-row justify-around">
+              <div class="flex flex-col justify-start">
+                <div class="txt">Password</div>
+                <input
+                  class="emailInput"
+                  type="password"
+                  id="password"
+                  name="password"
+                  required
+                />
               </div>
+            </div>
+            <div class="btnBg">
+              <div class="btn">
+                <button>Sign In</button>
+              </div>
+            </div>
+            <div class="google-button" id="google"></div>
+            <div class="accountQuestion py-4">
+              Don’t have an account yet? Click
+              <RouterLink class="hereStyle" to="/sign-up">here</RouterLink>
+              to sign up
             </div>
           </div>
         </div>
       </div>
     </div>
-  </body>
+  </div>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 .sign-container {
-  @apply flex justify-center items-center py-5;
+  @apply flex justify-center items-center overscroll-none py-5;
 }
 .signBg1 {
   @apply bg-[#D7CEC7] w-[600px] rounded-[20px] border border-black;
@@ -7,15 +7,17 @@
 .signBg {
   @apply bg-[#F1E8E2C2] rounded-t-[20px] h-[70px];
 }
-
-input {
-  @apply w-[220px] h-[70px] mb-5 rounded-[18px] bg-[#FFFFFF99] focus:bg-white focus:outline-none shadow-[0px_4px_4px_0px_#00000080];
+.detail-input {
+  @apply w-[250px] h-[60px] mb-5 pl-3 rounded-[18px] bg-[#FFFFFF99] focus:bg-white focus:outline-none shadow-[0px_4px_4px_0px_#00000080];
 }
 .emailInput {
-  @apply w-[400px] h-[70px] mb-5 rounded-[18px] bg-[#FFFFFF99] focus:bg-white focus:outline-none shadow-[0px_4px_4px_0px_#00000080];
+  @apply w-[550px] h-[60px] mb-5 pl-3 rounded-[18px] bg-[#FFFFFF99] focus:bg-white focus:outline-none shadow-[0px_4px_4px_0px_#00000080];
 }
 .btnBg {
-  @apply flex justify-center;
+  @apply flex justify-center py-5;
+}
+.btn {
+  @apply flex justify-center h-[70px] w-[237px] rounded-[18px] bg-[#d11f1f] text-[34px] text-white shadow-[0px_4px_4px_0px_#00000080];
 }
 .txt-and-button {
   @apply text-[25px] font-poppins;
