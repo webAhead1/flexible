@@ -1,8 +1,8 @@
 .contact-container {
-  @apply h-[80vh] flex justify-center items-center;
+  @apply h-[100vh] flex justify-center items-center;
 }
 .contact-card {
-  @apply h-[35rem] w-[35rem] rounded-[20px] relative border-solid border-black shadow-[0px_4px_4px_0px_#00000080] m-auto top-[4rem];
+  @apply h-[35rem] w-[35rem] rounded-[20px] shadow-[0px_4px_4px_0px_#00000080];
 }
 .card-title {
   @apply text-[30px] flex justify-center items-center bg-[#F1E8E2] w-full h-[4rem] rounded-tr-[20px] rounded-tl-[20px];
