@@ -35,7 +35,6 @@
                   </svg>
                   <span>Login with Facebook</span>
                 </button>
-                <div id="status"></div>
               </div>
               <div class="accountQuestion pt-8">
                 Don’t have an account yet? Click
@@ -60,7 +59,9 @@ export default {
     facebookLogIn() {
       FB.login((res) => {
         FB.api("/me?fields=name,email", function (response) {
-          console.log(JSON.stringify(response));
+          localStorage.setItem("user", JSON.stringify(response));
+          window.location.href = "/profile";
+          // console.log(JSON.stringify(response));
         });
       });
     },
