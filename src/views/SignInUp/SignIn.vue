@@ -4,7 +4,7 @@
   </header>
   <body>
     <div class="flex justify-center py-4">
-      <div class="signBg1 h-[620px]">
+      <div class="signBg1">
         <div class="signBg">
           <div class="signText">Sign In</div>
           <div class="flex justify-center">
@@ -18,6 +18,7 @@
                   <button>Sign In</button>
                 </div>
               </div>
+              <div class="flex justify-center">Or</div>
               <div class="fb-btn">
                 <button
                   @click="facebookLogIn"

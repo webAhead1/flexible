@@ -19,7 +19,7 @@ input {
   @apply pl-2 text-[#0C0C0C] pb-1;
 }
 .signBg1 {
-  @apply bg-[#D7CEC7] w-[550px] rounded-[20px] border border-black;
+  @apply bg-[#D7CEC7] h-[45rem] w-[550px] rounded-[20px] border border-black;
 }
 .signBg {
   @apply bg-[#F1E8E2C2] rounded-t-[20px] h-[70px];
@@ -37,7 +37,7 @@ input {
   @apply text-[#013565F0] hover:underline;
 }
 .fb-btn {
-  @apply flex justify-center;
+  @apply flex justify-center mb-[1rem];
 }
 login-button {
   @apply flex justify-center rounded-[1rem];
