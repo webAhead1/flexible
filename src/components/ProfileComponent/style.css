@@ -2,5 +2,18 @@
   @apply flex flex-col items-center self-center;
 }
 .user-name {
-  @apply left-[320px] text-4xl w-[25rem] text-center text-[34px];
+  @apply mb-[2rem] left-[320px] text-4xl w-[25rem] text-center font-poppins leading-[4rem] font-medium not-italic text-[40px];
+}
+.user-photo {
+  @apply rounded-full;
+}
+.edit-photo {
+  @apply absolute bottom-0 right-0 h-14 w-14 my-8;
+}
+.edit-button {
+  @apply mt-[4rem] h-[4.5rem] w-[25rem]  rounded-[16px] text-[#FFFFFF] font-normal
+     text-[34px] bg-[#D11F1F] text-[32px] shadow-md;
+}
+.profile-settings {
+  @apply bg-[#013565] rounded-[20px] w-[58rem] h-[55rem] mb-[4rem] border border-solid;
 }

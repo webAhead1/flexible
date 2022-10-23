@@ -1,14 +1,15 @@
 <template>
   <main>
-    <div class="Profile-container">Profile Settings</div>
-    <div class="flex justify-around pt-[5rem] space-x-4">
+    <div class="profile-container">Profile Settings</div>
+    <div class="flex justify-around pt-[3rem] space-x-4">
       <UserDetails />
-      <h1>image</h1>
+      <ProfileSetting />
     </div>
   </main>
 </template>
 <script>
 import UserDetails from "@/components/ProfileComponent/UserDetails.vue";
+import ProfileSetting from "@/components/ProfileComponent/ProfileSetting.vue";
 export default {
   data() {
     return {
@@ -26,6 +27,7 @@ export default {
   },
   components: {
     UserDetails,
+    ProfileSetting,
   },
 };
 </script>
