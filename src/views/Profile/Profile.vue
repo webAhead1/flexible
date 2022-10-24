@@ -1,7 +1,7 @@
 <template>
   <main>
     <div class="profile-container">Profile Settings</div>
-    <div class="flex justify-around pt-[3rem] space-x-4">
+    <div class="flex justify-around mt-[2rem] space-x-4">
       <UserDetails />
       <ProfileSetting />
     </div>
