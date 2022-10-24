@@ -36,3 +36,9 @@ input {
 .hereStyle {
   @apply text-[#013565F0] hover:underline;
 }
+.fb-btn {
+  @apply flex justify-center rounded-[1rem];
+}
+login-button {
+  @apply flex justify-center rounded-[1rem];
+}
