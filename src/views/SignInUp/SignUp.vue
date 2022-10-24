@@ -3,7 +3,7 @@
     <SignInUpNavbar />
   </header>
   <body>
-    <div class="flex justify-center py-4">
+    <div class="flex justify-center py-4 bg-[#D7CEC7]">
       <div class="signBg1 h-[900px]">
         <div class="signBg">
           <div class="signText">Sign Up</div>
@@ -24,6 +24,7 @@
                   <button>Submit</button>
                 </div>
               </div>
+              <div class="google-button" id="google"></div>
               <div class="accountQuestion pt-4">
                 Already have an account? Click
                 <RouterLink class="hereStyle" to="/sign-in">here</RouterLink>

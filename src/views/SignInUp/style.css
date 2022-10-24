@@ -22,7 +22,7 @@ input {
   @apply bg-[#D7CEC7] w-[550px] rounded-[20px] border border-black;
 }
 .signBg {
-  @apply bg-[#F1E8E2C2] rounded-t-[20px] h-[70px];
+  @apply bg-[#F1E8E2] rounded-t-[20px] h-[70px];
 }
 .signText {
   @apply flex justify-center text-black font-poppins pt-3 text-[34px];
