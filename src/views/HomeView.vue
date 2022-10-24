@@ -1,9 +1,6 @@
 <template>
-  <header>
-    <Navbar />
-  </header>
-  <main>
-    <div id="home" class="flex justify-around pt-[5rem] space-x-4">
+  <main id="home">
+    <div class="homeStyle">
       <GetStarted />
       <Slider />
     </div>

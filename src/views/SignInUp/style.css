@@ -1,11 +1,11 @@
 .sign-container {
-  @apply flex justify-center items-center overscroll-none py-5;
+  @apply flex justify-center items-center overscroll-none py-5 scale-75;
 }
 .signBg1 {
   @apply bg-[#D7CEC7] w-[600px] rounded-[20px] border border-black;
 }
 .signBg {
-  @apply bg-[#F1E8E2C2] rounded-t-[20px] h-[70px];
+  @apply bg-[#F1E8E2] rounded-t-[20px] h-[70px];
 }
 .detail-input {
   @apply w-[250px] h-[60px] mb-5 pl-3 rounded-[18px] bg-[#FFFFFF99] focus:bg-white focus:outline-none shadow-[0px_4px_4px_0px_#00000080];
@@ -36,4 +36,10 @@
 }
 .hereStyle {
   @apply text-[#013565F0] hover:underline;
+}
+.fb-btn {
+  @apply flex justify-center rounded-[1rem];
+}
+login-button {
+  @apply flex justify-center rounded-[1rem];
 }
