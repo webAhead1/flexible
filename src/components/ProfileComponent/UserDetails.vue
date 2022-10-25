@@ -1,19 +1,24 @@
 <script>
 import EditPhoto from "./EditPhoto.vue";
+import EditProfile from "./EditProfile.vue";
 export default {
   data() {
     return {
       editPhotoButton: false,
+      editProfileButton: false,
     };
   },
   methods: {
     openEditPhoto() {
       this.editPhotoButton = !this.editPhotoButton;
-      console.log("aaa");
+    },
+    openEditProfile() {
+      this.editProfileButton = !this.editProfileButton;
     },
   },
   components: {
     EditPhoto,
+    EditProfile,
   },
 };
 </script>
@@ -30,7 +35,11 @@ export default {
         </div>
       </div>
     </div>
-    <button class="edit-button">Edit profile</button>
+    <button @click="openEditProfile" class="edit-button">Edit profile</button>
   </div>
-  <EditPhoto v-if="editPhotoButton === true" />
+  <EditPhoto v-if="editPhotoButton === true" @closephoto="openEditPhoto" />
+  <EditProfile
+    v-if="editProfileButton === true"
+    @closeprofile="openEditProfile"
+  />
 </template>

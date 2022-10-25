@@ -2,30 +2,40 @@
   @apply flex flex-col items-center self-center mb-[5rem];
 }
 .user-name {
-  @apply mb-[2rem] left-[320px] text-4xl w-[25rem] text-center font-poppins leading-[4rem] font-medium not-italic text-[40px];
+  @apply mb-[2rem] left-[320px] text-2xl w-[25rem] text-center font-poppins leading-[4rem] font-medium not-italic text-[36px];
 }
 .user-photo {
-  @apply rounded-full;
+  @apply rounded-full w-[22rem] h-[22rem];
 }
 .current-user-photo {
-  @apply rounded-full  w-[26rem] h-[28rem];
+  @apply p-12;
 }
+
 .edit-photo {
-  @apply absolute bottom-0 right-0 h-14 w-14 my-8;
+  @apply absolute bottom-0 right-0 h-12 w-12 my-5;
 }
 .edit-button {
   @apply mt-[4rem] h-[4.5rem] w-[25rem]  rounded-[16px] text-[#FFFFFF] font-normal
      text-[34px] bg-[#D11F1F] text-[32px] shadow-md;
 }
 .profile-settings {
-  @apply bg-[#013565] rounded-[20px] w-[58rem] h-[55rem] mb-[4rem] border border-solid;
+  @apply bg-[#013565] rounded-[20px] w-[50rem] h-[47rem] mb-[4rem] border border-solid;
 }
 .edit-photo-box {
-  @apply flex-col items-center justify-self-auto self-center  bg-[#C6C6C6] rounded-[18px];
+  @apply flex-col items-center justify-self-auto self-center  bg-[#C6C6C6] rounded-[18px] mt-[3rem];
+}
+.edit-profile-box {
+  @apply flex-col items-center justify-self-auto self-center  bg-[#C6C6C6] rounded-[18px] mt-[3rem];
 }
 .edit-photo-container {
-  @apply top-0 absolute w-[60rem] h-[55rem] p-[13rem];
+  @apply top-0 absolute w-[60rem] p-[16rem];
+}
+.edit-profile-container {
+  @apply top-0 absolute w-[60rem] p-[16rem];
 }
 .add-photo-options {
-  @apply flex justify-around pt-[1rem] space-x-4;
+  @apply flex justify-around pt-[1rem] space-x-4 mr-[1rem];
+}
+.add-photo-option-t {
+  @apply flex justify-around pt-[1rem] space-x-4 ml-[1.5rem];
 }

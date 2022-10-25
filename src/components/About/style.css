@@ -1,8 +1,11 @@
 .about-container {
-  @apply flex flex-col justify-center py-[8rem] items-center font-poppins space-y-10;
+  @apply flex flex-col justify-center py-[6rem] items-center font-poppins space-y-32;
 }
 .about {
-  @apply text-4xl;
+  @apply absolute top-2/4 left-2/4 text-4xl -translate-x-2/4 -translate-y-2/4;
+}
+.about-text-container {
+  @apply w-full flex justify-center items-center bg-[#D7CEC7] h-[60vh];
 }
 .about-text {
   @apply text-3xl w-[700px] text-center;

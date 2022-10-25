@@ -61,7 +61,9 @@ export default {
     facebookLogIn() {
       FB.login((res) => {
         FB.api("/me?fields=name,email", function (response) {
-          console.log(JSON.stringify(response));
+          localStorage.setItem("user", JSON.stringify(response));
+          window.location.href = "/profile";
+          // console.log(JSON.stringify(response));
         });
       });
     },
