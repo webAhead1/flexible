@@ -10,16 +10,31 @@
 .current-user-photo {
   @apply p-12;
 }
-
 .edit-photo {
   @apply absolute bottom-0 right-0 h-12 w-12 my-5;
 }
 .edit-button {
   @apply mt-[4rem] h-[4.5rem] w-[25rem]  rounded-[16px] text-[#FFFFFF] font-normal
-     text-[34px] bg-[#D11F1F] text-[32px] shadow-md;
+     text-[34px] bg-[#D11F1F]  shadow-md;
 }
 .profile-settings {
-  @apply bg-[#013565] rounded-[20px] w-[50rem] h-[47rem] mb-[4rem] border border-solid;
+  @apply flex flex-row space-x-7 bg-[#013565] rounded-[20px] w-[50rem] h-[47rem] mb-[4rem] border border-solid;
+}
+.button-options-settings {
+  @apply flex flex-col space-y-12 ml-[2rem] mt-[4rem] text-[#FFFFFF] font-normal font-poppins leading-[51px]
+  text-[32px];
+}
+.content-settings {
+  @apply flex bg-[#D9D9D9] w-[30rem] h-[40rem] mt-[3.5rem] rounded-[18px];
+}
+.settings-content-box {
+  @apply flex flex-col space-y-6;
+}
+.setting-header {
+  @apply ml-[10rem] mt-[1rem] underline underline-offset-auto font-normal font-poppins leading-[51px] text-[32px];
+}
+.setting-website {
+  @apply ml-[3rem] font-normal font-poppins leading-[51px] text-[32px];
 }
 .edit-photo-box {
   @apply shadow-[0px_4px_4px_0px_#00000080] flex-col items-center justify-self-auto self-center  bg-[#C6C6C6] rounded-[18px] mt-[3rem];
