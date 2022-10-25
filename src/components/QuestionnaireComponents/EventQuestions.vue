@@ -1,57 +1,63 @@
 <template>
-  <div class="flex justify-center font-poppins">
-    <div class="bg-[#013565] w-full h-[885px]">
-      <div class="pricingTxt">EventQuestions</div>
-      <div class="flex justify-center space-x-11">
-        <div v-for="question in Questions" class="mt-14">
-          <Event :question />
-        </div>
-      </div>
-    </div>
+  <!-- <div v-for="(question, i) in questions" :key="i" class="mt-14"> -->
+  <div>
+    <Event :question="questions[questionNumber]" />
   </div>
 </template>
 <script>
 import Event from "./Event.vue";
 export default {
+  props: ["questionNumber"],
   data() {
     return {
-      Questions: [
-        { type: "textbox", question_text: "Event name:", answers: [] },
+      questions: [
+        { type: "text", text: "Event name:", answers: [] },
         {
           type: "radio",
-          question_text: "How can people attend your event?",
+          text: "How can people attend your event?",
           answers: [
             {
+              value: "buy-tickets",
               answerid: 1,
               text: "Buy tickets",
             },
             {
+              value: "signup-sheets",
               answerid: 2,
-              text: "Signup-sheets",
+              text: "Signup sheets",
             },
-            { answerid: 3, text: "Just show up" },
+            { value: "just-show-up", answerid: 3, text: "Just show up" },
             {
+              value: "contact-us",
               answerid: 4,
               text: "Contact us",
             },
           ],
         },
         {
-          type: "textbox",
-          question_text: "What is the event address?",
+          type: "text",
+          text: "What is the event address?",
           answers: [],
         },
-        { type: "textbox", question_text: "When is your event?", answers: [] },
+        { type: "text", text: "When is your event?", answers: [] },
         {
-          type: "checkboxes",
-          question_text: "What features would you like to add? ",
+          type: "checkbox",
+          text: "What features would you like to add? ",
           answers: [
-            { answerid: 1, text: "Gallery" },
-            { answerid: 2, text: "Social media links" },
-            { answerid: 3, text: "Music" },
-            { answerid: 4, text: "Videos" },
-            { answerid: 5, text: "Text boxes (blog style)" },
-            { answerid: 6, text: "Countdown" },
+            { value: "gallery", answerid: 1, text: "Gallery" },
+            {
+              value: "social media links",
+              answerid: 2,
+              text: "Social media links",
+            },
+            { value: "music", answerid: 3, text: "Music" },
+            { value: "videos", answerid: 4, text: "Videos" },
+            {
+              value: "text boxes (blog style)",
+              answerid: 5,
+              text: "Text boxes (blog style)",
+            },
+            { value: "countdown", answerid: 6, text: "Countdown" },
           ],
         },
       ],

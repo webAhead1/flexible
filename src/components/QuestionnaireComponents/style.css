@@ -54,3 +54,9 @@
 #no-contact {
   @apply mt-[35px] w-[35px] h-[32px] shadow-none;
 }
+/* #buy-tickets,
+#signup-sheets,
+#just-show-up,
+#contact-us {
+  @apply border-none w-[35px] h-[32px] shadow-none  mt-[0.8rem];
+} */
