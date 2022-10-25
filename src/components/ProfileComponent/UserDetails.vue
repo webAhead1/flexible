@@ -6,6 +6,7 @@ export default {
     return {
       editPhotoButton: false,
       editProfileButton: false,
+      user: JSON.parse(localStorage.getItem("user")),
     };
   },
   methods: {
@@ -24,10 +25,19 @@ export default {
 </script>
 <template>
   <div class="userDetails-container">
-    <h1 class="user-name">Mario saliba</h1>
+    <h1 class="user-name">{{ this.user.name }}</h1>
     <div class="flex">
       <div class="relative">
-        <img class="user-photo" src="@/assets/img/mario.png" />
+        <img
+          v-if="this.user.type == 'google'"
+          class="user-photo"
+          :src="this.user.picture"
+        />
+        <img
+          v-else-if="this.user.type == 'facebook'"
+          class="user-photo"
+          src="@/assets/img/mario.png"
+        />
         <div class="edit-photo">
           <button @click="openEditPhoto">
             <img src="@/assets/img/pencile.png" />

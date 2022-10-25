@@ -1,5 +1,10 @@
 <script>
 export default {
+  data() {
+    return {
+      user: JSON.parse(localStorage.getItem("user")),
+    };
+  },
   methods: {
     closeEditPhotoBox() {
       this.$emit("closephoto");
@@ -16,7 +21,16 @@ export default {
         </button>
       </div>
       <div class="current-user-photo" id="profile-pic">
-        <img class="rounded-full" src="@/assets/img/mario.png" />
+        <img
+          v-if="this.user.type == 'google'"
+          class="user-photo"
+          :src="this.user.picture"
+        />
+        <img
+          v-else-if="this.user.type == 'facebook'"
+          class="user-photo"
+          src="@/assets/img/mario.png"
+        />
       </div>
       <div class="add-photo-options">
         <div>

@@ -2,23 +2,42 @@
   <header>
     <SignInUpNavbar />
   </header>
-  <body>
-    <div class="flex justify-center py-4">
-      <div class="signBg1">
-        <div class="signBg">
-          <div class="signText">Sign In</div>
-          <div class="flex justify-center">
-            <div class="txt-and-button py-10">
-              <div class="txt">Email</div>
-              <input type="email" id="email" name="email" required />
-              <div class="txt">Password</div>
-              <input type="password" id="password" name="password" required />
-              <div class="btnBg py-10">
-                <div class="btn">
-                  <button>Sign In</button>
-                </div>
+  <div class="sign-container">
+    <div class="signBg1 h-[38rem]">
+      <div class="signBg">
+        <div class="signText">Sign In</div>
+        <div class="sign-body">
+          <div class="txt-and-button py-5">
+            <div class="flex flex-row justify-around">
+              <div class="flex flex-col justify-start">
+                <div class="txt">Email</div>
+                <input
+                  class="emailInput"
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                />
               </div>
-              <div class="flex justify-center">Or</div>
+            </div>
+            <div class="flex flex-row justify-around">
+              <div class="flex flex-col justify-start">
+                <div class="txt">Password</div>
+                <input
+                  class="emailInput"
+                  type="password"
+                  id="password"
+                  name="password"
+                  required
+                />
+              </div>
+            </div>
+            <div class="btnBg">
+              <div class="btn">
+                <button>Sign In</button>
+              </div>
+            </div>
+            <div class="flex justify-around pt-5">
               <div class="fb-btn">
                 <button
                   @click="facebookLogIn"
@@ -38,17 +57,17 @@
                 </button>
               </div>
               <div class="google-button" id="google"></div>
-              <div class="accountQuestion pt-4">
-                Don’t have an account yet? Click
-                <RouterLink class="hereStyle" to="/sign-up">here</RouterLink>
-                to sign up
-              </div>
+            </div>
+            <div class="accountQuestion pt-4">
+              Don’t have an account yet? Click
+              <RouterLink class="hereStyle" to="/sign-up">here</RouterLink>
+              to sign up
             </div>
           </div>
         </div>
       </div>
     </div>
-  </body>
+  </div>
 </template>
 
 <script>
@@ -61,6 +80,7 @@ export default {
     facebookLogIn() {
       FB.login((res) => {
         FB.api("/me?fields=name,email", function (response) {
+          response.type = "facebook";
           localStorage.setItem("user", JSON.stringify(response));
           window.location.href = "/profile";
           // console.log(JSON.stringify(response));
@@ -88,7 +108,9 @@ export default {
           .join("")
       );
       // console.log('Encoded JWT ID token:' + response.credential);
-      localStorage.setItem("user", jsonPayload);
+      const json = JSON.parse(jsonPayload);
+      json.type = "google";
+      localStorage.setItem("user", JSON.stringify(json));
       window.location.href = "/profile";
     };
     google.accounts.id.initialize({
