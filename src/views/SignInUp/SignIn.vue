@@ -2,22 +2,42 @@
   <header>
     <SignInUpNavbar />
   </header>
-  <body>
-    <div class="flex justify-center py-4 bg-[#D7CEC7]">
-      <div class="signBg1 h-[620px]">
-        <div class="signBg">
-          <div class="signText">Sign In</div>
-          <div class="flex justify-center">
-            <div class="txt-and-button py-10">
-              <div class="txt">Email</div>
-              <input type="email" id="email" name="email" required />
-              <div class="txt">Password</div>
-              <input type="password" id="password" name="password" required />
-              <div class="btnBg py-10">
-                <div class="btn">
-                  <button>Sign In</button>
-                </div>
+  <div class="sign-container">
+    <div class="signBg1 h-[38rem]">
+      <div class="signBg">
+        <div class="signText">Sign In</div>
+        <div class="sign-body">
+          <div class="txt-and-button py-5">
+            <div class="flex flex-row justify-around">
+              <div class="flex flex-col justify-start">
+                <div class="txt">Email</div>
+                <input
+                  class="emailInput"
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                />
               </div>
+            </div>
+            <div class="flex flex-row justify-around">
+              <div class="flex flex-col justify-start">
+                <div class="txt">Password</div>
+                <input
+                  class="emailInput"
+                  type="password"
+                  id="password"
+                  name="password"
+                  required
+                />
+              </div>
+            </div>
+            <div class="btnBg">
+              <div class="btn">
+                <button>Sign In</button>
+              </div>
+            </div>
+            <div class="flex justify-around pt-5">
               <div class="fb-btn">
                 <button
                   @click="facebookLogIn"
@@ -37,21 +57,21 @@
                 </button>
               </div>
               <div class="google-button" id="google"></div>
-              <div class="accountQuestion pt-8">
-                Don’t have an account yet? Click
-                <RouterLink class="hereStyle" to="/sign-up">here</RouterLink>
-                to sign up
-              </div>
+            </div>
+            <div class="accountQuestion pt-4">
+              Don’t have an account yet? Click
+              <RouterLink class="hereStyle" to="/sign-up">here</RouterLink>
+              to sign up
             </div>
           </div>
         </div>
       </div>
     </div>
-  </body>
+  </div>
 </template>
 
 <script>
-import SignInUpNavbar from "@/components/SignInUpNavbar.vue";
+import SignInUpNavbar from '@/components/SignInUpNavbar.vue';
 export default {
   components: {
     SignInUpNavbar,
@@ -59,9 +79,9 @@ export default {
   methods: {
     facebookLogIn() {
       FB.login((res) => {
-        FB.api("/me?fields=name,email", function (response) {
-          localStorage.setItem("user", JSON.stringify(response));
-          window.location.href = "/profile";
+        FB.api('/me?fields=name,email', function (response) {
+          localStorage.setItem('user', JSON.stringify(response));
+          window.location.href = '/profile';
           // console.log(JSON.stringify(response));
         });
       });
@@ -70,37 +90,37 @@ export default {
 
   mounted() {
     FB.init({
-      appId: "631600558695178",
+      appId: '631600558695178',
       cookie: true,
       xfbml: true,
-      version: "v15.0",
+      version: 'v15.0',
     });
     const handleCredentialResponse = (response) => {
-      var base64Url = response.credential.split(".")[1];
-      var base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+      var base64Url = response.credential.split('.')[1];
+      var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
       var jsonPayload = decodeURIComponent(
         atob(base64)
-          .split("")
+          .split('')
           .map(function (c) {
-            return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
           })
-          .join("")
+          .join('')
       );
       // console.log('Encoded JWT ID token:' + response.credential);
-      localStorage.setItem("user", jsonPayload);
-      window.location.href = "/profile";
+      localStorage.setItem('user', jsonPayload);
+      window.location.href = '/profile';
     };
     google.accounts.id.initialize({
       client_id:
-        "905632566241-c0mi3crlia5q8h6tqe9uc2u647sjkpji.apps.googleusercontent.com",
+        '905632566241-c0mi3crlia5q8h6tqe9uc2u647sjkpji.apps.googleusercontent.com',
       callback: handleCredentialResponse,
     });
     google.accounts.id.renderButton(
-      document.getElementById("google"),
-      { theme: "outline", size: "large", text: "signin", width: "220px" } // customization attributes
+      document.getElementById('google'),
+      { theme: 'outline', size: 'large', text: 'signin', width: '220px' } // customization attributes
     );
-    if (localStorage.getItem("user")) {
-      this.$router.push({ name: "home" });
+    if (localStorage.getItem('user')) {
+      this.$router.push({ name: 'home' });
     }
   },
 };
