@@ -29,7 +29,7 @@
   @apply flex justify-center text-black font-poppins pt-3 text-[34px];
 }
 .google-button {
-  @apply min-h-[40px] flex justify-center;
+  @apply min-h-[50px] flex justify-center;
 }
 .accountQuestion {
   @apply text-center text-[20px] text-black;
@@ -38,8 +38,5 @@
   @apply text-[#013565F0] hover:underline;
 }
 .fb-btn {
-  @apply flex justify-center rounded-[1rem];
-}
-login-button {
   @apply flex justify-center rounded-[1rem];
 }

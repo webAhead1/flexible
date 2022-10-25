@@ -1,22 +1,21 @@
 <template>
-  <div class="flex justify-center bg-[#D7CEC7]">
-    <div class="template-container">
-      <div
-        @mouseenter="t.hidden = false"
-        @mouseleave="t.hidden = true"
-        class="templates"
-        v-for="t in templates"
-      >
-        <b
-          >Template<br />
-          example {{ t.id }}</b
-        >
+  <div class="parallax">
+    <img class="parallax-img" src="../../assets/img/bg.png" />
+    <div class="flex justify-center">
+      <div class="template-container">
         <div
-          :class="{ hidden: t.hidden }"
-          class="absolute justify-center pt-[180px]"
+          @mouseenter="t.hidden = false"
+          @mouseleave="t.hidden = true"
+          class="templates"
+          v-for="t in templates"
         >
-          <div class="selectBtn">
-            <button>Select</button>
+          <div
+            :class="{ hidden: t.hidden }"
+            class="absolute justify-center pt-[180px]"
+          >
+            <div class="templateBtn">
+              <div class="tempButton">Select</div>
+            </div>
           </div>
         </div>
       </div>
