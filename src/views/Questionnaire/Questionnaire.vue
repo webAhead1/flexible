@@ -11,20 +11,21 @@ export default {
     return {
       currentStep: 1,
       text: "",
-      event: [0, 1, 2, 3, 4],
-      portfolio: [0, 1, 2],
-      blog: [0, 1, 2, 3],
       paths: {
         event: [0, 1, 2, 3, 4],
-        portfolio: [0, 1, 2],
         blog: [0, 1, 2, 3],
       },
       category: "",
     };
   },
+  updated() {
+    console.log(this.category);
+    console.log(this.currentStep);
+  },
 
   methods: {
     getData() {
+      console.log("I ran");
       if (this.currentStep == 2) {
         TextBox.methods.handleSubmit;
       }
@@ -52,34 +53,16 @@ export default {
       <div class="w-[100%] h-[85%]">
         <StartQuestionnaire v-if="currentStep == 1" />
         <TextBox v-else-if="currentStep == 2" />
-        <RadioButtons @onMaysan="updateCategory" v-else-if="currentStep == 3" />
+        <RadioButtons @onRadioChange="updateCategory" v-else-if="currentStep == 3" />
         <div v-for="(question, i) in paths[category]" :key="i">
-          <EventQuestions
-            v-if="currentStep == i + 4 && category === 'event'"
-            :questionNumber="event[i]"
-          />
-          <BlogQuestions
-            :questionNumber="blog[i]"
-            v-else-if="currentStep == i + 4 && category === 'blog'"
-          />
+          <EventQuestions v-if="currentStep == i + 4 && category === 'event'" :questionNumber="paths.event[i]" />
+          <BlogQuestions :questionNumber="paths.blog[i]" v-else-if="currentStep == i + 4 && category === 'blog'" />
         </div>
       </div>
       <div class="buttons">
-        <button
-          class="backButton"
-          @click="currentStep--"
-          v-if="currentStep >= 2"
-        >
-          Back
-        </button>
+        <button class="backButton" @click="currentStep--" v-if="currentStep >= 2">Back</button>
 
-        <button
-          @click="currentStep++"
-          v-if="currentStep == 1"
-          class="startButton"
-        >
-          Start
-        </button>
+        <button @click="currentStep++" v-if="currentStep == 1" class="startButton">Start</button>
         <button
           @click="getData"
           v-else-if="currentStep != paths[category]?.length + 3"

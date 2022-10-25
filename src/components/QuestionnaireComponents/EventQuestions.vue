@@ -54,8 +54,7 @@ export default {
               answerid: 2,
               text: "Social media links",
             },
-            { value: "music", answerid: 3, text: "Music" },
-            { value: "videos", answerid: 4, text: "Videos" },
+
             {
               value: "text boxes (blog style)",
               answerid: 5,
