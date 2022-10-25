@@ -49,18 +49,20 @@ export default {
 <template>
   <body class="bg-[#013565] pt-[5rem] pb-[5rem]">
     <div class="template-background">
-      <StartQuestionnaire v-if="currentStep == 1" />
-      <TextBox v-else-if="currentStep == 2" />
-      <RadioButtons @onMaysan="updateCategory" v-else-if="currentStep == 3" />
-      <div v-for="(question, i) in paths[category]" :key="i">
-        <EventQuestions
-          v-if="currentStep == i + 4 && category === 'event'"
-          :questionNumber="event[i]"
-        />
-        <BlogQuestions
-          :questionNumber="blog[i]"
-          v-else-if="currentStep == i + 4 && category === 'blog'"
-        />
+      <div class="w-[100%] h-[85%]">
+        <StartQuestionnaire v-if="currentStep == 1" />
+        <TextBox v-else-if="currentStep == 2" />
+        <RadioButtons @onMaysan="updateCategory" v-else-if="currentStep == 3" />
+        <div v-for="(question, i) in paths[category]" :key="i">
+          <EventQuestions
+            v-if="currentStep == i + 4 && category === 'event'"
+            :questionNumber="event[i]"
+          />
+          <BlogQuestions
+            :questionNumber="blog[i]"
+            v-else-if="currentStep == i + 4 && category === 'blog'"
+          />
+        </div>
       </div>
       <div class="buttons">
         <button

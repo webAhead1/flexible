@@ -36,10 +36,14 @@ export default {
         },
         {
           type: "text",
-          text: "What is the event address?",
+          text: "What is the event address? (Fattoush, Haifa Auditorium, Zoom ...) ",
           answers: [],
         },
-        { type: "text", text: "When is your event?", answers: [] },
+        {
+          type: "text",
+          text: "When is your event? (DD/MM/YYYY) ",
+          answers: [],
+        },
         {
           type: "checkbox",
           text: "What features would you like to add? ",

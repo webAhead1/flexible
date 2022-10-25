@@ -1,7 +1,7 @@
 <template>
   <h1 class="nameQ1">What would you like to call your website?</h1>
   <br /><br /><br /><br /><br />
-  <div class="domain">
+  <div class="domain ml-[-5rem]">
     <input
       required
       v-model="text"
@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     handleSubmit() {
-      console.log("website name: ", this.text);
+      this.text = this.text.length = 0 ? "" : "";
     },
   },
 };
