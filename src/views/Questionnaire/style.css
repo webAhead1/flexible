@@ -9,8 +9,8 @@
 }
 
 .backButton {
-  @apply shadow-boxShadow bg-red rounded-[1rem] h-[4.5rem] w-[12rem] mr-[12rem] text-white text-3xl leading-loose font-poppins items-center text-center;
+  @apply shadow-boxShadow bg-red rounded-[1rem] h-[4.5rem] w-[12rem] mr-[12rem] text-white text-3xl leading-loose font-poppins items-center text-center hover:opacity-80 hover:text-white  hover:bg-red active:drop-shadow-xl active:bg-red hover:rounded-[18px] active:h-[79px];
 }
 .nextButton {
-  @apply shadow-boxShadow bg-red rounded-[1rem] h-[4.5rem] w-[12rem] text-white text-3xl leading-loose font-poppins items-center text-center;
+  @apply shadow-boxShadow bg-red rounded-[1rem] h-[4.5rem] w-[12rem] text-white text-3xl leading-loose font-poppins items-center text-center hover:opacity-80 hover:text-white  hover:bg-red active:drop-shadow-xl active:bg-red hover:rounded-[18px] active:h-[79px];
 }
