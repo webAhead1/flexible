@@ -22,7 +22,8 @@ module.exports = {
         106: '6.625rem',
       },
       backgroundImage: {
-        bg1: "url('src/assets/img/Sign-In-bg.png')",
+        bg1: "url('src/assets/img/a.png')",
+        bg2: "url('src/assets/img/b.png')",
       },
     },
   },
