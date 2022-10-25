@@ -1,28 +1,29 @@
-.signInUpNavbar {
-  @apply w-full mb-[3rem] bg-[#D7CEC7] top-0 text-center 
-    font-poppins flex justify-center fixed h-106 shadow-[0px_4px_4px_0px_#00000080] z-50;
-}
-.logoWithFlexible1 {
-  @apply flex justify-center w-full items-center text-black py-5 text-[34px];
-}
-input {
-  @apply w-[459px] h-[70px] mb-5 rounded-[18px] px-3 py-2 bg-[#FFFFFF99] focus:bg-white focus:outline-none shadow-[0px_4px_4px_0px_#00000080];
-}
-.btnBg {
-  @apply flex justify-center;
-}
-
-.txt-and-button {
-  @apply text-[30px] font-poppins;
-}
-.txt {
-  @apply pl-2 text-[#0C0C0C] pb-1;
+.sign-container {
+  @apply flex justify-center items-center overscroll-none py-5 scale-75;
 }
 .signBg1 {
-  @apply bg-[#D7CEC7] w-[550px] rounded-[20px] border border-black;
+  @apply bg-[#D7CEC7] w-[600px] rounded-[20px] border border-black;
 }
 .signBg {
   @apply bg-[#F1E8E2] rounded-t-[20px] h-[70px];
+}
+.detail-input {
+  @apply w-[250px] h-[60px] mb-5 pl-3 rounded-[18px] bg-[#FFFFFF99] focus:bg-white focus:outline-none shadow-[0px_4px_4px_0px_#00000080];
+}
+.emailInput {
+  @apply w-[550px] h-[60px] mb-5 pl-3 rounded-[18px] bg-[#FFFFFF99] focus:bg-white focus:outline-none shadow-[0px_4px_4px_0px_#00000080];
+}
+.btnBg {
+  @apply flex justify-center py-5;
+}
+.btn {
+  @apply flex justify-center h-[70px] w-[237px] rounded-[18px] bg-[#d11f1f] text-[34px] text-white shadow-[0px_4px_4px_0px_#00000080];
+}
+.txt-and-button {
+  @apply text-[25px] font-poppins;
+}
+.txt {
+  @apply pl-2 text-[#0C0C0C] pb-1;
 }
 .signText {
   @apply flex justify-center text-black font-poppins pt-3 text-[34px];
