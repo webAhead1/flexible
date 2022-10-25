@@ -50,26 +50,34 @@
         <div v-if="focused === 'contact'" class="underlined">Contact Us</div>
         <div v-else>Contact Us</div>
       </router-link>
-      <router-link to="/sign-in" id="signin" class="menu-link">
+      <router-link
+        v-if="!checkSignIn()"
+        to="/sign-in"
+        id="signin"
+        class="menu-link"
+      >
         <span>Sign in</span>
       </router-link>
+      <button v-if="checkSignIn()" @click="handleSignOut(e)" class="menu-link">
+        <span>Sign Out</span>
+      </button>
     </div>
   </ul>
 </template>
 <script>
 export default {
   created() {
-    window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll);
     window.onscroll = function () {
       this.handleScroll;
     };
   },
   destroyed() {
-    window.removeEventListener("scroll", this.handleScroll);
+    window.removeEventListener('scroll', this.handleScroll);
   },
   data() {
     return {
-      focused: "aboutus",
+      focused: 'aboutus',
     };
   },
   data() {
@@ -78,12 +86,19 @@ export default {
     };
   },
   methods: {
+    handleSignOut(event) {
+      localStorage.removeItem('user');
+      window.location.href = '/';
+    },
+    checkSignIn() {
+      return !!localStorage.getItem('user');
+    },
     handleScroll() {
       let sticky = document.getElementById.offsetTop;
       if (window.pageYOffset >= sticky) {
-        document.getElementById("menu").classList.add("sticky");
+        document.getElementById('menu').classList.add('sticky');
       } else {
-        document.getElementById("menu").classList.remove("sticky");
+        document.getElementById('menu').classList.remove('sticky');
       }
     },
   },

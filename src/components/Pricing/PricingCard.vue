@@ -21,7 +21,7 @@
 
         <!-- Here we should remember which of the offers the user choose,
            becouse after signing in/up we should give him this offer -->
-        <router-link :to="{ path: '/', hash: '#pricing' }">
+        <router-link to="/sign-in">
           <!-- Here we should know if the user is already sign-in or not -->
           <div class="btnPosition">
             <div class="pricingBtn">

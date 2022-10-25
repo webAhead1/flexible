@@ -1,3 +1,9 @@
-.selectBtn{
-        @apply flex justify-center text-white bg-[#D11F1F] w-[174px] h-[79px] text-[34px] rounded-[18px] hover:opacity-80 hover:text-black  hover:bg-[#FFFFFF99] active:drop-shadow-xl active:bg-gray-100 shadow-[0px_4px_4px_0px_#00000080];
+.template-container {
+  @apply grid grid-cols-2 gap-[40px] my-[50px];
+}
+.templates {
+  @apply flex justify-center w-[587px] h-[400px] bg-[#D9D9D9] rounded-[20px] pt-[120px] drop-shadow-xl;
+}
+.selectBtn {
+  @apply flex justify-center text-white bg-[#D11F1F] w-[174px] h-[79px] text-[34px] rounded-[18px] hover:opacity-80 hover:text-black  hover:bg-[#FFFFFF99] active:drop-shadow-xl active:bg-gray-100 shadow-[0px_4px_4px_0px_#00000080];
 }

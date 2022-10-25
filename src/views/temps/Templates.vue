@@ -1,17 +1,16 @@
 <template>
-  <div class="flex justify-center">
-    <div class="grid grid-cols-2 gap-[40px] mt-[120px]">
+  <div class="flex justify-center bg-[#D7CEC7]">
+    <div class="template-container">
       <div
         @mouseenter="t.hidden = false"
         @mouseleave="t.hidden = true"
-        class="flex justify-center w-[587px] h-[400px] bg-[#D9D9D9] rounded-[20px] pt-[120px] drop-shadow-xl"
+        class="templates"
         v-for="t in templates"
       >
         <b
           >Template<br />
           example {{ t.id }}</b
         >
-
         <div
           :class="{ hidden: t.hidden }"
           class="absolute justify-center pt-[180px]"
