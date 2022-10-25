@@ -10,14 +10,16 @@
           <div class="flex justify-center">
             <div class="txt-and-button py-10">
               <div class="txt">Email</div>
-              <input type="email" id="email" name="email" required />
+              <form @submit.prevent @submit="signIn">
+              <input type="email" id="email" name="email" v-model="emailInput" required/>
               <div class="txt">Password</div>
-              <input type="password" id="password" name="password" required />
+              <input type="password" id="password" name="password" v-model="passwordInput" required />
               <div class="btnBg py-10">
                 <div class="btn">
-                  <button>Sign In</button>
+                  <button type="submit">Sign In</button>
                 </div>
               </div>
+            </form>
               <div class="fb-btn">
                 <button
                   @click="facebookLogIn"
@@ -53,6 +55,13 @@
 <script>
 import SignInUpNavbar from "@/components/SignInUpNavbar.vue";
 export default {
+  data(){
+    return {
+      emailInput: '',
+      passwordInput: ''
+    }
+  },
+
   components: {
     SignInUpNavbar,
   },
@@ -65,6 +74,14 @@ export default {
           // console.log(JSON.stringify(response));
         });
       });
+    },
+    signIn(){
+      const data = {
+        email: this.emailInput,
+        password: this.passwordInput
+      }
+        this.axios.post('http://localhost:4000/api/sign-in', data).then((response)=> console.log(response.data))
+        .catch((error)=> console.log(error));
     },
   },
 
