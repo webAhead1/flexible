@@ -12,14 +12,17 @@ module.exports = {
       colors: {
         backgroundColor: "#D7CEC7",
         text: "#989595",
+        white: "#FFFFFF",
         red: "#D11F1F",
         back: "#565454",
-        white: "#FFFFFF",
         black: "#000000",
         navyColor: "#2B4F60",
       },
       height: {
         106: "6.625rem",
+      },
+      backgroundImage: {
+        bg1: "url('src/assets/img/Sign-In-bg.png')",
       },
     },
   },

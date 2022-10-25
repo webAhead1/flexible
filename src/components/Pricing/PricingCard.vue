@@ -19,9 +19,9 @@
           <hr class="line" />
         </div>
 
-        <!-- Here we should remember witch of the offers the user choose,
+        <!-- Here we should remember which of the offers the user choose,
            becouse after signing in/up we should give him this offer -->
-        <router-link to="/">
+        <router-link to="/sign-in">
           <!-- Here we should know if the user is already sign-in or not -->
           <div class="btnPosition">
             <div class="pricingBtn">
@@ -35,6 +35,6 @@
 </template>
 <script>
 export default {
-  props: ["name", "shekels", "price", "monthly", "sentence", "offers"],
+  props: ['name', 'shekels', 'price', 'monthly', 'sentence', 'offers'],
 };
 </script>

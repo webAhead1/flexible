@@ -1,28 +1,35 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-@import "./components/QuestionnaireComponents/style.css";
-@import "./components/ContactUs/style.css";
-@import "./components/Pricing/style.css";
-@import "./components/QuestionnaireOrTemplates/style.css";
-@import "./views/temps/style.css";
-@import "./views/SignInUp/style.css";
-@import "./components/GetStarted/style.css";
-@import "./components/Slider/style.css";
-@import "./components/About/style.css";
-@import "./views/Questionnaire/style.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import './components/QuestionnaireComponents/style.css';
+@import './components/ContactUs/style.css';
+@import './components/Pricing/style.css';
+@import './components/QuestionnaireOrTemplates/style.css';
+@import './views/temps/style.css';
+@import './views/SignInUp/style.css';
+@import './components/GetStarted/style.css';
+@import './components/Slider/style.css';
+@import './components/About/style.css';
+@import './views/Questionnaire/style.css';
+@import './views/Profile/style.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 /* Global styling */
 html {
   @apply scroll-pt-[100px];
 }
 body {
-  @apply mt-[7rem] bg-[#D7CEC7];
+  @apply mt-[6rem];
 }
+/* Home styling */
+.homeStyle {
+  @apply flex justify-around items-center h-[90vh] bg-[#D7CEC7] space-x-4;
+}
+
 /* Navbar styling */
 .menu {
-  @apply w-full mb-[3rem] bg-[#D7CEC7] top-0 text-center text-[26px] 
+  @apply w-full bg-[#D7CEC7] top-0 text-center text-[26px] 
   font-poppins fixed h-106 flex shadow-[0px_4px_4px_0px_#00000080] z-50;
 }
 .menu-item {
@@ -40,11 +47,28 @@ body {
 .underlined {
   @apply border-b-4 border-solid border-[#908077] rounded;
 }
+/* Sign in up navbar styling */
+.signInUpNavbar {
+  @apply w-full mb-[3rem] bg-[#D7CEC7] top-0 text-center 
+    font-poppins flex justify-center fixed h-106 shadow-[0px_4px_4px_0px_#00000080] z-50;
+}
+.logoWithFlexible1 {
+  @apply flex justify-center w-full items-center text-black py-5 text-[34px];
+}
 /* Footer styling */
 .footer-container {
   @apply w-full h-[4rem] bg-[#013565] bottom-0 flex flex-row items-center text-white p-[1rem];
 }
-
 .footer-copyright-formality {
   @apply flex justify-end w-full;
+}
+/* Parallax styling */
+.parallax-img {
+  @apply min-w-full fixed top-0 left-2/4 -z-10 -translate-x-2/4;
+}
+.parallax {
+  @apply relative h-1/2 bg-fixed bg-center bg-no-repeat bg-cover;
+}
+.titles {
+  @apply bg-[#013565] h-[5rem] w-[30rem] rounded-[15px] flex justify-center items-center text-3xl text-[white];
 }
