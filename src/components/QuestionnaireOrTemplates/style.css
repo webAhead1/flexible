@@ -17,7 +17,7 @@
   @apply bg-white h-[3rem] w-3/4 rounded-[15px] flex items-center justify-center text-3xl text-[#013565];
 }
 .build-website-card {
-  @apply bg-[#908077] h-[40rem] w-full rounded-[20px] my-[2rem] shadow-md shadow-gray-700 p-[2rem];
+  @apply bg-bg1  bg-cover bg-no-repeat bg-center h-[40rem] z-10 w-full rounded-[20px] my-[2rem] shadow-md shadow-gray-700 p-[2rem];
 }
 .or-container {
   @apply z-10 top-[28rem] h-[70px] w-[70px] text-3xl bg-[#B1A198] flex items-center justify-center rounded-[15px];
@@ -26,5 +26,5 @@
   @apply z-10 my-6 w-[30rem] flex items-center flex-col;
 }
 .template-card {
-  @apply bg-[#908077] h-[40rem] w-full rounded-[20px] my-[2rem] shadow-md shadow-gray-700 p-[2rem];
+  @apply bg-bg2  bg-cover bg-no-repeat bg-center h-[40rem] z-10 w-full rounded-[20px] my-[2rem] shadow-md shadow-gray-700 p-[2rem];
 }

@@ -80,6 +80,11 @@ export default {
       focused: 'aboutus',
     };
   },
+  data() {
+    return {
+      focused: '',
+    };
+  },
   methods: {
     handleSignOut(event) {
       localStorage.removeItem('user');
