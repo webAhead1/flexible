@@ -39,7 +39,7 @@ export default {
 
       <!-- Here we should remember which of the offers the user choose,
                becouse after signing in/up we should give him this offer -->
-      <router-link to="/pricing">
+      <router-link to="/#pricing">
         <!-- Here we should know if the user is already sign-in or not -->
         <div class="btnPosition-sub">
           <div class="pricingBtn-sub">
