@@ -20,14 +20,9 @@ export default {
       category: "",
     };
   },
-  updated() {
-    console.log(this.category);
-    console.log(this.currentStep);
-  },
 
   methods: {
     getData() {
-      console.log("I ran");
       if (this.currentStep == 2) {
         TextBox.methods.handleSubmit;
       }

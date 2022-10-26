@@ -155,7 +155,6 @@ export default {
           })
           .join("")
       );
-      // console.log('Encoded JWT ID token:' + response.credential);
       localStorage.setItem("user", jsonPayload);
       window.location.href = "/profile";
     };

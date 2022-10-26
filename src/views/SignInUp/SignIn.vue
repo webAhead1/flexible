@@ -94,7 +94,6 @@ export default {
         FB.api("/me?fields=name,email", function (response) {
           localStorage.setItem("user", JSON.stringify(response));
           window.location.href = "/profile";
-          // console.log(JSON.stringify(response));
         });
       });
     },
@@ -133,7 +132,6 @@ export default {
           })
           .join("")
       );
-      // console.log('Encoded JWT ID token:' + response.credential);
       localStorage.setItem("user", jsonPayload);
       window.location.href = "/profile";
     };
@@ -152,7 +150,7 @@ export default {
         width: "240px",
       } // customization attributes
     );
-    if (localStorage.getItem("user")) {
+    if (localStorage.getItem("user") || localStorage.getItem("access_token")) {
       this.$router.push({ name: "home" });
     }
   },
