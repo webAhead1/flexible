@@ -18,6 +18,7 @@
                     type="email"
                     id="email"
                     name="email"
+                    v-model="emailInput"
                     required
                   />
                 </div>
@@ -30,6 +31,7 @@
                     type="password"
                     id="password"
                     name="password"
+                    v-model="passwordInput"
                     required
                   />
                 </div>
@@ -74,62 +76,84 @@
 </template>
 
 <script>
-import SignInUpNavbar from '@/components/SignInUpNavbar.vue';
+import SignInUpNavbar from "@/components/SignInUpNavbar.vue";
 export default {
+  data() {
+    return {
+      emailInput: "",
+      passwordInput: "",
+    };
+  },
+
   components: {
     SignInUpNavbar,
   },
   methods: {
     facebookLogIn() {
       FB.login((res) => {
-        FB.api('/me?fields=name,email', function (response) {
-          localStorage.setItem('user', JSON.stringify(response));
-          window.location.href = '/profile';
+        FB.api("/me?fields=name,email", function (response) {
+          localStorage.setItem("user", JSON.stringify(response));
+          window.location.href = "/profile";
           // console.log(JSON.stringify(response));
         });
       });
+    },
+    signIn() {
+      const data = {
+        email: this.emailInput,
+        password: this.passwordInput,
+      };
+      this.axios
+        .post("http://localhost:4000/api/sign-in", data)
+        .then((response) => {
+          window.localStorage.setItem(
+            "access_token",
+            response.data.access_token
+          );
+        })
+        .catch((error) => console.log(error));
     },
   },
 
   mounted() {
     FB.init({
-      appId: '631600558695178',
+      appId: "631600558695178",
       cookie: true,
       xfbml: true,
-      version: 'v15.0',
+      version: "v15.0",
     });
     const handleCredentialResponse = (response) => {
-      var base64Url = response.credential.split('.')[1];
-      var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+      var base64Url = response.credential.split(".")[1];
+      var base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
       var jsonPayload = decodeURIComponent(
         atob(base64)
-          .split('')
+          .split("")
           .map(function (c) {
-            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+            return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
           })
-          .join('')
+          .join("")
       );
       // console.log('Encoded JWT ID token:' + response.credential);
-      localStorage.setItem('user', jsonPayload);
-      window.location.href = '/profile';
+      localStorage.setItem("user", jsonPayload);
+      window.location.href = "/profile";
     };
     google.accounts.id.initialize({
       client_id:
-        '905632566241-c0mi3crlia5q8h6tqe9uc2u647sjkpji.apps.googleusercontent.com',
+        "905632566241-c0mi3crlia5q8h6tqe9uc2u647sjkpji.apps.googleusercontent.com",
       callback: handleCredentialResponse,
     });
     google.accounts.id.renderButton(
-      document.getElementById('google'),
+      document.getElementById("google"),
       {
-        theme: 'outline',
-        size: 'large',
-        height: '100px',
-        text: 'signin',
-        width: '240px',
+        theme: "outline",
+        size: "large",
+        height: "100px",
+        text: "signin",
+        width: "240px",
       } // customization attributes
     );
-    if (localStorage.getItem('user')) {
-      this.$router.push({ name: 'home' });
+    if (localStorage.getItem("user")) {
+      this.$router.push({ name: "home" });
     }
   },
 };
