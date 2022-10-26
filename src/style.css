@@ -81,7 +81,7 @@
 }
 
 .modal-text {
-    @apply p-[10px]
+    @apply p-[10px] text-center
 }
 
 .ok-button-container {

@@ -18,7 +18,7 @@
                     We got your request and we'll get back to you as soon as possible.
                 </div>
                 <div data-close-button class="ok-button-container">
-                    <button @click="closeModal()" class="ok-button">Ok</button>
+                    <button @click="closeModal()" class="ok-button">OK</button>
                 </div>
             </div>
             <div id="overlay"></div>
