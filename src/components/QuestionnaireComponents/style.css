@@ -1,0 +1,56 @@
+.nameQ1 {
+  @apply ml-[5.5rem] mr-[5.5rem] mt-[2.5rem] text-center not-italic text-black font-poppins text-[33px] font-semibold leading-[50px];
+}
+.nameQ2 {
+  @apply font-poppins mr-24 ml-24 text-center md:text-center text-4xl mt-[120px] leading-loose not-italic font-semibold;
+}
+.nameQ3 {
+  @apply text-black font-poppins mr-24 ml-24 text-center md:text-center text-4xl mt-[30px] leading-loose not-italic font-semibold;
+}
+.text {
+  @apply ml-[10rem] shadow-[0px_4px_4px_0px_#00000080]  py-2 px-3 text-black leading-tight focus:outline-none w-[347.85px] h-[55.07px] rounded-[18px] text-3xl;
+}
+.domain {
+  @apply flex flex-row;
+}
+.com {
+  @apply w-[262px] h-[72px] font-poppins text-4xl leading-loose font-normal;
+}
+
+.radios {
+  @apply text-black font-poppins font-normal text-3xl not-italic leading-loose ml-[7rem];
+}
+.radio {
+  @apply w-[150px] mt-[0.8rem];
+}
+.firstSentence {
+  @apply ml-[4rem] mr-[4rem] mt-[120px] text-center not-italic text-black font-poppins text-[33px] font-semibold leading-[50px];
+}
+
+#blog,
+#portfolio,
+#restaurant,
+#event,
+#e-commerce {
+  @apply mt-[35px] border-none w-[35px] h-[32px] shadow-none;
+}
+.checkboxes {
+  @apply text-black font-poppins font-normal text-3xl not-italic leading-loose ml-[7rem];
+}
+.checkbox {
+  @apply w-[214px] h-[72px];
+}
+
+#musicplayer,
+#gallery,
+#forum,
+#socialmedialinks {
+  @apply mt-[35px] w-[35px] h-[32px] shadow-none;
+}
+
+#phone,
+#e-mail,
+#fax,
+#no-contact {
+  @apply mt-[35px] w-[35px] h-[32px] shadow-none;
+}

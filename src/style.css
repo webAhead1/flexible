@@ -1,4 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import './components/QuestionnaireComponents/style.css';
+@import './components/ContactUs/style.css';
+@import './components/Pricing/style.css';
+@import './components/QuestionnaireOrTemplates/style.css';
+@import './views/temps/style.css';
+@import './views/SignInUp/style.css';
+@import './components/GetStarted/style.css';
+@import './components/Slider/style.css';
+@import './components/About/style.css';
+@import './views/Questionnaire/style.css';
+@import './views/Profile/style.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -236,50 +248,21 @@
 /* .cardButton {
   @apply flex justify-center h-[79px] items-center text-[30px] hover:bg-white hover:rounded-[18px] active:h-[82px] active:bg-gray-200 active:shadow-[0px_4px_4px_#00000090];
 } */
+/* Global styling */
 html {
   @apply scroll-pt-[100px];
 }
 body {
-  @apply mt-[7rem] bg-[#D7CEC7];
+  @apply mt-[6rem];
 }
-.signInUpNavbar {
-  @apply w-full mb-[3rem] bg-[#D7CEC7F7] top-0 text-center 
-  font-poppins fixed h-106 shadow-[0px_4px_4px_0px_#00000080] z-50;
-}
-.logoWithFlexible1 {
-  @apply flex justify-center w-full items-center text-black py-5 text-[34px];
-}
-input {
-  @apply w-[459px] h-[70px] mb-5 rounded-[18px] px-3 py-2 bg-[#FFFFFF99] focus:bg-white focus:outline-none shadow-[0px_4px_4px_0px_#00000080];
-}
-.btnBg {
-  @apply flex justify-center;
+/* Home styling */
+.homeStyle {
+  @apply flex justify-around items-center h-[90vh] bg-[#D7CEC7] space-x-4;
 }
 
-.txt-and-button {
-  @apply text-[30px] font-poppins;
-}
-.txt {
-  @apply pl-2 text-[#0C0C0C] pb-1;
-}
-.signBg1 {
-  @apply bg-[#D7CEC7] w-[600px] rounded-[20px] border border-black;
-}
-.signBg {
-  @apply bg-[#F1E8E2C2] rounded-t-[20px] h-[70px];
-}
-.signText {
-  @apply flex justify-center text-black font-poppins pt-3 text-[34px];
-}
-.accountQuestion {
-  @apply text-center text-[20px] text-black;
-}
-.hereStyle {
-  @apply text-[#013565F0] hover:underline;
-}
-
+/* Navbar styling */
 .menu {
-  @apply w-full mb-[3rem] bg-[#D7CEC7] top-0 text-center text-[26px] 
+  @apply w-full bg-[#D7CEC7] top-0 text-center text-[26px] 
   font-poppins fixed h-106 flex shadow-[0px_4px_4px_0px_#00000080] z-50;
 }
 .menu-item {
@@ -288,13 +271,37 @@ input {
 .menu-link {
   @apply py-7 px-3 ml-14 items-center text-black active:shadow-[0px_4px_4px_0px_#00000080];
 }
-.menu-txt {
-  /* this is for example */
-  @apply hover:bg-[#D7CEC7];
-}
 .logo {
   @apply h-16 top-0 z-10;
 }
 .logoWithFlexible {
   @apply flex items-center text-black py-[0.80rem] truncate text-[34px];
+}
+.underlined {
+  @apply border-b-4 border-solid border-[#908077] rounded;
+}
+/* Sign in up navbar styling */
+.signInUpNavbar {
+  @apply w-full mb-[3rem] bg-[#D7CEC7] top-0 text-center 
+    font-poppins flex justify-center fixed h-106 shadow-[0px_4px_4px_0px_#00000080] z-50;
+}
+.logoWithFlexible1 {
+  @apply flex justify-center w-full items-center text-black py-5 text-[34px];
+}
+/* Footer styling */
+.footer-container {
+  @apply w-full h-[4rem] bg-[#013565] bottom-0 flex flex-row items-center text-white p-[1rem];
+}
+.footer-copyright-formality {
+  @apply flex justify-end w-full;
+}
+/* Parallax styling */
+.parallax-img {
+  @apply min-w-full fixed top-0 left-2/4 -z-10 -translate-x-2/4;
+}
+.parallax {
+  @apply relative h-1/2 bg-fixed bg-center bg-no-repeat bg-cover;
+}
+.titles {
+  @apply bg-[#013565] h-[5rem] w-[30rem] rounded-[15px] flex justify-center items-center text-3xl text-[white];
 }

@@ -1,0 +1,72 @@
+.contact-container {
+  @apply h-[100vh] flex justify-center items-center;
+}
+.contact-card {
+  @apply h-[35rem] w-[35rem] rounded-[20px] shadow-[0px_4px_4px_0px_#00000080];
+}
+.card-title {
+  @apply text-[30px] flex justify-center items-center bg-[#F1E8E2] w-full h-[4rem] rounded-tr-[20px] rounded-tl-[20px];
+}
+.card-body {
+  @apply h-[100%] bg-[#D7CEC7] rounded-br-[20px] rounded-bl-[20px] pt-[2rem] pl-[4rem] pr-[4rem] flex flex-col;
+}
+.name-input {
+  @apply w-full h-[3rem] min-h-[3rem] border-2 rounded-[18px] pl-[1rem] text-[20px] shadow-md shadow-gray-600;
+}
+.name-input.errorEmpty {
+  @apply border-red;
+}
+.name-input.notEmpty {
+  @apply border-transparent;
+}
+.email-input {
+  @apply w-full h-[3rem] min-h-[3rem] border-2 rounded-[18px] pl-[1rem] text-[20px] shadow-md shadow-gray-600;
+}
+.email-input.errorEmpty {
+  @apply border-red;
+}
+.email-input.notEmpty {
+  @apply border-transparent;
+}
+.message-input {
+  @apply w-full h-[10rem] max-h-[15rem] border-2 rounded-[18px] pl-[1rem] text-[20px] break-normal p-[10px] shadow-md shadow-gray-600;
+}
+.message-input.errorEmpty {
+  @apply border-red;
+}
+.message-input.notEmpty {
+  @apply border-transparent;
+}
+.submit-button {
+  @apply bg-[#D11F1F] w-[11rem] h-[3rem] rounded-[16px] self-center text-[23px] bottom-[2rem] text-white shadow-md shadow-gray-600;
+}
+.contact-name-label {
+  @apply text-[25px] relative left-[10px];
+}
+.contact-email-label {
+  @apply text-[25px] relative left-[10px];
+}
+.contact-message-label {
+  @apply text-[25px] relative left-[10px];
+}
+.modal {
+  @apply fixed top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 border-black border-[1px] rounded-[10px] z-10 bg-slate-100 w-[500px] scale-0 ease-in-out duration-200 h-[6rem];
+}
+.modal.active {
+  @apply scale-100;
+}
+.modal-text {
+  @apply p-[5px];
+}
+.ok-button-container {
+  @apply flex justify-center;
+}
+.ok-button {
+  @apply border-[1px] border-black rounded-[5px] bg-[#2b4f6086] m-[10px] w-[2rem] h-[2rem];
+}
+#overlay {
+  @apply fixed top-0 left-0 right-0 bottom-0 bg-[#0000007c] pointer-events-none opacity-0 ease-in-out duration-200;
+}
+#overlay.active {
+  @apply opacity-100 pointer-events-auto;
+}

@@ -1,0 +1,12 @@
+.template-container {
+  @apply grid grid-cols-2 gap-[40px] my-[50px];
+}
+.templates {
+  @apply flex justify-center w-[587px] h-[400px] bg-t2 z-10 bg-cover rounded-[20px] pt-[120px] drop-shadow-xl;
+}
+.templateBtn {
+  @apply bg-[#B1A198] shadow-[0px_4px_4px_#00000080] rounded-[18px] w-[200px] h-[70px];
+}
+.tempButton {
+  @apply flex justify-center cursor-pointer h-[65px] items-center text-[25px] hover:bg-white hover:rounded-[18px] active:h-[70px] active:bg-gray-100 active:shadow-[0px_4px_4px_#00000090];
+}

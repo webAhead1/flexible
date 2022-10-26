@@ -1,0 +1,33 @@
+.pricingTxt {
+  @apply text-white text-[37px] flex justify-center items-end h-[90px];
+}
+.cardName {
+  @apply flex justify-center pt-5 text-[30px];
+}
+.cardPrice {
+  @apply flex pt-5 font-bold text-[47px];
+}
+.priceDetails {
+  @apply flex items-center pt-[12px] text-[20px] font-normal;
+}
+.cardSentence {
+  @apply flex justify-center pt-2 text-[20px];
+}
+.offers {
+  @apply flex flex-col items-center pt-8;
+}
+.cardOffers {
+  @apply flex flex-col items-center  text-[20px];
+}
+.line {
+  @apply my-2 w-[284px] h-[2px] border-[1px] bg-black border-black;
+}
+.btnPosition {
+  @apply absolute bottom-5 left-[47px];
+}
+.pricingBtn {
+  @apply bg-[#B1A198] shadow-[0px_4px_4px_#00000080] rounded-[18px] w-[238px] h-[79px];
+}
+.cardButton {
+  @apply flex justify-center cursor-pointer  h-[74px] items-center text-[30px] hover:bg-white hover:rounded-[18px] active:h-[79px] active:bg-gray-100 active:shadow-[0px_4px_4px_#00000090];
+}

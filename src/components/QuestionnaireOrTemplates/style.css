@@ -1,0 +1,30 @@
+.questionnaire-or-templates-title-container {
+  @apply flex justify-center items-center pb-[6rem];
+}
+.questionnaire-or-templates-title {
+  @apply bg-[#013565] h-[5rem] w-[30rem] rounded-[15px] flex justify-center items-center text-3xl text-[white];
+}
+.polygon {
+  @apply absolute w-0 h-0 left-0 border-l-[90rem] border-l-[#013565] border-b-[50rem] border-b-transparent;
+}
+.questionnaire-or-templates-container {
+  @apply flex space-x-[5rem] items-center justify-center;
+}
+.build-website-option {
+  @apply z-10 my-6 w-[30rem] flex items-center flex-col;
+}
+.option-title {
+  @apply bg-white h-[3rem] w-3/4 rounded-[15px] flex items-center justify-center text-3xl text-[#013565];
+}
+.build-website-card {
+  @apply bg-bg1  bg-cover bg-no-repeat bg-center h-[40rem] z-10 w-full rounded-[20px] my-[2rem] shadow-md shadow-gray-700 p-[2rem];
+}
+.or-container {
+  @apply z-10 top-[28rem] h-[70px] w-[70px] text-3xl bg-[#B1A198] flex items-center justify-center rounded-[15px];
+}
+.template-option {
+  @apply z-10 my-6 w-[30rem] flex items-center flex-col;
+}
+.template-card {
+  @apply bg-bg2  bg-cover bg-no-repeat bg-center h-[40rem] z-10 w-full rounded-[20px] my-[2rem] shadow-md shadow-gray-700 p-[2rem];
+}
