@@ -21,7 +21,10 @@ export default {
     },
   },
   mounted() {
-    if (localStorage.getItem("user") || localStorage.getItem("access_token")) {
+    if (
+      !localStorage.getItem("user") &&
+      !localStorage.getItem("access_token")
+    ) {
       this.$router.push({ name: "signin" });
     }
   },
