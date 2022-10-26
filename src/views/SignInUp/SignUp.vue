@@ -18,6 +18,7 @@
                     type="text"
                     id="fName"
                     name="fName"
+                    v-model="firstName"
                     required
                   />
                 </div>
@@ -28,6 +29,7 @@
                     type="text"
                     id="lName"
                     name="lName"
+                    v-model="lastName"
                     required
                   />
                 </div>
@@ -40,6 +42,7 @@
                     type="email"
                     id="email"
                     name="email"
+                    v-model="emailInput"
                     required
                   />
                 </div>
@@ -52,6 +55,7 @@
                     type="password"
                     id="password"
                     name="password"
+                    v-model="passwordInput"
                     required
                   />
                 </div>
@@ -62,6 +66,7 @@
                     type="password"
                     id="cPassword"
                     name="cPassword"
+                    v-model="passConfirm"
                     required
                   />
                 </div>
@@ -107,9 +112,37 @@
 <script>
 import SignInUpNavbar from "@/components/SignInUpNavbar.vue";
 export default {
+  data() {
+    return {
+      firstName: "",
+      lastName: "",
+      emailInput: "",
+      passwordInput: "",
+      passConfirm: "",
+    };
+  },
   components: {
     SignInUpNavbar,
   },
+
+  methods: {
+    signUp() {
+      const data = {
+        firstName: this.firstName,
+        lastName: this.lastName,
+        email: this.emailInput,
+        password: this.passwordInput,
+      };
+      this.axios
+        .post("http://localhost:4000/api/sign-up", data)
+        .then((response) => {
+          if (response.data.status == "success") this.$router.push("/sign-in");
+          else alert("An error occured...");
+        })
+        .catch(console.log);
+    },
+  },
+
   mounted() {
     const handleCredentialResponse = (response) => {
       var base64Url = response.credential.split(".")[1];
@@ -122,7 +155,6 @@ export default {
           })
           .join("")
       );
-      // console.log('Encoded JWT ID token:' + response.credential);
       localStorage.setItem("user", jsonPayload);
       window.location.href = "/profile";
     };
@@ -135,7 +167,7 @@ export default {
       document.getElementById("google"),
       { theme: "outline", size: "large", text: "signin", width: "220px" } // customization attributes
     );
-    if (localStorage.getItem("user")) {
+    if (localStorage.getItem("user") || localStorage.getItem("access_token")) {
       this.$router.push({ name: "home" });
     }
   },

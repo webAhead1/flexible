@@ -18,6 +18,7 @@
                     type="email"
                     id="email"
                     name="email"
+                    v-model="emailInput"
                     required
                   />
                 </div>
@@ -30,6 +31,7 @@
                     type="password"
                     id="password"
                     name="password"
+                    v-model="passwordInput"
                     required
                   />
                 </div>
@@ -76,6 +78,13 @@
 <script>
 import SignInUpNavbar from "@/components/SignInUpNavbar.vue";
 export default {
+  data() {
+    return {
+      emailInput: "",
+      passwordInput: "",
+    };
+  },
+
   components: {
     SignInUpNavbar,
   },
@@ -83,12 +92,32 @@ export default {
     facebookLogIn() {
       FB.login((res) => {
         FB.api("/me?fields=name,email", function (response) {
+<<<<<<< HEAD
           response.type = "facebook";
           localStorage.setItem("user", JSON.stringify(response));
           window.location.href = "/";
           // console.log(JSON.stringify(response));
+=======
+          localStorage.setItem("user", JSON.stringify(response));
+          window.location.href = "/profile";
+>>>>>>> development
         });
       });
+    },
+    signIn() {
+      const data = {
+        email: this.emailInput,
+        password: this.passwordInput,
+      };
+      this.axios
+        .post("http://localhost:4000/api/sign-in", data)
+        .then((response) => {
+          window.localStorage.setItem(
+            "access_token",
+            response.data.access_token
+          );
+        })
+        .catch((error) => console.log(error));
     },
   },
 
@@ -131,7 +160,7 @@ export default {
         width: "240px",
       } // customization attributes
     );
-    if (localStorage.getItem("user")) {
+    if (localStorage.getItem("user") || localStorage.getItem("access_token")) {
       this.$router.push({ name: "home" });
     }
   },
