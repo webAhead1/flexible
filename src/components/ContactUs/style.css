@@ -56,7 +56,7 @@
   @apply scale-100;
 }
 .modal-text {
-  @apply p-[10px];
+  @apply p-[5px];
 }
 .ok-button-container {
   @apply flex justify-center;

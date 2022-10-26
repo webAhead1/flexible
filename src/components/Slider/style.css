@@ -40,5 +40,5 @@
   @apply ml-[-40%];
 }
 .active {
-  @apply bg-orange-600;
+  @apply bg-white;
 }
