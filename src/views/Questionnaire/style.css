@@ -2,17 +2,17 @@
   @apply flex justify-start flex-col items-start m-auto border-solid border border-[#948C86] rounded-[12px] h-[44rem] w-[44rem] bg-[#D7CEC7] shadow-[0px_4px_4px_0px_#00000080];
 }
 .startButton {
-  @apply shadow-boxShadow m-auto mt-[10rem] bg-red text-white rounded-[1rem] h-[4.5rem] w-[12rem] text-3xl leading-loose font-poppins items-center text-center;
+  @apply shadow-boxShadow m-auto mb-[15rem] bg-red text-white rounded-[1rem] h-[4.5rem] w-[12rem] text-3xl leading-loose font-poppins items-center text-center;
 }
 .buttons {
   @apply flex flex-row justify-between m-auto mt-[0.8rem];
 }
 
 .backButton {
-  @apply shadow-boxShadow bg-red rounded-[1rem] h-[4.5rem] w-[12rem] mr-[12rem] text-white text-3xl leading-loose font-poppins items-center text-center;
+  @apply shadow-boxShadow bg-red rounded-[1rem] h-[4.5rem] w-[12rem] mr-[12rem] text-white text-3xl leading-loose font-poppins items-center text-center hover:opacity-80 hover:text-white  hover:bg-red active:drop-shadow-xl active:bg-red hover:rounded-[18px] active:h-[79px];
 }
 .nextButton {
-  @apply shadow-boxShadow bg-red rounded-[1rem] h-[4.5rem] w-[12rem] text-white text-3xl leading-loose font-poppins items-center text-center;
+  @apply shadow-boxShadow bg-red rounded-[1rem] h-[4.5rem] w-[12rem] text-white text-3xl leading-loose font-poppins items-center text-center hover:opacity-80 hover:text-white  hover:bg-red active:drop-shadow-xl active:bg-red hover:rounded-[18px] active:h-[79px];
 }
 .modal {
   @apply fixed top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 border-black border-[1px] rounded-[10px] z-10 bg-slate-100 w-[500px] scale-0 ease-in-out duration-200 h-[7rem];
