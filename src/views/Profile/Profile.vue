@@ -15,13 +15,15 @@ export default {
     return {};
   },
   methods: {
-    //     getUser(){
-    // user = localStorage.getItem("user");
-    //     }
     handleSignOut(event) {
       localStorage.removeItem("user");
       window.location.href = "/";
     },
+  },
+  mounted() {
+    if (localStorage.getItem("user") || localStorage.getItem("access_token")) {
+      this.$router.push({ name: "signin" });
+    }
   },
   components: {
     UserDetails,

@@ -40,6 +40,14 @@ export default {
     updateCategory(newCategory) {
       this.category = newCategory;
     },
+    mounted() {
+      if (
+        localStorage.getItem("user") ||
+        localStorage.getItem("access_token")
+      ) {
+        this.$router.push({ name: "signin" });
+      }
+    },
   },
   components: {
     Navbar,
