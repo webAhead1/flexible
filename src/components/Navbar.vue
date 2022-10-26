@@ -69,9 +69,14 @@
       >
         <span>Sign in</span>
       </router-link>
-      <button v-if="checkSignIn()" @click="handleSignOut(e)" class="menu-link">
+      <router-link
+        v-if="checkSignIn()"
+        to="/"
+        @click="handleSignOut(e)"
+        class="menu-link"
+      >
         <span>Sign Out</span>
-      </button>
+      </router-link>
     </div>
   </ul>
 </template>

@@ -1,3 +1,3 @@
 .profile-container {
-  @apply flex mt-[8rem] justify-center items-center leading-[60px] font-normal not-italic font-poppins text-[40px];
+  @apply flex mt-[6.5rem] justify-center items-center leading-[60px] font-normal not-italic font-poppins text-[40px];
 }
