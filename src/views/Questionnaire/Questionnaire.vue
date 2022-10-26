@@ -11,6 +11,8 @@ export default {
     return {
       currentStep: 1,
       text: "",
+      modal: document.querySelector('.modal'),
+      overlay: document.getElementById('overlay'),
     };
   },
 
@@ -21,6 +23,14 @@ export default {
       }
 
       this.currentStep++;
+    },
+    openModal: function () {
+      modal.classList.add('active');
+      overlay.classList.add('active');
+    },
+    closeModal: function () {
+      modal.classList.remove('active');
+      overlay.classList.remove('active');
     },
   },
   components: {
@@ -35,6 +45,15 @@ export default {
 </script>
 
 <template>
+  <div class="modal" id="modal">
+    <div class="modal-text">
+      Well done! You have finished the questionnaire, we'll get your website ready for you.
+    </div>
+    <div data-close-button class="ok-button-container">
+      <button @click="closeModal()" class="ok-button">OK</button>
+    </div>
+  </div>
+  <div id="overlay"></div>
   <body class="bg-[#013565] pt-[5rem] pb-[5rem]">
     <div class="template-background">
       <StartQuestionnaire v-if="currentStep == 1" />
@@ -67,7 +86,7 @@ export default {
         </button>
 
         <button
-          @click="alert('This is the last question')"
+          @click="openModal()"
           v-if="currentStep == 5"
           class="nextButton"
         >

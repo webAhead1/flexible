@@ -14,3 +14,24 @@
 .nextButton {
   @apply shadow-boxShadow bg-red rounded-[1rem] h-[4.5rem] w-[12rem] text-white text-3xl leading-loose font-poppins items-center text-center;
 }
+.modal {
+  @apply fixed top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 border-black border-[1px] rounded-[10px] z-10 bg-slate-100 w-[500px] scale-0 ease-in-out duration-200 h-[7rem];
+}
+.modal.active {
+  @apply scale-100;
+}
+.modal-text {
+  @apply p-[5px] text-center;
+}
+.ok-button-container {
+  @apply flex justify-center;
+}
+.ok-button {
+  @apply border-[1px] border-black rounded-[5px] bg-[#2b4f6086] m-[10px] w-[2rem] h-[2rem];
+}
+#overlay {
+  @apply fixed top-0 left-0 right-0 bottom-0 bg-[#0000007c] pointer-events-none opacity-0 ease-in-out duration-200;
+}
+#overlay.active {
+  @apply opacity-100 pointer-events-auto;
+}
