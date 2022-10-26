@@ -23,7 +23,7 @@ export default {
       <div class="cardName">Basic</div>
       <div class="flex justify-center">
         <span class="cardPrice">
-          <b class="priceDetails">shekels</b>
+          <b class="priceDetails">₪</b>
           <b class="items-end">57</b>
           <b class="priceDetails">/month</b>
         </span>
