@@ -92,15 +92,9 @@ export default {
     facebookLogIn() {
       FB.login((res) => {
         FB.api("/me?fields=name,email", function (response) {
-<<<<<<< HEAD
           response.type = "facebook";
           localStorage.setItem("user", JSON.stringify(response));
           window.location.href = "/";
-          // console.log(JSON.stringify(response));
-=======
-          localStorage.setItem("user", JSON.stringify(response));
-          window.location.href = "/profile";
->>>>>>> development
         });
       });
     },
