@@ -56,8 +56,10 @@
         class="menu-link"
         @click="focused = 'profile'"
       >
-        <div v-if="focused === 'profile'" class="underlined">Profile</div>
-        <div v-else>Profile</div>
+        <div v-if="focused === 'profile'" class="underlined">
+          {{ this.user.name }}
+        </div>
+        <div v-else>{{ this.user.name }}</div>
       </router-link>
       <router-link
         v-if="!checkSignIn()"
@@ -87,6 +89,7 @@ export default {
   data() {
     return {
       focused: "aboutus",
+      user: JSON.parse(localStorage.getItem("user")),
     };
   },
   methods: {
