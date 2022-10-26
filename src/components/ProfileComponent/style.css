@@ -31,10 +31,10 @@
   @apply flex flex-col space-y-6;
 }
 .setting-header {
-  @apply ml-[10rem] mt-[1rem] underline underline-offset-auto font-normal font-poppins leading-[51px] text-[32px];
+  @apply flex justify-center pt-5 underline underline-offset-auto font-normal font-poppins leading-[51px] text-[32px];
 }
 .setting-website {
-  @apply ml-[3rem] font-normal font-poppins leading-[51px] text-[32px];
+  @apply flex ml-[3rem] font-normal font-poppins leading-[51px] text-[32px];
 }
 .edit-photo-box {
   @apply shadow-[0px_4px_4px_0px_#00000080] flex-col items-center justify-self-auto self-center  bg-[#C6C6C6] rounded-[18px] mt-[3rem];
@@ -62,4 +62,15 @@
 }
 .profile-input-text {
   @apply w-[400px] h-[56px] mb-5 pl-3 rounded-[18px] bg-[#FFFFFF99] focus:bg-white focus:outline-none shadow-[0px_4px_4px_0px_#00000080];
+}
+
+.btnPosition-sub {
+  @apply absolute bottom-12 left-[6.5rem];
+}
+.pricingBtn-sub {
+  @apply bg-[#B1A198] shadow-[0px_4px_4px_#00000080] rounded-[18px] w-[14rem] h-[4rem];
+}
+
+.cardButton-sub {
+  @apply flex justify-center h-[4.6rem] items-center text-[30px] hover:bg-white hover:rounded-[18px] active:h-[79px] active:bg-gray-100 active:shadow-[0px_4px_4px_#00000090];
 }
