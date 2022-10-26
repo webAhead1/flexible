@@ -92,8 +92,15 @@ export default {
     facebookLogIn() {
       FB.login((res) => {
         FB.api("/me?fields=name,email", function (response) {
+<<<<<<< HEAD
+          response.type = "facebook";
+          localStorage.setItem("user", JSON.stringify(response));
+          window.location.href = "/";
+          // console.log(JSON.stringify(response));
+=======
           localStorage.setItem("user", JSON.stringify(response));
           window.location.href = "/profile";
+>>>>>>> development
         });
       });
     },
@@ -132,8 +139,11 @@ export default {
           })
           .join("")
       );
-      localStorage.setItem("user", jsonPayload);
-      window.location.href = "/profile";
+      // console.log('Encoded JWT ID token:' + response.credential);
+      const json = JSON.parse(jsonPayload);
+      json.type = "google";
+      localStorage.setItem("user", JSON.stringify(json));
+      window.location.href = "/";
     };
     google.accounts.id.initialize({
       client_id:

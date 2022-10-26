@@ -35,6 +35,6 @@
 </template>
 <script>
 export default {
-  props: ['name', 'shekels', 'price', 'monthly', 'sentence', 'offers'],
+  props: ["name", "shekels", "price", "monthly", "sentence", "offers"],
 };
 </script>

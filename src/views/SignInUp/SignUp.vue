@@ -167,7 +167,7 @@ export default {
       document.getElementById("google"),
       { theme: "outline", size: "large", text: "signin", width: "220px" } // customization attributes
     );
-    if (localStorage.getItem("user")) {
+    if (localStorage.getItem("user") || localStorage.getItem("access_token")) {
       this.$router.push({ name: "home" });
     }
   },
