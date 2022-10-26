@@ -12,7 +12,7 @@
         </div>
         <div class="cardSentence">{{ sentence }}</div>
         <div class="offers">
-          <div class="cardOffers" v-for="offer in offers">
+          <div class="cardOffers" v-for="(offer, i) in offers" :key="i">
             <hr class="line" />
             {{ offer }}
           </div>

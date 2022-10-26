@@ -51,6 +51,15 @@
         <div v-else>Contact Us</div>
       </router-link>
       <router-link
+        v-if="checkSignIn()"
+        to="/profile"
+        class="menu-link"
+        @click="focused = 'profile'"
+      >
+        <div v-if="focused === 'profile'" class="underlined">Profile</div>
+        <div v-else>Profile</div>
+      </router-link>
+      <router-link
         v-if="!checkSignIn()"
         to="/sign-in"
         id="signin"
@@ -61,15 +70,6 @@
       <button v-if="checkSignIn()" @click="handleSignOut(e)" class="menu-link">
         <span>Sign Out</span>
       </button>
-      <router-link
-        v-if="checkSignIn()"
-        to="/profile"
-        class="menu-link"
-        @click="focused = 'profile'"
-      >
-        <div v-if="focused === 'profile'" class="underlined">Profile</div>
-        <div v-else>Profile</div>
-      </router-link>
     </div>
   </ul>
 </template>

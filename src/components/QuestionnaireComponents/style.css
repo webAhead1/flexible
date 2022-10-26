@@ -8,7 +8,7 @@
   @apply text-black font-poppins mr-24 ml-24 text-center md:text-center text-4xl mt-[30px] leading-loose not-italic font-semibold;
 }
 .text {
-  @apply ml-[4rem] shadow-[0px_4px_4px_0px_#00000080]  py-2 px-3 text-text leading-tight focus:outline-none w-[347.85px] h-[55.07px] rounded-[18px] text-3xl;
+  @apply ml-[10rem] shadow-[0px_4px_4px_0px_#00000080]  py-2 px-3 text-black leading-tight focus:outline-none w-[347.85px] h-[55.07px] rounded-[18px] text-3xl;
 }
 .domain {
   @apply flex flex-row;
