@@ -25,7 +25,7 @@
   text-[32px];
 }
 .content-settings {
-  @apply flex bg-[#D9D9D9] w-[30rem] h-[40rem] mt-[3.5rem] rounded-[18px];
+  @apply relative bg-[#D9D9D9] w-[30rem] h-[40rem] mt-[3.5rem] rounded-[18px];
 }
 .settings-content-box {
   @apply flex flex-col space-y-6;
@@ -73,4 +73,10 @@
 
 .cardButton-sub {
   @apply flex justify-center h-[4.6rem] items-center text-[30px] hover:bg-white hover:rounded-[18px] active:h-[79px] active:bg-gray-100 active:shadow-[0px_4px_4px_#00000090];
+}
+.payment-table {
+  @apply table-auto border-collapse w-[20rem] border border-black;
+}
+.table-content {
+  @apply font-normal font-poppins leading-[51px] text-[32px] border border-black;
 }
