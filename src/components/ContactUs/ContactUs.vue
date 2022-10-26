@@ -43,59 +43,54 @@
 export default {
   data() {
     return {
-      name: '',
-      email: '',
-      message: '',
-      modal: document.querySelector('.modal'),
-      overlay: document.getElementById('overlay'),
-      nameIsEmpty: '',
-      emailIsEmpty: '',
-      messageIsEmpty: '',
+      name: "",
+      email: "",
+      message: "",
+      modal: document.querySelector(".modal"),
+      overlay: document.getElementById("overlay"),
+      nameIsEmpty: "",
+      emailIsEmpty: "",
+      messageIsEmpty: "",
     };
   },
   methods: {
     openModal: function () {
-      console.log({
-        name: this.name,
-        email: this.email,
-        message: this.message,
-      });
       if (!this.name || !this.email || !this.message) {
         if (!this.name) {
-          this.nameIsEmpty = 'errorEmpty';
+          this.nameIsEmpty = "errorEmpty";
         } else {
-          this.nameIsEmpty = 'notEmpty';
+          this.nameIsEmpty = "notEmpty";
         }
         if (!this.email) {
-          this.emailIsEmpty = 'errorEmpty';
+          this.emailIsEmpty = "errorEmpty";
         } else {
           if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.email))
-            this.emailIsEmpty = 'notEmpty';
-          else this.emailIsEmpty = 'errorEmpty';
+            this.emailIsEmpty = "notEmpty";
+          else this.emailIsEmpty = "errorEmpty";
         }
         if (!this.message) {
-          this.messageIsEmpty = 'errorEmpty';
+          this.messageIsEmpty = "errorEmpty";
         } else {
-          this.messageIsEmpty = 'notEmpty';
+          this.messageIsEmpty = "notEmpty";
         }
-        alert('You must fill out all the boxes');
+        alert("You must fill out all the boxes");
       } else {
-        this.nameIsEmpty = 'notEmpty';
-        this.emailIsEmpty = 'notEmpty';
-        this.messageIsEmpty = 'notEmpty';
+        this.nameIsEmpty = "notEmpty";
+        this.emailIsEmpty = "notEmpty";
+        this.messageIsEmpty = "notEmpty";
 
         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.email)) {
-          modal.classList.add('active');
-          overlay.classList.add('active');
+          modal.classList.add("active");
+          overlay.classList.add("active");
         } else {
-          alert('You need to enter a valid email address');
-          this.emailIsEmpty = 'errorEmpty';
+          alert("You need to enter a valid email address");
+          this.emailIsEmpty = "errorEmpty";
         }
       }
     },
     closeModal: function () {
-      modal.classList.remove('active');
-      overlay.classList.remove('active');
+      modal.classList.remove("active");
+      overlay.classList.remove("active");
     },
   },
 };
