@@ -28,9 +28,6 @@
 .pricingBtn {
   @apply bg-[#B1A198] shadow-[0px_4px_4px_#00000080] rounded-[18px] w-[238px] h-[79px];
 }
-.btn {
-  @apply flex justify-center text-white bg-[#D11F1F] w-[237px] h-[79px] text-[34px] rounded-[18px] hover:opacity-80 hover:text-black  hover:bg-[#FFFFFF99] active:drop-shadow-xl active:bg-gray-100 shadow-[0px_4px_4px_0px_#00000080];
-}
 .cardButton {
-  @apply flex justify-center h-[74px] items-center text-[30px] hover:bg-white hover:rounded-[18px] active:h-[79px] active:bg-gray-100 active:shadow-[0px_4px_4px_#00000090];
+  @apply flex justify-center cursor-pointer  h-[74px] items-center text-[30px] hover:bg-white hover:rounded-[18px] active:h-[79px] active:bg-gray-100 active:shadow-[0px_4px_4px_#00000090];
 }
