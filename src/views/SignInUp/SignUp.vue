@@ -132,7 +132,11 @@ export default {
         email: this.emailInput,
         password: this.passwordInput
       };
-      this.axios.post('http://localhost:4000/api/sign-up', data).then((response)=> console.log(response.data))
+      this.axios.post('http://localhost:4000/api/sign-up', data).then((response)=> {
+       if (response.data.status == 'success')
+        this.$router.push('/sign-in');
+        else alert('An error occured...')
+      })
       .catch(console.log)
     },
   },

@@ -2,26 +2,6 @@
   <header>
     <SignInUpNavbar />
   </header>
-<!-- <<<<<<< HEAD
-  <body>
-    <div class="flex justify-center py-4 bg-[#D7CEC7]">
-      <div class="signBg1 h-[620px]">
-        <div class="signBg">
-          <div class="signText">Sign In</div>
-          <div class="flex justify-center">
-            <div class="txt-and-button py-10">
-              <div class="txt">Email</div>
-              <form @submit.prevent @submit="signIn">
-              <input type="email" id="email" name="email" v-model="emailInput" required/>
-              <div class="txt">Password</div>
-              <input type="password" id="password" name="password" v-model="passwordInput" required />
-              <div class="btnBg py-10">
-                <div class="btn">
-                  <button type="submit">Sign In</button>
-                </div>
-              </div>
-            </form>
-======= -->
   <div class="sign-container">
     <div class="signBg1 h-[38rem]">
       <div class="signBg">
@@ -123,7 +103,9 @@ export default {
         email: this.emailInput,
         password: this.passwordInput
       }
-        this.axios.post('http://localhost:4000/api/sign-in', data).then((response)=> console.log(response.data))
+        this.axios.post('http://localhost:4000/api/sign-in', data).then((response)=> {
+          window.localStorage.setItem('access_token', response.data.access_token);
+        })
         .catch((error)=> console.log(error));
     },
   },
