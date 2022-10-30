@@ -116,7 +116,7 @@ export default {
           Next
         </button>
 
-        <button @click="openModal()" v-if="currentStep == 5" class="nextButton">
+        <button @click="openModal()" v-if="currentStep == 7" class="nextButton">
           Submit
         </button>
       </div>
